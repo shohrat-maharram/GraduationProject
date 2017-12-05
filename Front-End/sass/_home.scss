@@ -1,0 +1,54 @@
+#header {
+  .search {
+    background-color: $main-bg-color;
+    padding: 5px 0;
+
+    .flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .searchBar {
+      background-color: transparent;
+      border: none;
+      width: 80%;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: $main-font-2;
+      line-height: 0;
+      outline-style: none;
+      box-shadow: none;
+      border-color: transparent;
+    }
+
+    i {
+      font-size: 13px;
+      color: $main-color;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .navMenu {
+    background-color: transparent;
+    box-shadow: 0 5px 10px -5px #dfdede;
+
+    .navMenuInside {
+      a {
+        align-items: center;
+        padding: 0;
+      }
+
+      .navInside {
+        width: 100%;
+        justify-content: space-between;
+        .navInsidePages{
+            justify-content: flex-end;
+        }
+      }
+    }
+  }
+}

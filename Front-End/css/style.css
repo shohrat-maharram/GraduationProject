@@ -1,0 +1,197 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.clear {
+  clear: both; }
+
+.boxSizing {
+  box-sizing: border-box; }
+
+.mg-left {
+  margin-left: 0; }
+
+.mg-right {
+  margin-right: 0; }
+
+.mg-top {
+  margin-top: 0; }
+
+.mg-bottom {
+  margin-bottom: 0; }
+
+.pd-left {
+  padding-left: 0; }
+
+.pd-right {
+  padding-right: 0; }
+
+.pd-top {
+  padding-top: 0; }
+
+.pd-bottom {
+  padding-bottom: 0; }
+
+.flex {
+  display: flex; }
+
+#header .search {
+  background-color: #f8f8f8;
+  padding: 5px 0; }
+  #header .search .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  #header .search .searchBar {
+    background-color: transparent;
+    border: none;
+    width: 80%;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Lato, sans-serif;
+    line-height: 0;
+    outline-style: none;
+    box-shadow: none;
+    border-color: transparent; }
+  #header .search i {
+    font-size: 13px;
+    color: #de1219; }
+    #header .search i:hover {
+      cursor: pointer; }
+#header .navMenu {
+  background-color: transparent;
+  box-shadow: 0 5px 10px -5px #dfdede; }
+  #header .navMenu .navMenuInside a {
+    align-items: center;
+    padding: 0; }
+  #header .navMenu .navMenuInside .navInside {
+    width: 100%;
+    justify-content: space-between; }
+    #header .navMenu .navMenuInside .navInside .navInsidePages {
+      justify-content: flex-end; }
+
+/*# sourceMappingURL=style.css.map */
