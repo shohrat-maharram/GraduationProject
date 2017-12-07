@@ -23,25 +23,65 @@
             <div class="container pd-left pd-right">
                 <div class="col-md-12 flex pd-left pd-right">
                     <input type="text" class="input-lg searchBar pd-left" placeholder="Type and Hit Enter" />
-                    <i class="glyphicon glyphicon-remove"></i>
+                    <i class="glyphicon glyphicon-remove searchClose"></i>
                 </div>
             </div>
         </div>
-        <div class="raw navMenu">
-            <div class="container flex navMenuInside pd-left pd-right">
-                <nav class="navbar navbar-expand-lg navbar-light pd-left pd-right mg-bottom navInside">
-                    <a class="navbar-brand pd-left flex" href="#">
-                        <span>G</span>ives
-                    </a>
+        <div class="raw navMenu pd">
+            <div class="container flex navMenuInside pd">
+                <nav class="navbar navbar-expand-lg navbar-light pd-bottom pd-left pd-right mg-bottom navInside flex">
+                    <div class="col-md-3 pd-left logoDiv">
+                        <a class="navbar-brand pd-left flex logo" href="index.html">
+                            <span>G</span>ives
+                        </a>
+                    </div>
 
-                    <div class="collapse navbar-collapse navInsidePages pd-right" id="navbarSupportedContent">
-                        <ul class="navbar-nav mg-right">
-                            <li class="nav-item active">
-                                <a class="nav-link pd-right" href="#">Home
-                                    <span class="sr-only">(current)</span>
-                                </a>
-                            </li>                            
-                        </ul>
+                    <div class="col-md-8 pd-right menuDiv">
+                        <div class="collapse navbar-collapse navInsidePages pd-right" id="navbarSupportedContent">
+                            <ul class="navbar-nav mg-right flex">
+                                <li class="nav-item">
+                                    <a class="nav-link pd-right  pageTabs active" onclick='activeTab(this)' href="#">HOME</a>
+                                </li>
+                                <li class="nav-item subMenuLi">
+                                    <a class="nav-link pd-right pageTabs" onclick='activeTab(this)' href="#">CAUSES</a>
+                                    <ul class="subMenu">
+                                        <li>
+                                            <a class="nav-link pd-right pageTabs" onclick='activeTab(this)' href="#">Causes grid</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link pd-right pageTabs" onclick='activeTab(this)' href="#">Causes list</a>
+                                        </li>
+                                        <li style="border-bottom:none;">
+                                            <a class="nav-link pd-right pageTabs" onclick='activeTab(this)' href="#">Causes single</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link pd-right pageTabs" onclick='activeTab(this)' href="#">GALLERY</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link pd-right pageTabs" onclick='activeTab(this)' href="#">ABOUT</a>
+                                </li>
+                                <li class="nav-item subMenuLi">
+                                    <a class="nav-link pd-right pageTabs" onclick='activeTab(this)' href="#">BLOG</a>
+                                    <ul class="subMenu">
+                                        <li>
+                                            <a class="nav-link pd-right pageTabs" onclick='activeTab(this)' href="#">Blog list</a>
+                                        </li>
+                                        <li style="border-bottom:none;">
+                                            <a class="nav-link pd-right pageTabs" onclick='activeTab(this)' href="#">Blog single</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link pd-right pageTabs" onclick='activeTab(this)' href="#">CONTACT</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-1 flex searchIcon pd-right">
+                        <i class="glyphicon glyphicon-search"></i>
                     </div>
                 </nav>
             </div>
@@ -130,6 +170,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
         crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <script src="js/script.js" type="text/javascript"></script>
 </body>
 
 </html>

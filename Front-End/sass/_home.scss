@@ -1,7 +1,17 @@
+body {
+  height: 3000px;
+}
+
 #header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
   .search {
     background-color: $main-bg-color;
     padding: 5px 0;
+    display: none;
 
     .flex {
       display: flex;
@@ -12,7 +22,7 @@
     .searchBar {
       background-color: transparent;
       border: none;
-      width: 80%;
+      width: 95%;
       font-size: 14px;
       font-weight: 400;
       font-family: $main-font-2;
@@ -34,19 +44,122 @@
 
   .navMenu {
     background-color: transparent;
-    box-shadow: 0 5px 10px -5px #dfdede;
+    box-shadow: 0 5px 10px -7px #dfdede;
+    // position: relative;
+    // display: none;
 
     .navMenuInside {
+      padding: 5px 0;
+
       a {
         align-items: center;
         padding: 0;
       }
 
       .navInside {
+        position: relative;
         width: 100%;
         justify-content: space-between;
-        .navInsidePages{
+        align-items: center;
+        padding-top: 25px;
+
+        .logoDiv {
+          position: relative;
+          top: -12px;
+
+          .logo {
+            font-size: 32px;
+            color: $main-color;
+            font-weight: 600;
+            font-family: $main-font;
+
+            span {
+              color: $main-black-color;
+              font-weight: 900;
+            }
+          }
+        }
+
+        .menuDiv {
+          position: relative;
+          top: 3px;
+          .navInsidePages {
             justify-content: flex-end;
+
+            ul {
+              align-items: center;
+              line-height: 30px;
+
+              .active {
+                color: $main-color;
+              }
+
+              li {
+                position: relative;
+                padding-bottom: 25px;
+
+                a,
+                span {
+                  transition: all .2s ease-out 0s;
+                  font-size: 15px;
+                  font-weight: 500;
+                  color: $main-black-color;
+                  margin: 0 20px;
+                  opacity: .9;
+                  cursor: pointer;
+
+                  &:hover {
+                    color: $main-color;
+                  }
+                }
+
+                .subMenu {
+                  display: none;
+                  position: absolute;
+                  top: 45px;
+                  left: 20px;
+                  width: 250px;
+                  border-bottom: 2px solid $main-color;
+
+                  li {
+                    background-color: $main-black-color;
+                    padding: 10px 0;
+                    border-bottom: 1px solid rgb(95, 95, 97);
+                    transition: all .3s ease-out 0s;
+
+                    &:hover {
+                      background-color: $main-color;
+                      border-bottom: 1px solid $main-color;
+                    }
+
+                    &:hover a {
+                      margin-left: 15px;
+                    }
+
+                    a {
+                      color: white;
+                      margin-left: 10px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .searchIcon {
+          justify-content: flex-end;
+          position: relative;
+          top: -12px;
+
+          i {
+            padding: 8px 15px;
+            border-radius: 3px;
+            background-color: $main-color;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+          }
         }
       }
     }

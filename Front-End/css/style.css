@@ -126,11 +126,17 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+body {
+  font-family: Raleway, sans-serif; }
+
 .clear {
   clear: both; }
 
 .boxSizing {
   box-sizing: border-box; }
+
+.mg {
+  margin: 0px !important; }
 
 .mg-left {
   margin-left: 0; }
@@ -143,6 +149,9 @@ table {
 
 .mg-bottom {
   margin-bottom: 0; }
+
+.pd {
+  padding: 0 !important; }
 
 .pd-left {
   padding-left: 0; }
@@ -159,39 +168,124 @@ table {
 .flex {
   display: flex; }
 
-#header .search {
-  background-color: #f8f8f8;
-  padding: 5px 0; }
-  #header .search .flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
-  #header .search .searchBar {
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+body {
+  height: 3000px; }
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; }
+  #header .search {
+    background-color: #f8f8f8;
+    padding: 5px 0;
+    display: none; }
+    #header .search .flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+    #header .search .searchBar {
+      background-color: transparent;
+      border: none;
+      width: 95%;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: Lato, sans-serif;
+      line-height: 0;
+      outline-style: none;
+      box-shadow: none;
+      border-color: transparent; }
+    #header .search i {
+      font-size: 13px;
+      color: #de1219; }
+      #header .search i:hover {
+        cursor: pointer; }
+  #header .navMenu {
     background-color: transparent;
-    border: none;
-    width: 80%;
-    font-size: 14px;
-    font-weight: 400;
-    font-family: Lato, sans-serif;
-    line-height: 0;
-    outline-style: none;
-    box-shadow: none;
-    border-color: transparent; }
-  #header .search i {
-    font-size: 13px;
-    color: #de1219; }
-    #header .search i:hover {
-      cursor: pointer; }
-#header .navMenu {
-  background-color: transparent;
-  box-shadow: 0 5px 10px -5px #dfdede; }
-  #header .navMenu .navMenuInside a {
-    align-items: center;
-    padding: 0; }
-  #header .navMenu .navMenuInside .navInside {
-    width: 100%;
-    justify-content: space-between; }
-    #header .navMenu .navMenuInside .navInside .navInsidePages {
-      justify-content: flex-end; }
+    box-shadow: 0 5px 10px -7px #dfdede; }
+    #header .navMenu .navMenuInside {
+      padding: 5px 0; }
+      #header .navMenu .navMenuInside a {
+        align-items: center;
+        padding: 0; }
+      #header .navMenu .navMenuInside .navInside {
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 25px; }
+        #header .navMenu .navMenuInside .navInside .logoDiv {
+          position: relative;
+          top: -12px; }
+          #header .navMenu .navMenuInside .navInside .logoDiv .logo {
+            font-size: 32px;
+            color: #de1219;
+            font-weight: 600;
+            font-family: Raleway, sans-serif; }
+            #header .navMenu .navMenuInside .navInside .logoDiv .logo span {
+              color: #444444;
+              font-weight: 900; }
+        #header .navMenu .navMenuInside .navInside .menuDiv {
+          position: relative;
+          top: 3px; }
+          #header .navMenu .navMenuInside .navInside .menuDiv .navInsidePages {
+            justify-content: flex-end; }
+            #header .navMenu .navMenuInside .navInside .menuDiv .navInsidePages ul {
+              align-items: center;
+              line-height: 30px; }
+              #header .navMenu .navMenuInside .navInside .menuDiv .navInsidePages ul .active {
+                color: #de1219; }
+              #header .navMenu .navMenuInside .navInside .menuDiv .navInsidePages ul li {
+                position: relative;
+                padding-bottom: 25px; }
+                #header .navMenu .navMenuInside .navInside .menuDiv .navInsidePages ul li a,
+                #header .navMenu .navMenuInside .navInside .menuDiv .navInsidePages ul li span {
+                  transition: all .2s ease-out 0s;
+                  font-size: 15px;
+                  font-weight: 500;
+                  color: #444444;
+                  margin: 0 20px;
+                  opacity: .9;
+                  cursor: pointer; }
+                  #header .navMenu .navMenuInside .navInside .menuDiv .navInsidePages ul li a:hover,
+                  #header .navMenu .navMenuInside .navInside .menuDiv .navInsidePages ul li span:hover {
+                    color: #de1219; }
+                #header .navMenu .navMenuInside .navInside .menuDiv .navInsidePages ul li .subMenu {
+                  display: none;
+                  position: absolute;
+                  top: 45px;
+                  left: 20px;
+                  width: 250px;
+                  border-bottom: 2px solid #de1219; }
+                  #header .navMenu .navMenuInside .navInside .menuDiv .navInsidePages ul li .subMenu li {
+                    background-color: #444444;
+                    padding: 10px 0;
+                    border-bottom: 1px solid #5f5f61;
+                    transition: all .3s ease-out 0s; }
+                    #header .navMenu .navMenuInside .navInside .menuDiv .navInsidePages ul li .subMenu li:hover {
+                      background-color: #de1219;
+                      border-bottom: 1px solid #de1219; }
+                    #header .navMenu .navMenuInside .navInside .menuDiv .navInsidePages ul li .subMenu li:hover a {
+                      margin-left: 15px; }
+                    #header .navMenu .navMenuInside .navInside .menuDiv .navInsidePages ul li .subMenu li a {
+                      color: white;
+                      margin-left: 10px; }
+        #header .navMenu .navMenuInside .navInside .searchIcon {
+          justify-content: flex-end;
+          position: relative;
+          top: -12px; }
+          #header .navMenu .navMenuInside .navInside .searchIcon i {
+            padding: 8px 15px;
+            border-radius: 3px;
+            background-color: #de1219;
+            color: white;
+            font-size: 14px;
+            cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */
