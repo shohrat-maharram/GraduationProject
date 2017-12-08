@@ -352,7 +352,7 @@ body {
         font-size: 30px;
         cursor: pointer; }
   #header .menuResponse {
-    display: block; } }
+    display: none; } }
 @media only screen and (max-width: 768px) {
   #header .navMenuSmall .navInside {
     border-bottom: 1px solid #dddddd; } }
