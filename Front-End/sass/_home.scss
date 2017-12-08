@@ -2,12 +2,16 @@ body {
   height: 3000px;
 }
 
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+// Screen size > 992px
+//Header
 #header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
 
+  //Search bar
   .search {
     background-color: $main-bg-color;
     padding: 5px 0;
@@ -42,6 +46,7 @@ body {
     }
   }
 
+  //Navbar
   .navMenu {
     background-color: transparent;
     box-shadow: 0 5px 10px -7px #dfdede;
@@ -83,6 +88,7 @@ body {
         .menuDiv {
           position: relative;
           top: 3px;
+
           .navInsidePages {
             justify-content: flex-end;
 
@@ -162,6 +168,208 @@ body {
           }
         }
       }
+    }
+  }
+
+  //Navbar small screen
+  .navMenuSmall {
+    display: none;
+  }
+
+  //Title of navbar
+  .navMenuSmallTitle {
+    display: none;
+  }
+
+  //Responsive menu
+  .menuResponse {
+    display: none;
+
+    ul {
+      li {
+        border-top: 1px solid lighten($main-black-color,60%);
+        position: relative;
+
+        a {
+          display: block;
+          text-decoration: none;
+          color: $main-black-color;
+          font-family: $main-font;
+          font-size: 12px;
+          font-weight: 600;
+          padding: 15px;
+          cursor: pointer;
+          width: 95%;
+          transition: all .3s ease-out 0s;
+
+          &:hover {
+            color: $main-color;
+          }
+        }
+
+        i {
+          position: absolute;
+          right: 7px;
+          top: 12px;
+          float: right;
+          color: $main-black-color;
+          font-size: 8px;
+          padding: 3px;
+          cursor: pointer;
+          transition: all .3s ease-out 0s;
+
+          &:hover {
+            color: $main-color;
+          }
+        }
+
+        ul {
+          display: none;
+          li {
+            background-color: rgb(252, 252, 252);
+
+            a {
+              padding-left: 55px;
+              font-size: 12px;
+              color: lighten($main-black-color, 30);
+              font-weight: normal;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+// Screen size between 992px and 768px
+@media only screen and (max-width: 992px) {
+
+  //Header
+  #header {
+    //Navbar big screen
+    .navMenuBig {
+      display: none;
+    }
+
+    //Navbar small screen
+    .navMenuSmall {
+      display: block;
+      box-shadow: none;
+    }
+
+    //Title of navbar
+    .navMenuSmallTitle {
+      display: block;
+      box-shadow: none;
+
+      .navInside {
+        .logoDiv {
+          a {
+            font-size: 22px !important;
+            font-weight: 300 !important;
+          }
+        }
+
+        .searchIconSmall {
+
+          justify-content: flex-end;
+          position: relative;
+          top: -12px;
+
+          i {
+            color: $main-color;
+            font-size: 30px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    //Responsive menu
+    .menuResponse {
+      display: block;
+
+    }
+  }
+}
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+// Screen size between 768 and 576px
+@media only screen and (max-width: 768px) {
+
+  //Header
+  #header {
+    //Navbar small screen
+    .navMenuSmall {
+      .navInside {
+        border-bottom: 1px solid lighten($main-black-color, 60%);
+        // box-shadow: 0 5px 4px -3px #dfdede;
+      }
+    }
+  }
+}
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+// Screen size < 576px
+@media only screen and (max-width: 576px) {
+
+  //Header
+  #header {
+    //Search bar
+    .search {
+      padding: 0 50px;
+    }
+
+    //Navbar big screen
+    .navMenuBig {
+      display: none;
+    }
+
+    //Navbar small screen
+    .navMenuSmall {
+      display: block;
+      padding-right: 15px;
+      padding-left: 15px;
+
+      .navInside {
+        padding: 0 50px;
+
+        .logoDiv {
+          width: 50%;
+        }
+
+        .searchIcon {
+          width: 50%;
+          // margin: 0px 10px;
+        }
+      }
+    }
+
+    //Title of navbar
+    .navMenuSmallTitle {
+      padding-right: 15px;
+      padding-left: 15px;
+
+      .navInside {
+        padding: 0 50px;
+
+        .logoDiv {
+          width: 50%;
+        }
+
+        .searchIconSmall {
+          width: 50%;
+          // margin: 0px 10px;
+        }
+      }
+    }
+
+    //Responsive menu
+    .menuResponse {
+      padding-right: 15px;
+      padding-left: 15px;
     }
   }
 }
