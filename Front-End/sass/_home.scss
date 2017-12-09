@@ -1,4 +1,6 @@
-
+body{
+  height: 3000px;
+}
 // <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
 // Screen size > 992px
 //Header
@@ -45,7 +47,7 @@
 
   //Navbar
   .navMenu {
-    background-color: transparent;
+    background-color: white;
     box-shadow: 0 5px 10px -7px #dfdede;
     // position: relative;
     // display: none;
@@ -281,7 +283,7 @@
 
         a {
           text-decoration: none;
-          color:darken(white,20);
+          color: darken(white,20);
 
           i {
             font-size: 12px;
@@ -399,13 +401,18 @@
           outline-style: none;
           box-shadow: none;
           border-color: transparent;
+          transition: all .3s linear 0s;
+          &:hover {
+            background-color: white;
+            color: $main-color;
+          }
         }
       }
     }
   }
 
   .copyright {
-    padding: 30px;
+    padding: 25px 0px;
     background-color: #161719;
     text-align: center;
 

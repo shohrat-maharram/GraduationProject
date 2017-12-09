@@ -174,6 +174,9 @@ body {
 .float-right {
   float: right; }
 
+body {
+  height: 3000px; }
+
 #header {
   position: fixed;
   top: 0;
@@ -204,7 +207,7 @@ body {
       #header .search i:hover {
         cursor: pointer; }
   #header .navMenu {
-    background-color: transparent;
+    background-color: white;
     box-shadow: 0 5px 10px -7px #dfdede; }
     #header .navMenu .navMenuInside {
       padding: 5px 0; }
@@ -434,9 +437,13 @@ body {
         border-radius: 3px;
         outline-style: none;
         box-shadow: none;
-        border-color: transparent; }
+        border-color: transparent;
+        transition: all .3s linear 0s; }
+        #footer .footerBar .subscribe .form button:hover {
+          background-color: white;
+          color: #de1219; }
 #footer .copyright {
-  padding: 30px;
+  padding: 25px 0px;
   background-color: #161719;
   text-align: center; }
   #footer .copyright p {
