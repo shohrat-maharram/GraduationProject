@@ -174,14 +174,11 @@ body {
 .float-right {
   float: right; }
 
-body {
-  height: 3000px; }
-
 #header {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0; }
+  width: 100%;
+  z-index: 999; }
   #header .search {
     background-color: #f8f8f8;
     padding: 5px 0;
@@ -331,12 +328,131 @@ body {
             color: #919191;
             font-weight: normal; }
 
+#footer .footerBar {
+  padding: 50px 0;
+  background-color: #1e2024; }
+  #footer .footerBar .gives {
+    margin: 35px 0; }
+    #footer .footerBar .gives .logo {
+      margin-bottom: 25px; }
+      #footer .footerBar .gives .logo a {
+        display: block;
+        color: #de1219;
+        text-decoration: none;
+        font-size: 32px;
+        font-weight: 700;
+        font-family: Raleway, sans-serif; }
+        #footer .footerBar .gives .logo a span {
+          color: white; }
+    #footer .footerBar .gives .text {
+      margin-bottom: 20px; }
+      #footer .footerBar .gives .text p {
+        color: #cccccc;
+        line-height: 24px;
+        font-size: 14px; }
+    #footer .footerBar .gives .social {
+      color: #cccccc; }
+      #footer .footerBar .gives .social a {
+        text-decoration: none;
+        color: #cccccc; }
+        #footer .footerBar .gives .social a i {
+          font-size: 12px;
+          font-weight: bold;
+          width: 30px;
+          padding: 8px 0;
+          background-color: #2a2c32;
+          border-radius: 3px;
+          text-align: center;
+          cursor: pointer;
+          transition: all .3s ease-out 0s; }
+  #footer .footerBar .links {
+    margin: 35px 0; }
+    #footer .footerBar .links h5 {
+      font-size: 16px;
+      color: #cccccc;
+      margin-bottom: 25px; }
+    #footer .footerBar .links ul li {
+      line-height: 30px;
+      color: #cccccc;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all .3s ease-out 0s; }
+      #footer .footerBar .links ul li:hover {
+        margin-left: 6px;
+        color: #de1219; }
+      #footer .footerBar .links ul li:hover a {
+        color: #de1219; }
+      #footer .footerBar .links ul li a {
+        color: #cccccc;
+        text-decoration: none; }
+  #footer .footerBar .tags {
+    margin: 35px 0; }
+    #footer .footerBar .tags h5 {
+      color: #cccccc;
+      margin-bottom: 25px; }
+    #footer .footerBar .tags a {
+      transition: all .3s ease-out 0s;
+      font-size: 14px;
+      display: inline-block;
+      text-decoration: none;
+      color: #cccccc;
+      padding: 10px 12px;
+      margin: 3px 0;
+      background-color: #2a2c32;
+      border-radius: 3px; }
+      #footer .footerBar .tags a:hover {
+        background-color: white;
+        color: #de1219; }
+  #footer .footerBar .subscribe {
+    margin: 35px 0; }
+    #footer .footerBar .subscribe h5 {
+      color: #cccccc;
+      margin-bottom: 25px; }
+    #footer .footerBar .subscribe p {
+      color: #cccccc;
+      line-height: 24px;
+      font-size: 14px;
+      margin-bottom: 30px; }
+    #footer .footerBar .subscribe .form {
+      font-size: 14px; }
+      #footer .footerBar .subscribe .form input {
+        height: 45px;
+        border-radius: 3px;
+        outline-style: none;
+        box-shadow: none;
+        border-color: transparent;
+        font-size: 14px;
+        width: 100%; }
+      #footer .footerBar .subscribe .form button {
+        height: 45px;
+        background-color: #de1219;
+        border: none;
+        font-size: 14px;
+        color: white;
+        font-weight: 600;
+        padding: 0 20px;
+        border-radius: 3px;
+        outline-style: none;
+        box-shadow: none;
+        border-color: transparent; }
+#footer .copyright {
+  padding: 30px;
+  background-color: #161719;
+  text-align: center; }
+  #footer .copyright p {
+    color: #cccccc;
+    font-size: 14px;
+    font-family: Lato, sans-serif;
+    font-weight: 400; }
+
 @media only screen and (max-width: 992px) {
   #header .navMenuBig {
     display: none; }
   #header .navMenuSmall {
     display: block;
     box-shadow: none; }
+    #header .navMenuSmall .navInside {
+      border-bottom: 1px solid #dddddd; }
   #header .navMenuSmallTitle {
     display: block;
     box-shadow: none; }

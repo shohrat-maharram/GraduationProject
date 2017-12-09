@@ -47,14 +47,14 @@ $(document).ready(function () {
             thisNext.removeClass("showen");
             thisNext.addClass("hiden");
         }
-        // $(".menuResponse").toggle("slow");
     });
 
 });
 
 
 //Switching to native javascript
-//Add active class to the active page`
+
+//Add active class to the active page
 var pageTabs = document.getElementsByClassName("pageTabs");
 function activeTab(elem) {
     for (var i = 0; i < pageTabs.length; i++) {
@@ -68,5 +68,41 @@ function activeTab(elem) {
                 pageTabs[i].classList.add("active");
             }
         }
+    }
+}
+
+//Add active class to the active page
+var socialLinks = document.getElementsByClassName("socialLinks");
+function changeContent(elem) {
+    for (var i = 0; i < socialLinks.length; i++) {
+        if (elem != socialLinks[i]){
+            
+        }else{
+            socialLinks[i].style.backgroundColor = "white";
+            socialLinks[i].style.width = "70px";
+            socialLinks[i].style.color = "#de1219";
+
+            if (socialLinks[i].id=="facebook"){
+                socialLinks[i].textContent += " Facebook";
+            }
+            else if (socialLinks[i].id == "linkedin"){
+                socialLinks[i].textContent += " Linkedin";
+            } else if (socialLinks[i].id == "google") {
+                socialLinks[i].textContent += " Google";
+            } else if (socialLinks[i].id == "twitter") {
+                socialLinks[i].textContent += " Twitter";
+            } else if (socialLinks[i].id == "skype") {
+                socialLinks[i].textContent += " Skype";
+            }       
+        }
+    }
+}
+
+function resetContent(elem) {
+    for (var i = 0; i < socialLinks.length; i++) {
+        socialLinks[i].textContent = "";
+        socialLinks[i].style.backgroundColor = "#292b2f";
+        socialLinks[i].style.width = "30px";
+        socialLinks[i].style.color = "white";
     }
 }
