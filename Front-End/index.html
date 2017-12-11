@@ -20,7 +20,7 @@
 <body>
 
     <header id="header">
-        <div class="raw search">
+        <div class="row search">
             <div class="container pd-left pd-right">
                 <div class="col-md-12 flex pd-left pd-right">
                     <input type="text" class="input-lg searchBar pd-left" placeholder="Type and Hit Enter" />
@@ -29,7 +29,7 @@
             </div>
         </div>
 
-        <div class="raw navMenu navMenuBig pd">
+        <div class="row navMenu navMenuBig pd">
             <div class="container flex navMenuInside pd">
                 <nav class="navbar navbar-expand-lg navbar-light pd-bottom pd-left pd-right mg-bottom navInside flex">
                     <div class="col-md-3 pd-left logoDiv">
@@ -89,7 +89,7 @@
             </div>
         </div>
 
-        <div class="raw navMenu navMenuSmall">
+        <div class="row navMenu navMenuSmall">
             <div class="container flex navMenuInside pd">
                 <nav class="navbar navbar-expand-lg navbar-light pd-bottom pd-left pd-right mg-bottom navInside flex">
                     <div class="col-md-6 col-sm-6 col-xs-4 pd-left logoDiv clear">
@@ -105,7 +105,7 @@
             </div>
         </div>
 
-        <div class="raw navMenu navMenuSmallTitle">
+        <div class="row navMenu navMenuSmallTitle">
             <div class="container flex navMenuInside pd">
                 <nav class="navbar navbar-expand-lg navbar-light pd-bottom pd-left pd-right mg-bottom navInside flex">
                     <div class="col-md-6 col-sm-6 col-xs-4 pd-left logoDiv clear">
@@ -121,9 +121,9 @@
             </div>
         </div>
 
-        <div class="raw menuResponse">
+        <div class="row menuResponse">
             <div class="container pd-left pd-right">
-                <div class="raw">
+                <div class="row">
                     <ul>
                         <li class="clear">
                             <a href="">HOME</a>
@@ -173,20 +173,25 @@
 
 
 
-
+<!--     
     <section id="slider">
-        <div class="container">
-            <div class="raw">
-                <div id="sliderDiv" class="col-12">
+        <div class="container-fluid pd-left pd-right">
+            <div class="row">
+                <div id="sliderDiv" class="col-12 pd-left pd-right">
 
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+
+
+
+
 
     <section id="doings">
         <div class="container">
-
+            <h1 style="margin:200px 0px;">Main content</h1>
         </div>
     </section>
 
@@ -228,9 +233,8 @@
 
     <section id="recentNews">
         <div class="container">
-            <div class="raw">
+            <div class="row">
                 <div class="col-md-12">
-                    <h1 style="margin:300px 0px;">Bura main section-dir</h1>
                 </div>
             </div>
         </div>
@@ -239,77 +243,102 @@
 
 
     <footer id="footer">
-        <div class="raw footerBar">
+        <div class="footerBar">
             <div class="container pd-right pd-left">
-                <div class="col-lg-3 col-md-12 gives pd-left">
-                    <div class="logo">
-                        <a href="index.html">
-                            <span>G</span>ives
-                        </a>
+                <div class="row">
+                    <div class="col-lg-3 col-md-12 gives pd-left">
+                        <div class="logo">
+                            <a href="index.html">
+                                <span>G</span>ives
+                            </a>
+                        </div>
+                        <div class="text">
+                            <p>At vero eos et accusamus et iusto odio dignis simos ducimus qui blanditiis praesentiumlo volupt</p>
+                        </div>
+                        <div class="social">
+                            <a href="">
+                                <i id="twitter" class="fa fa-twitter socialLinks" aria-hidden="true" onmouseover="changeContent(this)" onmouseout="resetContent(this)"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="">
+                                <i id="google" class="fa fa-google-plus socialLinks" aria-hidden="true" onmouseover="changeContent(this)" onmouseout="resetContent(this)"></i>
+                                <span>Google+</span>
+                            </a>
+                            <a href="">
+                                <i id="facebook" class="fa fa-facebook socialLinks" aria-hidden="true" onmouseover="changeContent(this)" onmouseout="resetContent(this)"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="">
+                                <i id="linkedin" class="fa fa-linkedin socialLinks" aria-hidden="true" onmouseover="changeContent(this)" onmouseout="resetContent(this)"></i>
+                                <span>Linkedin</span>
+                            </a>
+                            <a href="">
+                                <i id="skype" class="fa fa-skype socialLinks" aria-hidden="true" onmouseover="changeContent(this)" onmouseout="resetContent(this)"></i>
+                                <span>Skype</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="text">
-                        <p>At vero eos et accusamus et iusto odio dignis simos ducimus qui blanditiis praesentiumlo volupt</p>
+                    <div class="col-lg-2 col-md-12 links pd-left">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li>
+                                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                <a href="">About Us</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                <a href="">Forum</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                <a href="">Terms and Conditions</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                <a href="">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                <a href="">Blog</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                <a href="">Compains</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="social">
-                        <a href="">
-                        <i id="twitter" class="fa fa-twitter socialLinks" aria-hidden="true" onmouseover="changeContent(this)" onmouseout="resetContent(this)"></i>
-                        </a>
-                        <a href="">
-                        <i id="google" class="fa fa-google-plus socialLinks" aria-hidden="true" onmouseover="changeContent(this)" onmouseout="resetContent(this)"></i>
-                        </a>
-                        <a href="">
-                        <i id="facebook" class="fa fa-facebook socialLinks" aria-hidden="true" onmouseover="changeContent(this)" onmouseout="resetContent(this)"></i>
-                        </a>
-                        <a href="">
-                        <i id="linkedin" class="fa fa-linkedin socialLinks" aria-hidden="true" onmouseover="changeContent(this)" onmouseout="resetContent(this)"></i>
-                        </a>
-                        <a href="">
-                        <i id="skype" class="fa fa-skype socialLinks" aria-hidden="true" onmouseover="changeContent(this)" onmouseout="resetContent(this)"></i>
-                        </a>                       
+                    <div class="col-lg-3 col-md-12 tags pd-left">
+                        <h5>Tags</h5>
+                        <a href="">Cause</a>
+                        <a href="">Lipsum</a>
+                        <a href="">Donation</a>
+                        <a href="">Chairtable</a>
+                        <a href="">Homeless</a>
+                        <a href="">Blog</a>
+                        <a href="">Minimal</a>
+                        <a href="">Health</a>
+                        <a href="">Education</a>
+                        <a href="">LifeStyle</a>
                     </div>
-                </div>
-                <div class="col-lg-2 col-md-12 links pd-left">
-                    <h5>Quick Links</h5>
-                    <ul>
-                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="">About Us</a></li>
-                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="">Forum</a></li>
-                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="">Terms and Conditions</a></li>
-                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="">Privacy Policy</a></li>
-                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="">Blog</a></li>
-                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="">Compains</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-12 tags pd-left">
-                    <h5>Tags</h5>
-                    <a href="">Cause</a>
-                    <a href="">Lipsum</a>
-                    <a href="">Donation</a>
-                    <a href="">Chairtable</a>
-                    <a href="">Homeless</a>
-                    <a href="">Blog</a>
-                    <a href="">Minimal</a>
-                    <a href="">Health</a>
-                    <a href="">Education</a>
-                    <a href="">LifeStyle</a>
-                </div>
-                <div class="col-lg-4 col-md-12 subscribe pd-left pd-right">
-                    <h5>Subscribe</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate provident amet reprehenderit!</p>
-                    <div class="form">
-                        <form class="form-inline">
-                            <div class="form-group mx-sm-3 mg-left">
-                                <input type="email" class="form-control " id="inputEmail" placeholder="Your E-mail">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Subscribe</button>
-                        </form>
+                    <div class="col-lg-4 col-md-12 subscribe pd-left pd-right">
+                        <h5>Subscribe</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate provident amet reprehenderit!</p>
+                        <div class="form">
+                            <form class="form-inline">
+                                <div class="form-group mx-sm-3 mg-left">
+                                    <input type="email" class="form-control " id="inputEmail" placeholder="Your E-mail">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Subscribe</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="raw copyright">
+        <div class="copyright">
             <div class="container">
-                <div class="raw">
+                <div class="row">
                     <div class="col-md-12">
                         <p>Copyright ©2017 Gives. All Rights Reserved</p>
                     </div>
@@ -317,9 +346,6 @@
             </div>
         </div>
     </footer>
-
-
-
 
 
 

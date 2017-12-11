@@ -1,0 +1,157 @@
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+// Screen size > 992px
+/* Header section */
+#causes-grid {
+  background: url("../img/parallax/img-1.jpg") no-repeat;
+  position: relative;
+  background-color: transparent;
+  padding: 90px 0;
+
+  .backgroundImg {
+    background-color: rgba(36, 40, 47, 0.55);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+
+  }
+
+  .sectionName {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+
+    h2 {
+      font-size: 29px;
+      font-family: $main-font;
+      font-weight: 900;
+      margin-bottom: 10px;
+      letter-spacing: -1px;
+    }
+
+    h5 {
+      font-size: 15px;
+      font-family: $main-font;
+    }
+  }
+}
+
+#cause-list {
+  background-color: $main-bg-color;
+  padding-bottom: 112px;
+  padding-top: 108px;
+
+  .cause {
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 0 1px lightgray;
+    transition: all .1s linear;
+
+    &:hover {
+      box-shadow: 0 0 10px lightgray;
+    }
+
+    &:hover .image > .over-lay {
+      opacity: 1;
+    }
+
+    &:hover .image > img {
+      transform: scale(1.12);
+    }
+
+    .image {
+      overflow: hidden;
+      position: relative;
+      line-height: 0;
+
+      img {
+        transition: all .1s linear;
+        transform: scale(1);
+      }
+
+      .over-lay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-color: rgba(36, 40, 47, 0.65);
+        z-index: 10;
+        opacity: 0;
+
+      }
+    }
+
+    .content {
+      text-align: center;
+      background-color: white;
+      width: 100%;
+      padding: 20px;
+
+      h4 {
+        a {
+          text-decoration: none;
+          color: $main-black-color;
+          font-weight: 600;
+          transition: all .1s linear;
+
+          &:hover {
+            color: $main-color;
+          }
+        }
+        margin-bottom: 15px;
+
+      }
+
+      p {
+        line-height: 24px;
+        font-size: 14px;
+        font-family: $main-font-2;
+        font-weight: 400;
+      }
+
+      .progressBar {
+        padding: 15px 0;
+
+        p {
+          margin-bottom: 15px;
+          font-size: 16px;
+
+          .Raised {
+            color: rgb(224, 7, 7);
+          }
+
+        }
+
+        .progress {
+          .progressOwn {
+            background-color: $main-color;
+            transition: all .3s linear;
+          }
+        }
+      }
+
+      .donation {
+        text-align: center;
+
+        .main-color {
+          background-color: $main-color;
+          color: white;
+          font-family: $main-font;
+          font-size: 14px;
+          font-weight: 600;
+          padding: 9px 38px;
+          border-radius: 6px;
+          transition: all .2s linear;
+
+          &:hover {
+            background-color: $main-black-color;
+          }
+        }
+      }
+    }
+
+  }
+}

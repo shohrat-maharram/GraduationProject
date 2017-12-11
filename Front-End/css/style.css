@@ -174,16 +174,14 @@ body {
 .float-right {
   float: right; }
 
-body {
-  height: 3000px; }
-
+/* Header section */
 #header {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 999; }
   #header .search {
-    background-color: #f8f8f8;
+    background-color: #f5f5f5;
     padding: 5px 0;
     display: none; }
     #header .search .flex {
@@ -292,7 +290,8 @@ body {
   #header .navMenuSmallTitle {
     display: none; }
   #header .menuResponse {
-    display: none; }
+    display: none;
+    background-color: white; }
     #header .menuResponse ul li {
       border-top: 1px solid #dddddd;
       position: relative; }
@@ -331,8 +330,48 @@ body {
             color: #919191;
             font-weight: normal; }
 
+/* Slider section */
+#slider .sliderFrame {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: lightgray;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden; }
+  #slider .sliderFrame .nextDiv {
+    position: absolute;
+    right: 40px;
+    bottom: 5px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    #slider .sliderFrame .nextDiv .nextRound {
+      width: 15px;
+      height: 15px;
+      box-sizing: border-box;
+      border-radius: 100%;
+      float: left;
+      background-color: #e6e6e6;
+      transition: background-color .2s linear; }
+      #slider .sliderFrame .nextDiv .nextRound:hover {
+        background-color: #de1219;
+        cursor: pointer; }
+  #slider .sliderFrame .slidesDiv {
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    transition: all .5s linear; }
+    #slider .sliderFrame .slidesDiv .slideDiv {
+      height: 100vh;
+      float: left;
+      background-repeat: no-repeat;
+      background-size: cover; }
+
+/* Footer section */
 #footer .footerBar {
-  padding: 50px 0;
+  padding: 50px 15px;
   background-color: #1e2024; }
   #footer .footerBar .gives {
     margin: 35px 0; }
@@ -356,18 +395,31 @@ body {
     #footer .footerBar .gives .social {
       color: #cccccc; }
       #footer .footerBar .gives .social a {
+        display: inline-block;
+        position: relative;
         text-decoration: none;
-        color: #cccccc; }
-        #footer .footerBar .gives .social a i {
-          font-size: 12px;
-          font-weight: bold;
-          width: 30px;
-          padding: 8px 0;
-          background-color: #2a2c32;
-          border-radius: 3px;
-          text-align: center;
-          cursor: pointer;
-          transition: all .3s ease-out 0s; }
+        color: #cccccc;
+        font-size: 12px;
+        font-weight: bold;
+        width: 28px;
+        padding: 8px;
+        background-color: #2a2c32;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all .3s ease-in 0s;
+        box-sizing: border-box;
+        overflow: hidden; }
+        #footer .footerBar .gives .social a:hover {
+          background-color: white;
+          width: 88px;
+          color: #de1219; }
+        #footer .footerBar .gives .social a:hover span {
+          visibility: visible; }
+        #footer .footerBar .gives .social a span {
+          position: absolute;
+          top: 8px;
+          left: 28px;
+          visibility: hidden; }
   #footer .footerBar .links {
     margin: 35px 0; }
     #footer .footerBar .links h5 {
@@ -443,7 +495,7 @@ body {
           background-color: white;
           color: #de1219; }
 #footer .copyright {
-  padding: 25px 0px;
+  padding: 25px 0;
   background-color: #161719;
   text-align: center; }
   #footer .copyright p {
@@ -506,5 +558,105 @@ body {
   #header .menuResponse {
     padding-right: 15px;
     padding-left: 15px; } }
+/* Header section */
+#causes-grid {
+  background: url("../img/parallax/img-1.jpg") no-repeat;
+  position: relative;
+  background-color: transparent;
+  padding: 90px 0; }
+  #causes-grid .backgroundImg {
+    background-color: rgba(36, 40, 47, 0.55);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 5; }
+  #causes-grid .sectionName {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white; }
+    #causes-grid .sectionName h2 {
+      font-size: 29px;
+      font-family: Raleway, sans-serif;
+      font-weight: 900;
+      margin-bottom: 10px;
+      letter-spacing: -1px; }
+    #causes-grid .sectionName h5 {
+      font-size: 15px;
+      font-family: Raleway, sans-serif; }
+
+#cause-list {
+  background-color: #f5f5f5;
+  padding-bottom: 112px;
+  padding-top: 108px; }
+  #cause-list .cause {
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 0 1px lightgray;
+    transition: all .1s linear; }
+    #cause-list .cause:hover {
+      box-shadow: 0 0 10px lightgray; }
+    #cause-list .cause:hover .image > .over-lay {
+      opacity: 1; }
+    #cause-list .cause:hover .image > img {
+      transform: scale(1.12); }
+    #cause-list .cause .image {
+      overflow: hidden;
+      position: relative;
+      line-height: 0; }
+      #cause-list .cause .image img {
+        transition: all .1s linear;
+        transform: scale(1); }
+      #cause-list .cause .image .over-lay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-color: rgba(36, 40, 47, 0.65);
+        z-index: 10;
+        opacity: 0; }
+    #cause-list .cause .content {
+      text-align: center;
+      background-color: white;
+      width: 100%;
+      padding: 20px; }
+      #cause-list .cause .content h4 {
+        margin-bottom: 15px; }
+        #cause-list .cause .content h4 a {
+          text-decoration: none;
+          color: #444444;
+          font-weight: 600;
+          transition: all .1s linear; }
+          #cause-list .cause .content h4 a:hover {
+            color: #de1219; }
+      #cause-list .cause .content p {
+        line-height: 24px;
+        font-size: 14px;
+        font-family: Lato, sans-serif;
+        font-weight: 400; }
+      #cause-list .cause .content .progressBar {
+        padding: 15px 0; }
+        #cause-list .cause .content .progressBar p {
+          margin-bottom: 15px;
+          font-size: 16px; }
+          #cause-list .cause .content .progressBar p .Raised {
+            color: #e00707; }
+        #cause-list .cause .content .progressBar .progress .progressOwn {
+          background-color: #de1219;
+          transition: all .3s linear; }
+      #cause-list .cause .content .donation {
+        text-align: center; }
+        #cause-list .cause .content .donation .main-color {
+          background-color: #de1219;
+          color: white;
+          font-family: Raleway, sans-serif;
+          font-size: 14px;
+          font-weight: 600;
+          padding: 9px 38px;
+          border-radius: 6px;
+          transition: all .2s linear; }
+          #cause-list .cause .content .donation .main-color:hover {
+            background-color: #444444; }
 
 /*# sourceMappingURL=style.css.map */

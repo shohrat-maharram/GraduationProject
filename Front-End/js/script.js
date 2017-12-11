@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    /*  ~~~~~~~~~~~~~~~~~~~~~ Home page ~~~~~~~~~~~~~~~~~~~~~ */
     //Show and hide search bar
     $(".searchIcon").click(function () {
         $(".search").show("slow");
@@ -48,10 +49,20 @@ $(document).ready(function () {
         }
     });
 
+    /*  ~~~~~~~~~~~~~~~~~~~~~ Causes page  ~~~~~~~~~~~~~~~~~~~~~ */
+
+
+
 });
 
 
-//Switching to native javascript
+
+
+
+/*  ~~~~~~~~~~~~~~~~~~~~~ Switching to native javascript  ~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/*  ~~~~~~~~~~~~~~~~~~~~~ Home page  ~~~~~~~~~~~~~~~~~~~~~ */
 
 //Add active class to the active page
 var pageTabs = document.getElementsByClassName("pageTabs");
@@ -70,48 +81,14 @@ function activeTab(elem) {
     }
 }
 
-//Add active class to the active page
-var socialLinks = document.getElementsByClassName("socialLinks");
-function changeContent(elem) {
-    for (var i = 0; i < socialLinks.length; i++) {
-        if (elem != socialLinks[i]) {
 
-        } else {
-            socialLinks[i].style.backgroundColor = "white";
-            socialLinks[i].style.width = "70px";
-            socialLinks[i].style.color = "#de1219";
-
-            if (socialLinks[i].id == "facebook") {
-                socialLinks[i].textContent += " Facebook";
-            }
-            else if (socialLinks[i].id == "linkedin") {
-                socialLinks[i].textContent += " Linkedin";
-            } else if (socialLinks[i].id == "google") {
-                socialLinks[i].textContent += " Google";
-            } else if (socialLinks[i].id == "twitter") {
-                socialLinks[i].textContent += " Twitter";
-            } else if (socialLinks[i].id == "skype") {
-                socialLinks[i].textContent += " Skype";
-            }
-        }
-    }
-}
-
-function resetContent(elem) {
-    for (var i = 0; i < socialLinks.length; i++) {
-        socialLinks[i].textContent = "";
-        socialLinks[i].style.backgroundColor = "#292b2f";
-        socialLinks[i].style.width = "30px";
-        socialLinks[i].style.color = "white";
-    }
-}
 
 // Creating slider
 // Images which is used in slider
-var slidePic = ["images/slide-hotel-1.jpg", "images/slide-hotel-2.jpg", "images/slide-hotel-3.jpg", "images/slide-hotel-1.jpg", "images/slide-hotel-2.jpg"];
+var slidePic = ["img/slides/s1.jpg", "img/slides/s2.jpg", "img/slides/s3.jpg"];
 
 // Creating slider frame
-var slider = document.querySelector("#slider");
+var slider = document.querySelector("#sliderDiv");
 var sliderFrame = document.createElement("div");
 sliderFrame.setAttribute("class", "sliderFrame");
 slider.appendChild(sliderFrame);
@@ -120,25 +97,29 @@ slider.appendChild(sliderFrame);
 var nextDiv = document.createElement("div");
 nextDiv.setAttribute("class", "nextDiv");
 sliderFrame.appendChild(nextDiv);
-nextDiv.style.width = (20 * slidePic.length) + "px";
-nextDiv.style.left = ((1200 - (20 * slidePic.length)) / 2) + "px";
+nextDiv.style.height = (20 * slidePic.length) + "px";
+var heightVP = document.documentElement.clientHeight
+nextDiv.style.top = ((heightVP - (20 * slidePic.length)) / 2) + "px";
 
 // Creating slides content
 var slidesDiv = document.createElement("div");
 slidesDiv.setAttribute("class", "slidesDiv");
 sliderFrame.appendChild(slidesDiv);
-slidesDiv.style.width = (1200 * slidePic.length) + "px";
+// slidesDiv.style.width = (1200 * slidePic.length) + "px";
 
+var widthVP;
+window.addEventListener("resize", function (event) {
+    var widthVP = document.body.clientWidth;
+})
+console.log(widthVP);
 // Embedding pics
 for (i = 0; i < slidePic.length; i++) {
     var slideDiv = document.createElement("div");
     slideDiv.setAttribute("class", "slideDiv");
+    slideDiv.style.backgroundImage = "url(" + slidePic[i] + ")";
+    var widthVP = document.documentElement.clientWidth;
+    slideDiv.style.width = (widthVP) + "px";
     slidesDiv.appendChild(slideDiv);
-
-    var pic = document.createElement("img");
-    pic.setAttribute("class", "pic");
-    pic.setAttribute("src", slidePic[i]);
-    slideDiv.appendChild(pic);
 
     var nextRound = document.createElement("div");
     nextRound.setAttribute("class", "nextRound");
@@ -149,17 +130,17 @@ for (i = 0; i < slidePic.length; i++) {
 
 // Get index of round Navs
 var nextRound_index = document.getElementsByClassName("nextRound");
-nextRound_index[0].style.backgroundColor = "white";
+nextRound_index[0].style.backgroundColor = "#de1219";
 
 // Make slider dinamic
 var index = 0;
 function changeSlide() {
     if (index < slidePic.length) {
         for (j = 0; j < slidePic.length; j++) {
-            nextRound_index[j].style.backgroundColor = "transparent";
+            nextRound_index[j].style.backgroundColor = "white";
         }
-        slidesDiv.style.left = -index * 1200 + "px";
-        nextRound_index[index].style.backgroundColor = "white";
+        slidesDiv.style.left = (-index * widthVP) + "px";
+        nextRound_index[index].style.backgroundColor = "#de1219";
         index++;
     } else {
         slidesDiv.style.left = -index * 0 + "px";
@@ -172,9 +153,10 @@ setInterval(changeSlide, 6000)
 function get_data_index(e) {
     data_index = e.target.getAttribute("data-index");
     for (j = 0; j < slidePic.length; j++) {
-        nextRound_index[j].style.backgroundColor = "transparent";
+        nextRound_index[j].style.backgroundColor = "white";
     }
-    nextRound_index[data_index].style.backgroundColor = "white";
-    slidesDiv.style.left = -data_index * 1200 + "px";
+    // alert(slidePic[data_index])
+    nextRound_index[data_index].style.backgroundColor = "#de1219";
+    slidesDiv.style.left = (-data_index * widthVP) + "px";
 
 }

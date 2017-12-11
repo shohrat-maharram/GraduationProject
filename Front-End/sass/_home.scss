@@ -1,9 +1,7 @@
-body{
-  height: 3000px;
-}
+
 // <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
 // Screen size > 992px
-//Header
+/* Header section */
 #header {
   position: fixed;
   top: 0;
@@ -183,6 +181,7 @@ body{
   //Responsive menu
   .menuResponse {
     display: none;
+    background-color: white;
 
     ul {
       li {
@@ -242,10 +241,67 @@ body{
   }
 }
 
-//Footer
+/* Slider section */
+#slider {
+  .sliderFrame {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: lightgray;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+
+    //Creating rounded nav 
+    .nextDiv {
+      position: absolute;
+      right: 40px;
+      bottom: 5px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .nextRound {
+        width: 15px;
+        height: 15px;
+        box-sizing: border-box;
+        border-radius: 100%;
+        float: left;
+        background-color: darken(white,10);
+        transition: background-color .2s linear;
+
+        &:hover {
+          background-color: #de1219;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .slidesDiv {
+      height: 100vh;
+      position: absolute;
+      left: 0;
+      transition: all .5s linear;
+
+      .slideDiv {
+        height: 100vh;
+        float: left;
+        background-repeat: no-repeat;
+        // background-attachment: fixed;
+        // background-position: center;
+        background-size: cover;
+      }
+    }
+
+  }
+
+}
+
+/* Footer section */
 #footer {
   .footerBar {
-    padding: 50px 0;
+    padding: 50px 15px;
     background-color: #1e2024;
 
     .gives {
@@ -282,19 +338,38 @@ body{
         color: darken(white,20);
 
         a {
+          display: inline-block;
+          position: relative;
           text-decoration: none;
           color: darken(white,20);
+          font-size: 12px;
+          font-weight: bold;
+          width: 28px;
+          padding: 8px;
+          background-color: lighten(#1e2024,5);
+          border-radius: 3px;
+          cursor: pointer;
+          transition: all .3s ease-in 0s;
+          box-sizing: border-box;
+          overflow: hidden;
 
-          i {
-            font-size: 12px;
-            font-weight: bold;
-            width: 30px;
-            padding: 8px 0;
-            background-color: lighten(#1e2024,5);
-            border-radius: 3px;
-            text-align: center;
-            cursor: pointer;
-            transition: all .3s ease-out 0s;
+          &:hover {
+            background-color: white;
+            width: 88px;
+            color: $main-color;
+          }
+
+          &:hover span {
+            visibility: visible;
+          }
+
+          i {}
+
+          span {
+            position: absolute;
+            top: 8px;
+            left: 28px;
+            visibility: hidden;
           }
         }
 
@@ -402,6 +477,7 @@ body{
           box-shadow: none;
           border-color: transparent;
           transition: all .3s linear 0s;
+
           &:hover {
             background-color: white;
             color: $main-color;
@@ -412,7 +488,7 @@ body{
   }
 
   .copyright {
-    padding: 25px 0px;
+    padding: 25px 0;
     background-color: #161719;
     text-align: center;
 
