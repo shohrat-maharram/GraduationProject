@@ -106,9 +106,9 @@
     <section id="single-cause-pay">
         <div class="container">
             <div class="row">
-                <div class="col-md-10 col-md-offset-1 tabs">
-                    <div class="tab-links">
-                        <ul>
+                <div class="col-md-10 col-md-offset-1 tabs clear">
+                    <div class="tab-links clear">
+                        <ul class="clear">
                             <li class="active tab-link">
                                 <i class="fa fa-paypal"></i>
                                 <p>PayPlay</p>
@@ -125,34 +125,34 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 contents">
                     <div class="tab-content">
-                        <div class="active tab-item paypal">
+                        <div class="active tab-item paypal" style="display:none;">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, omnis, ad. Eligendi
                                 molestiae qui, modi minima voluptatibus est accusamus nisi reprehenderit mollitia vitae perferendis
                                 aliquam tenetur sequi enim tempora expedita, assumenda doloremque quos maxime esse.</p>
-                            <form>
+                            <form class="Form">
                                 <div class="row">
-                                    <div class="col">
+                                    <div class="col radios">
                                         <label for="gridRadios">Donation Amount</label>
-                                        <label></label>
-                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                                            "        $50"
-                                        </label>
-                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">$100
-                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">$150
+                                        <input type="radio" name="gridRadios" id="gridRadios1" value="option1" checked><span> $50</span>
+                                        <input type="radio" name="gridRadios" id="gridRadios2" value="option2"><span> $100</span>
+                                        <input type="radio" name="gridRadios" id="gridRadios3" value="option3"><span> $150</span>
 
                                     </div>
-                                    <div class="col">
+                                    <div class="col numbers">
                                         <label for="paypal">PayPal</label>
-                                        <input type="text" name="paypal" class="form-control">
+                                        <input type="text" name="paypal" class="form-control numberInput">
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary main-color">
                                     <i class="fa fa-archive"></i>
                                     Donate Now
                                 </button>
                             </form>
                         </div>
-                        <div class="tab-item visa"></div>
+
+                        <div class="tab-item visa">
+
+                        </div>
                     </div>
                 </div>
             </div>

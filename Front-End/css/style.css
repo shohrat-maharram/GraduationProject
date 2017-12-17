@@ -127,7 +127,7 @@ table {
   border-spacing: 0; }
 
 body {
-  font-family: Raleway, sans-serif; }
+  font-family: "Raleway", sans-serif; }
 
 .clear {
   clear: both; }
@@ -194,7 +194,7 @@ body {
       width: 95%;
       font-size: 14px;
       font-weight: 400;
-      font-family: Lato, sans-serif;
+      font-family: "Lato", sans-serif;
       line-height: 0;
       outline-style: none;
       box-shadow: none;
@@ -225,7 +225,7 @@ body {
             font-size: 32px;
             color: #de1219;
             font-weight: 600;
-            font-family: Raleway, sans-serif; }
+            font-family: "Raleway", sans-serif; }
             #header .navMenu .navMenuInside .navInside .logoDiv .logo span {
               color: #444444;
               font-weight: 900; }
@@ -302,7 +302,7 @@ body {
           display: block;
           text-decoration: none;
           color: #444444;
-          font-family: Raleway, sans-serif;
+          font-family: "Raleway", sans-serif;
           font-size: 12px;
           font-weight: 600;
           padding: 15px;
@@ -386,7 +386,7 @@ body {
         text-decoration: none;
         font-size: 32px;
         font-weight: 700;
-        font-family: Raleway, sans-serif; }
+        font-family: "Raleway", sans-serif; }
         #footer .footerBar .gives .logo a span {
           color: white; }
     #footer .footerBar .gives .text {
@@ -504,7 +504,7 @@ body {
   #footer .copyright p {
     color: #cccccc;
     font-size: 14px;
-    font-family: Lato, sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 400; }
 
 @media only screen and (min-width: 992px) {
@@ -584,13 +584,13 @@ body {
     color: white; }
     #grid-causes-grid .sectionName h2 {
       font-size: 29px;
-      font-family: Raleway, sans-serif;
+      font-family: "Raleway", sans-serif;
       font-weight: 900;
       margin-bottom: 10px;
       letter-spacing: -1px; }
     #grid-causes-grid .sectionName h5 {
       font-size: 15px;
-      font-family: Raleway, sans-serif; }
+      font-family: "Raleway", sans-serif; }
 
 #grid-cause-list {
   background-color: #f5f5f5;
@@ -639,7 +639,7 @@ body {
       #grid-cause-list .cause .content p {
         line-height: 24px;
         font-size: 14px;
-        font-family: Lato, sans-serif;
+        font-family: "Lato", sans-serif;
         font-weight: 400; }
       #grid-cause-list .cause .content .progress_section {
         padding: 15px 0; }
@@ -671,7 +671,7 @@ body {
         #grid-cause-list .cause .content .donation .main-color {
           background-color: #de1219;
           color: white;
-          font-family: Raleway, sans-serif;
+          font-family: "Raleway", sans-serif;
           font-size: 14px;
           font-weight: 600;
           padding: 9px 38px;
@@ -700,13 +700,13 @@ body {
     color: white; }
     #list-causes-grid .sectionName h2 {
       font-size: 29px;
-      font-family: Raleway, sans-serif;
+      font-family: "Raleway", sans-serif;
       font-weight: 900;
       margin-bottom: 10px;
       letter-spacing: -1px; }
     #list-causes-grid .sectionName h5 {
       font-size: 15px;
-      font-family: Raleway, sans-serif; }
+      font-family: "Raleway", sans-serif; }
 
 #list-cause-list {
   background-color: #f5f5f5;
@@ -752,7 +752,7 @@ body {
       #list-cause-list .list-cause-row .cause .content p {
         line-height: 24px;
         font-size: 14px;
-        font-family: Lato, sans-serif;
+        font-family: "Lato", sans-serif;
         font-weight: 400;
         color: #4a4a4a; }
       #list-cause-list .list-cause-row .cause .content .progress_section {
@@ -784,7 +784,7 @@ body {
         #list-cause-list .list-cause-row .cause .content .donation .main-color {
           background-color: #de1219;
           color: white;
-          font-family: Raleway, sans-serif;
+          font-family: "Raleway", sans-serif;
           font-size: 14px;
           font-weight: 600;
           padding: 9px 38px;
@@ -816,13 +816,13 @@ body {
     color: white; }
     #single-causes-grid .sectionName h2 {
       font-size: 29px;
-      font-family: Raleway, sans-serif;
+      font-family: "Raleway", sans-serif;
       font-weight: 900;
       margin-bottom: 10px;
       letter-spacing: -1px; }
     #single-causes-grid .sectionName h5 {
       font-size: 15px;
-      font-family: Raleway, sans-serif; }
+      font-family: "Raleway", sans-serif; }
 
 #single-cause-list {
   background-color: #f5f5f5;
@@ -886,7 +886,7 @@ body {
       #single-cause-list .mainCol .donationBar .donation .main-color {
         background-color: #de1219;
         color: white;
-        font-family: Raleway, sans-serif;
+        font-family: "Raleway", sans-serif;
         font-size: 14px;
         font-weight: 600;
         padding: 9px 38px;
@@ -898,29 +898,35 @@ body {
       color: #4a4a4a;
       font-size: 14px;
       line-height: 20px;
-      font-family: Lato, sans-serif;
+      font-family: "Lato", sans-serif;
       margin-bottom: 10px; }
 
 #single-cause-pay {
   background-color: #f2f2f2;
   padding: 50px 0 108px; }
-  #single-cause-pay .tabs {
-    border-bottom: 1px solid #e2e2e2; }
-    #single-cause-pay .tabs ul {
+  #single-cause-pay .tabs .tab-links {
+    border-bottom: 1px solid #e2e2e2;
+    width: 100%;
+    height: 100%; }
+    #single-cause-pay .tabs .tab-links ul {
       clear: both; }
-      #single-cause-pay .tabs ul li {
+      #single-cause-pay .tabs .tab-links ul .active {
+        color: #de1219;
+        border-bottom: 2px solid #de1219; }
+      #single-cause-pay .tabs .tab-links ul li {
         padding: 10px 15px 20px;
+        margin-right: 35px;
         list-style: none;
         float: left;
         color: #4a4a4a;
         font-family: "Helvetica Neue", sans-serif;
         font-size: 14px; }
-        #single-cause-pay .tabs ul li:hover {
+        #single-cause-pay .tabs .tab-links ul li:hover {
           cursor: pointer; }
-        #single-cause-pay .tabs ul li i {
+        #single-cause-pay .tabs .tab-links ul li i {
           float: left;
           margin-right: 5px; }
-        #single-cause-pay .tabs ul li p {
+        #single-cause-pay .tabs .tab-links ul li p {
           float: left; }
   #single-cause-pay .contents {
     margin-top: 25px; }
@@ -928,10 +934,43 @@ body {
       font-size: 14px;
       line-height: 24px;
       color: #4a4a4a;
-      font-family: Lato, sans-serif; }
-    #single-cause-pay .contents .paypal form {
+      font-family: "Lato", sans-serif; }
+    #single-cause-pay .contents .paypal .Form {
       padding: 30px 0; }
-    #single-cause-pay .contents .paypal input[type=radio]:checked {
-      color: #f00; }
+      #single-cause-pay .contents .paypal .Form .radios input {
+        font-size: 14px;
+        line-height: 20px; }
+      #single-cause-pay .contents .paypal .Form .radios span {
+        margin: 10px 25px 0 0;
+        font-size: 14px; }
+      #single-cause-pay .contents .paypal .Form .numbers .numberInput {
+        height: 45px;
+        font-size: 14px;
+        line-height: 20px; }
+      #single-cause-pay .contents .paypal .Form .numbers .numberInput:focus {
+        outline: none;
+        box-shadow: none;
+        text-decoration: none; }
+      #single-cause-pay .contents .paypal .Form label {
+        font-size: 16px;
+        font-weight: 400;
+        font-family: "Raleway", sans-serif;
+        color: #444;
+        display: block;
+        line-height: 20px;
+        margin-bottom: 10px; }
+      #single-cause-pay .contents .paypal .Form .main-color {
+        background-color: #de1219;
+        color: white;
+        font-family: "Raleway", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 12px 30px;
+        margin-top: 45px;
+        border: none;
+        border-radius: 6px;
+        transition: all .2s linear; }
+        #single-cause-pay .contents .paypal .Form .main-color:hover {
+          background-color: #444444; }
 
 /*# sourceMappingURL=style.css.map */
