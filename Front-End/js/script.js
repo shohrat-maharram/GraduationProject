@@ -1,22 +1,32 @@
 $(document).ready(function () {
 
+    // $(".progressOwn").bind("load",function () {
+    //     this.classList.add("changeWidth"); 
+    // });
+
+    $('.progressOwn').on('inview', function (event, visible) {
+        if (visible == true) {
+            this.classList.add("changeWidth");
+        }
+    });
+
     /*  ~~~~~~~~~~~~~~~~~~~~~ Home page ~~~~~~~~~~~~~~~~~~~~~ */
     //Show and hide search bar
     $(".searchIcon").click(function () {
-        $(".search").show("slow");
+        $(".search").slideDown("slow");
     });
 
     $(".searchClose").click(function () {
-        $(".search").hide("slow");
+        $(".search").slideUp("slow");
     });
 
     //Show and hide navbar submenu
     $(".subMenuLi").hover(function () {
-        $(this).find("ul").show(300);
+        $(this).find("ul").slideDown(100);
     });
 
     $(".subMenuLi").mouseleave(function () {
-        $(".subMenu").hide("slow");
+        $(".subMenu").slideUp(100);
     });
 
     //Show and hide responsive navbar menu
@@ -28,7 +38,7 @@ $(document).ready(function () {
             this.classList.remove("fa-times");
             this.classList.add("fa-bars");
         }
-        $(".menuResponse").toggle("slow");
+        $(".menuResponse").slideToggle(300);
     });
 
     //Show and hide responsive navbar submenus
@@ -37,13 +47,13 @@ $(document).ready(function () {
         if (thisNext.hasClass("hiden")) {
             this.classList.remove("fa-plus");
             this.classList.add("fa-minus");
-            thisNext.show();
+            thisNext.slideToggle();
             thisNext.removeClass("hiden");
             thisNext.addClass("showen");
         } else {
             this.classList.remove("fa-minus");
             this.classList.add("fa-plus");
-            thisNext.hide();
+            thisNext.slideToggle();
             thisNext.removeClass("showen");
             thisNext.addClass("hiden");
         }
@@ -51,10 +61,45 @@ $(document).ready(function () {
 
     /*  ~~~~~~~~~~~~~~~~~~~~~ Causes page  ~~~~~~~~~~~~~~~~~~~~~ */
 
+    //making Progressbar dynamically
+    var progressBar = $(".progressOwn").offset().top;
+    var checked = false;
+
+    $(window).scroll(function () {
+        var windowTop = $(window).scrollTop();
+
+        if (progressBar <= windowTop + 500 && !checked) {
+
+            $('.progressOwn').each(function (index, value) {
+                var progressBarOwn = $(this),
+                    width = 0,
+                    verilenWidth = $(value).text();
+                $(this).text(verilenWidth+"%");
+
+                var interval = setInterval(function () {
+                    width += 3.5;
+                    progressBarOwn.css({
+                        "width": width + "%",
+                        "color":"white",
+                        "padding-right":"5px"                        
+                });                    
+                    if (width >= verilenWidth) {
+                        clearInterval(interval);
+                    }
+                }, 100)
+            });
+            checked = true;
+        }
+    })
+
+
 
 
 });
 
+// $(window).on("load", function () {
+//     $(".progressOwn").classList.add("changeWidth");
+// });
 
 
 
@@ -81,7 +126,61 @@ function activeTab(elem) {
     }
 }
 
+/*  ~~~~~~~~~~~~~~~~~~~~~ Causes page  ~~~~~~~~~~~~~~~~~~~~~ */
 
+//Making dynamically progress bar
+// var elem = document.getElementsByClassName("content");
+// // window.onscroll()
+// var windowHeight= window.innerHeight;
+// var x=elem.scrollTop;
+// console.log(x);
+
+function myFunc() {
+    var elem = document.getElementsByClassName("progressOwn");
+    // elem.style.width="300px"
+    // var width = 0;
+    // var id = setInterval(frame, 10);
+    // function frame() {
+    //     if (width >= 100) {
+    //         clearInterval(id);
+    //     } else {
+    //         width++;
+    //         elem.style.width = width + '%';
+    //     }
+    // }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 // Creating slider
 // Images which is used in slider
@@ -158,5 +257,5 @@ function get_data_index(e) {
     // alert(slidePic[data_index])
     nextRound_index[data_index].style.backgroundColor = "#de1219";
     slidesDiv.style.left = (-data_index * widthVP) + "px";
-
 }
+*/

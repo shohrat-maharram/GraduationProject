@@ -2,7 +2,8 @@
 // <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
 // Screen size > 992px
 /* Header section */
-#causes-grid {
+
+#grid-causes-grid {
   background: url("../img/parallax/img-1.jpg") no-repeat;
   position: relative;
   background-color: transparent;
@@ -39,7 +40,7 @@
   }
 }
 
-#cause-list {
+#grid-cause-list {
   background-color: $main-bg-color;
   padding-bottom: 112px;
   padding-top: 108px;
@@ -112,7 +113,7 @@
         font-weight: 400;
       }
 
-      .progressBar {
+      .progress_section {
         padding: 15px 0;
 
         p {
@@ -125,10 +126,27 @@
 
         }
 
-        .progress {
+        .progress_barr {
+          background-color: $main-bg-color;
+          width: 100%;
+          position: relative;
+
           .progressOwn {
             background-color: $main-color;
-            transition: all .3s linear;
+            width: .4%;
+            -webkit-transition: width .8s linear;
+            transition: width .8s linear;
+            text-align: left;
+            position: relative;
+            z-index: 6;
+            font-size: 10px;
+            color: transparent;
+            line-height: 14px;
+            text-align: right;
+          }
+          
+          .changeWidth {
+            width: 50%;
           }
         }
       }

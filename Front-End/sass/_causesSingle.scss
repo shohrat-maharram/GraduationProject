@@ -1,0 +1,217 @@
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+// Screen size > 992px
+/* Header section */
+#single-causes-grid {
+  background: url("../img/parallax/img-1.jpg") no-repeat;
+  position: relative;
+  background-color: transparent;
+  padding: 90px 0;
+
+  .backgroundImg {
+    background-color: rgba(36, 40, 47, 0.55);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+
+  }
+
+  .sectionName {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+
+    h2 {
+      font-size: 29px;
+      font-family: $main-font;
+      font-weight: 900;
+      margin-bottom: 10px;
+      letter-spacing: -1px;
+    }
+
+    h5 {
+      font-size: 15px;
+      font-family: $main-font;
+    }
+  }
+}
+
+#single-cause-list {
+  background-color: $main-bg-color;
+  padding-bottom: 70px;
+  padding-top: 108px;
+
+  .mainCol {
+    overflow: hidden;
+
+    .imageWrapper {
+      margin-bottom: 30px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .title {
+      height: 45px;
+      clear: both;
+      margin-bottom: 30px;
+
+      h2 {
+        float: left;
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 700;
+
+      }
+
+      div {
+        float: right;
+        margin-top: 30px;
+
+        p {
+          float: left;
+          font-size: 14px;
+          line-height: 14px;
+          color: rgba(0, 0, 0, 0.55);
+
+          i {
+            color: $main-color;
+          }
+
+          &:first-child {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+
+    .donationBar {
+      .progress_section {
+        width: 70%;
+        float: left;
+
+        p {
+          .Raised {
+            color: $main-color;
+            font-size: 16px;
+          }
+
+          span {
+            color: $main-font-color;
+            font-size: 14px;
+          }
+        }
+
+        .progress_barr {
+          background-color: #f0ecec;
+          width: 100%;
+          margin: 30px 0;
+
+          .progressOwn {
+            background-color: $main-color;
+            width: .4%;
+            -webkit-transition: width .8s linear;
+            transition: width .8s linear;
+            text-align: left;
+            position: relative;
+            z-index: 6;
+            font-size: 10px;
+            color: transparent;
+            line-height: 14px;
+            text-align: right;
+          }
+        }
+      }
+
+      .donation {
+        margin-top: 20px;
+        float: right;
+
+        .main-color {
+          background-color: $main-color;
+          color: white;
+          font-family: $main-font;
+          font-size: 14px;
+          font-weight: 600;
+          padding: 9px 38px;
+          border-radius: 6px;
+          transition: all .2s linear;
+
+          &:hover {
+            background-color: $main-black-color;
+          }
+        }
+      }
+    }
+
+    .infoText {
+      p {
+        color: $main-font-color;
+        font-size: 14px;
+        line-height: 20px;
+        font-family: $main-font-2;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+#single-cause-pay {
+  background-color: #f2f2f2;
+  padding: 50px 0 108px;
+
+  .tabs {
+    border-bottom: 1px solid #e2e2e2;
+
+    ul {
+      li {
+        padding: 10px 15px 20px;
+        list-style: none;
+        float: left;
+        color: $main-font-color;
+        font-family: $main-font-3;
+        font-size: 14px;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        i {
+          float: left;
+          margin-right: 5px;
+        }
+
+        p {
+          float: left;
+        }
+      }
+      clear: both;
+    }
+  }
+
+  .contents {
+    margin-top: 25px;
+
+    .paypal {
+      p {
+        font-size: 14px;
+        line-height: 24px;
+        color: $main-font-color;
+        font-family: $main-font-2;
+      }
+
+      form {
+        padding: 30px 0;
+
+      }
+
+      input[type=radio]:checked {
+        color: #f00;
+      }
+    }
+  }
+}

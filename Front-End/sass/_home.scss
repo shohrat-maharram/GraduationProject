@@ -140,6 +140,7 @@
                     }
 
                     a {
+                      text-decoration: none;
                       color: white;
                       margin-left: 10px;
                     }
@@ -184,6 +185,8 @@
     background-color: white;
 
     ul {
+      width: 100%;
+
       li {
         border-top: 1px solid lighten($main-black-color,60%);
         position: relative;
@@ -502,6 +505,14 @@
 }
 
 // <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+
+// Screen size bigger than 992px
+@media only screen and (min-width: 992px) {
+  .menuResponse {
+    display: none;
+  }
+}
+
 // Screen size between 992px and 768px
 @media only screen and (max-width: 992px) {
 
