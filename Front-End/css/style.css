@@ -1018,4 +1018,32 @@ body {
         #single-cause-pay .contents .visa .Form .main-color:hover {
           background-color: #444444; }
 
+/* Header section */
+#gallery-grid {
+  background: url("../img/parallax/img-1.jpg") no-repeat;
+  position: relative;
+  background-color: transparent;
+  padding: 90px 0; }
+  #gallery-grid .backgroundImg {
+    background-color: rgba(36, 40, 47, 0.55);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 5; }
+  #gallery-grid .sectionName {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white; }
+    #gallery-grid .sectionName h2 {
+      font-size: 29px;
+      font-family: "Raleway", sans-serif;
+      font-weight: 900;
+      margin-bottom: 10px;
+      letter-spacing: -1px; }
+    #gallery-grid .sectionName h5 {
+      font-size: 15px;
+      font-family: "Raleway", sans-serif; }
+
 /*# sourceMappingURL=style.css.map */

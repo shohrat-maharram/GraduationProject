@@ -1,0 +1,41 @@
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+// Screen size > 992px
+/* Header section */
+
+#gallery-grid {
+    background: url("../img/parallax/img-1.jpg") no-repeat;
+    position: relative;
+    background-color: transparent;
+    padding: 90px 0;
+  
+    .backgroundImg {
+      background-color: rgba(36, 40, 47, 0.55);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      z-index: 5;
+  
+    }
+  
+    .sectionName {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      color: white;
+  
+      h2 {
+        font-size: 29px;
+        font-family: $main-font;
+        font-weight: 900;
+        margin-bottom: 10px;
+        letter-spacing: -1px;
+      }
+  
+      h5 {
+        font-size: 15px;
+        font-family: $main-font;
+      }
+    }
+}
