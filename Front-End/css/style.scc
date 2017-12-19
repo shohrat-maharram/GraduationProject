@@ -912,8 +912,7 @@ body {
       clear: both; }
       #single-cause-pay .tabs .tab-links ul .active {
         color: #de1219;
-        border-bottom: 2px solid #de1219;
-        cursor: auto !important; }
+        border-bottom: 2px solid #de1219; }
       #single-cause-pay .tabs .tab-links ul li {
         padding: 10px 15px 20px;
         margin-right: 35px;
@@ -980,6 +979,20 @@ body {
       font-family: "Lato", sans-serif; }
     #single-cause-pay .contents .visa .Form {
       padding: 30px 0; }
+      #single-cause-pay .contents .visa .Form .radios input {
+        font-size: 14px;
+        line-height: 20px; }
+      #single-cause-pay .contents .visa .Form .radios span {
+        margin: 10px 25px 0 0;
+        font-size: 14px; }
+      #single-cause-pay .contents .visa .Form .numbers .numberInput {
+        height: 45px;
+        font-size: 14px;
+        line-height: 20px; }
+      #single-cause-pay .contents .visa .Form .numbers .numberInput:focus {
+        outline: none;
+        box-shadow: none;
+        text-decoration: none; }
       #single-cause-pay .contents .visa .Form label {
         font-size: 16px;
         font-weight: 400;
@@ -987,23 +1000,7 @@ body {
         color: #444;
         display: block;
         line-height: 20px;
-        margin: 10px 0px; }
-      #single-cause-pay .contents .visa .Form .rowPd {
-        padding: 15px 0px; }
-      #single-cause-pay .contents .visa .Form .Input {
-        height: 45px;
-        font-size: 14px;
-        line-height: 20px; }
-      #single-cause-pay .contents .visa .Form .Input:focus {
-        outline: none;
-        box-shadow: none;
-        text-decoration: none; }
-      #single-cause-pay .contents .visa .Form .radios input {
-        font-size: 14px;
-        line-height: 20px; }
-      #single-cause-pay .contents .visa .Form .radios span {
-        margin: 10px 25px 0 0;
-        font-size: 14px; }
+        margin-bottom: 10px; }
       #single-cause-pay .contents .visa .Form .main-color {
         background-color: #de1219;
         color: white;
@@ -1018,4 +1015,4 @@ body {
         #single-cause-pay .contents .visa .Form .main-color:hover {
           background-color: #444444; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.scc.map */
