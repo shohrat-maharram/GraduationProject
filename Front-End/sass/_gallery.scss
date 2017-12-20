@@ -45,6 +45,14 @@
   .galleryWrapper{
     padding: 30px 0px;
 
+    .Width-25{
+      @extend .width-25;
+    }
+
+    .Width-50{
+      @extend .width-50;
+    }
+
     .galleryImage{
       padding: 3px;
       
@@ -107,5 +115,71 @@
         }
       }      
     }
+  }  
+}
+
+
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+
+// Screen size between 992px and 768px
+@media only screen and (max-width: 992px) {
+  #gallery-slide-image{    
+    .galleryWrapper{
+      .galleryImage{
+        .image{
+          .overlay{  
+            &:hover i{
+              transform: translateY(70px)
+            }     
+          }
+        }      
+      }
+    }  
+  }  
+}
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+// Screen size between 768 and 576px
+@media only screen and (max-width: 768px) {
+  #gallery-slide-image{    
+    .galleryWrapper{
+      
+      .Width-25{
+        width: 50%;
+      }
+
+      .Width-50{
+        width: 100%;
+      }
+
+      .galleryImage{
+        .image{
+          .overlay{  
+            &:hover i{
+              transform: translateY(120px)
+            }     
+          }
+        }      
+      }
+    }  
+  }   
+}
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+// Screen size < 576px
+@media only screen and (max-width: 576px) {
+  #gallery-slide-image{    
+    .galleryWrapper{
+      .galleryImage{
+        .image{
+          .overlay{  
+            &:hover i{
+              transform: translateY(80px)
+            }     
+          }
+        }      
+      }
+    }  
   }  
 }
