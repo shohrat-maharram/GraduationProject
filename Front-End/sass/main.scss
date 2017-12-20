@@ -213,7 +213,9 @@ body {
 .float-right {
   float: right;
 }
-
+.overFlow{
+  overflow: hidden;
+}
 // Imports
 @import 'home';
 @import 'causesGrid';
