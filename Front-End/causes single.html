@@ -30,8 +30,7 @@
                 <div>
                     <h5>
                         Home
-                        <i class="fa fa-angle-double-right"></i>
-                        Causes Grid
+                        <i class="fa fa-angle-double-right"></i> Causes Grid
                     </h5>
                 </div>
             </div>
@@ -109,13 +108,13 @@
                 <div class="col-md-10 col-md-offset-1 tabs clear">
                     <div class="tab-links clear">
                         <ul class="clear">
-                            <li class="active tab-link">
-                                <i class="fa fa-paypal"></i>
-                                <p>PayPlay</p>
+                            <li class="active single-cause-pay-tab-link">
+                                <i class="fa fa-paypal single-cause-pay-tab-link-i"></i>
+                                PayPlay
                             </li>
-                            <li class="tab-link">
-                                <i class="fa fa-cc-visa"></i>
-                                <p>Visa / MasterCard</p>
+                            <li class="single-cause-pay-tab-link">
+                                <i class="fa fa-cc-visa single-cause-pay-tab-link-i"></i>
+                                Visa / MasterCard
                             </li>
                         </ul>
                     </div>
@@ -125,20 +124,20 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 contents">
                     <div class="tab-content">
-                        <div class="active tab-item paypal" style="display:none;">
+                        <div class="active single-cause-pay-tab-item paypal">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, omnis, ad. Eligendi
                                 molestiae qui, modi minima voluptatibus est accusamus nisi reprehenderit mollitia vitae perferendis
                                 aliquam tenetur sequi enim tempora expedita, assumenda doloremque quos maxime esse.</p>
                             <form class="Form">
                                 <div class="row">
-                                    <div class="col radios">
+                                    <div class="col-md-6 col-sm-12 radios">
                                         <label for="gridRadios">Donation Amount</label>
                                         <input type="radio" name="gridRadios" id="gridRadios1" value="option1" checked><span> $50</span>
                                         <input type="radio" name="gridRadios" id="gridRadios2" value="option2"><span> $100</span>
                                         <input type="radio" name="gridRadios" id="gridRadios3" value="option3"><span> $150</span>
 
                                     </div>
-                                    <div class="col numbers">
+                                    <div class="col-md-6 col-sm-12 numbers">
                                         <label for="paypal">PayPal</label>
                                         <input type="text" name="paypal" class="form-control numberInput">
                                     </div>
@@ -150,6 +149,7 @@
                             </form>
                         </div>
 
+<<<<<<< HEAD
                         <div class="tab-item visa" style="display:block;">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, omnis, ad. Eligendi molestiae qui, modi minima voluptatibus
                                 est accusamus nisi reprehenderit mollitia vitae perferendis aliquam tenetur sequi enim tempora expedita, assumenda doloremque
@@ -171,6 +171,66 @@
                                         <input type="text" name="paypal" class="form-control numberInput">
                                     </div>
                                 </div>
+=======
+                        <div class="single-cause-pay-tab-item visa" style="display:none;">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, omnis, ad. Eligendi
+                                molestiae qui, modi minima voluptatibus est accusamus nisi reprehenderit mollitia vitae perferendis
+                                aliquam tenetur sequi enim tempora expedita, assumenda doloremque quos maxime esse.</p>
+                            <form class="Form">
+                                <div class="row rowPd">
+                                    <div class="col-md-6 col-sm-12 name">
+                                        <label for="paypal">First Name</label>
+                                        <input type="text" name="paypal" class="form-control Input">
+                                    </div>
+                                    <div class="col-md-6 col-sm-12 name">
+                                        <label for="paypal">Last Name</label>
+                                        <input type="text" name="paypal" class="form-control Input">
+                                    </div>
+                                </div>
+                                
+                                <div class="row rowPd">
+                                    <div class="col-md-6 col-sm-12 radios">
+                                        <label for="gridRadios">Donation Amount</label>
+                                        <input type="radio" name="gridRadios" id="gridRadios1" value="option1" checked><span> $50</span>
+                                        <input type="radio" name="gridRadios" id="gridRadios2" value="option2"><span> $100</span>
+                                        <input type="radio" name="gridRadios" id="gridRadios3" value="option3"><span> $150</span>
+
+                                    </div>
+                                    <div class="col-md-6 col-sm-12 radios">
+                                        <label for="gridRadios">Donation Type</label>
+                                        <input type="radio" name="gridRadios" id="gridRadios1" value="option1" checked><span> One Time</span>
+                                        <input type="radio" name="gridRadios" id="gridRadios2" value="option2"><span> Monthly</span>
+                                        <input type="radio" name="gridRadios" id="gridRadios3" value="option3"><span> Yearly</span>
+
+                                    </div>
+                                </div>
+
+                                <div class="row rowPd">
+                                    <div class="col-md-6 col-sm-12 form-group">
+                                        <label for="exampleFormControlSelect1">Credit Card</label>
+                                        <select class="form-control Input" id="exampleFormControlSelect1">
+                                          <option>Visa</option>
+                                          <option>Master Card</option>                                          
+                                        </select>
+                                      </div>
+                                    <div class="col-md-6 col-sm-12 numbers">
+                                        <label for="paypal">Card Numbar</label>
+                                        <input type="text" name="paypal" class="form-control Input">
+                                    </div>
+                                </div>
+
+                                <div class="row rowPd">
+                                    <div class="col-md-6 col-sm-12 numbers">
+                                        <label for="paypal">MM / YY</label>
+                                        <input type="text" name="paypal" class="form-control Input">
+                                    </div>
+                                    <div class="col-md-6 col-sm-12 numbers">
+                                        <label for="paypal">CVC</label>
+                                        <input type="text" name="paypal" class="form-control Input">
+                                    </div>
+                                </div>
+
+>>>>>>> cc3710e26408e54eaab426592e7a78916ed41a1c
                                 <button type="submit" class="btn btn-primary main-color">
                                     <i class="fa fa-archive"></i>
                                     Donate Now

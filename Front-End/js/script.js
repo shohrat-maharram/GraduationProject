@@ -74,15 +74,15 @@ $(document).ready(function () {
                 var progressBarOwn = $(this),
                     width = 0,
                     verilenWidth = $(value).text();
-                $(this).text(verilenWidth+"%");
+                $(this).text(verilenWidth + "%");
 
                 var interval = setInterval(function () {
                     width += 3.5;
                     progressBarOwn.css({
                         "width": width + "%",
-                        "color":"white",
-                        "padding-right":"5px"                        
-                });                    
+                        "color": "white",
+                        "padding-right": "5px"
+                    });
                     if (width >= verilenWidth) {
                         clearInterval(interval);
                     }
@@ -97,15 +97,8 @@ $(document).ready(function () {
 
 });
 
-// $(window).on("load", function () {
-//     $(".progressOwn").classList.add("changeWidth");
-// });
-
-
-
 
 /*  ~~~~~~~~~~~~~~~~~~~~~ Switching to native javascript  ~~~~~~~~~~~~~~~~~~~~~ */
-
 
 /*  ~~~~~~~~~~~~~~~~~~~~~ Home page  ~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -128,27 +121,47 @@ function activeTab(elem) {
 
 /*  ~~~~~~~~~~~~~~~~~~~~~ Causes page  ~~~~~~~~~~~~~~~~~~~~~ */
 
-//Making dynamically progress bar
-// var elem = document.getElementsByClassName("content");
-// // window.onscroll()
-// var windowHeight= window.innerHeight;
-// var x=elem.scrollTop;
-// console.log(x);
+//Causes single menu Paypal/Visa Master Card section
 
-function myFunc() {
-    var elem = document.getElementsByClassName("progressOwn");
-    // elem.style.width="300px"
-    // var width = 0;
-    // var id = setInterval(frame, 10);
-    // function frame() {
-    //     if (width >= 100) {
-    //         clearInterval(id);
-    //     } else {
-    //         width++;
-    //         elem.style.width = width + '%';
-    //     }
-    // }
+var tab_link = document.getElementsByClassName('single-cause-pay-tab-link');
+var tab_items = document.getElementsByClassName('single-cause-pay-tab-item');
+
+function myFunc(event) {
+
+    var index = event.target.attributes[1].value;
+
+    //removing active class from all elements
+    for (j = 0; j < tab_link.length; j++) {
+        tab_link[j].classList.remove('active');
+        tab_items[j].classList.remove('active');
+    }
+    //adding active class to all elements
+    event.target.classList.add('active');
+
+    //Setting interval for display
+    var interval = setInterval(function () {
+        for (k = 0; k < tab_items.length; k++) {
+            tab_items[k].style.display = 'none';
+        }
+        document.querySelector('.single-cause-pay-tab-item[data-tab-item="' + index + '"]').style.display = 'block';
+    }, 700);
+
+    //clearing interval
+    setTimeout(function () {
+        clearInterval(interval);
+        document.querySelector('.single-cause-pay-tab-item[data-tab-item="' + index + '"]').classList.add('active');
+    }, 700);
 }
+
+for (i = 0; i < tab_link.length; i++) {
+    tab_link[i].addEventListener('click', myFunc)
+}
+
+for (i = 0; i < tab_link.length; i++) {
+    tab_link[i].setAttribute('data-tab-link', i);
+    tab_items[i].setAttribute('data-tab-item', i);
+}
+
 
 
 

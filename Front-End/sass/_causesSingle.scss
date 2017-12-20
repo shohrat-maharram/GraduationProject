@@ -174,6 +174,7 @@
         .active {
           color: $main-color;
           border-bottom: 2px solid $main-color;
+          cursor: auto !important;
         }
 
         li {
@@ -274,7 +275,66 @@
     }
 
     .visa {
-      
+      p {
+        font-size: 14px;
+        line-height: 24px;
+        color: $main-font-color;
+        font-family: $main-font-2;
       }
+
+      .Form {
+        padding: 30px 0;
+
+        label {
+          font-size: 16px;
+          font-weight: 400;
+          font-family: $main-font;
+          color: #444;
+          display: block;
+          line-height: 20px;
+          margin: 10px 0px;;
+        }
+        .rowPd{
+          padding: 15px 0px;
+        }
+        .Input {
+          height: 45px;
+          font-size: 14px;
+          line-height: 20px;
+        }
+        .Input:focus {
+          outline: none;
+          box-shadow: none;
+          text-decoration: none;
+        }
+        .radios {
+          input {
+            font-size: 14px;
+            line-height: 20px;
+          }
+
+          span {
+            margin: 10px 25px 0 0;
+            font-size: 14px;
+          }
+        }
+        .main-color {
+          background-color: $main-color;
+          color: white;
+          font-family: $main-font;
+          font-size: 14px;
+          font-weight: 600;
+          padding: 12px 30px;
+          margin-top: 45px;
+          border: none;
+          border-radius: 6px;
+          transition: all .2s linear;
+
+          &:hover {
+            background-color: $main-black-color;
+          }
+        }
+      }
+    }
   }
 }
