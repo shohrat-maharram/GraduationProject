@@ -98,7 +98,7 @@ $(document).ready(function () {
 });
 
 
-/*  ~~~~~~~~~~~~~~~~~~~~~ Switching to native javascript  ~~~~~~~~~~~~~~~~~~~~~ */
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Switching to native javascript  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /*  ~~~~~~~~~~~~~~~~~~~~~ Home page  ~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -166,13 +166,6 @@ for (i = 0; i < tab_link.length; i++) {
 
 /*  ~~~~~~~~~~~~~~~~~~~~~ Gallery page  ~~~~~~~~~~~~~~~~~~~~~ */
 
-//Hide gallery slider
-
-var gallerySlider=document.getElementById('gallery-slider');
-function closeGallerySlider(){
-    gallerySlider.style.display="none";
-}
-
 
 //Making slider
 
@@ -217,7 +210,12 @@ function prev() {
 }
 
 
+//Hide gallery slider
 
+var gallerySlider = document.getElementById('gallery-slider');
+function closeGallerySlider() {
+    gallerySlider.style.display = "none";
+}
 
 
 
