@@ -169,12 +169,52 @@ for (i = 0; i < tab_link.length; i++) {
 //Hide gallery slider
 
 var gallerySlider=document.getElementById('gallery-slider');
-console.log(gallerySlider);
 function closeGallerySlider(){
     gallerySlider.style.display="none";
 }
 
 
+//Making slider
+
+//Defining of variables
+var images = ["img/gallery/img-1.jpg", "img/gallery/img-2.jpg", "img/gallery/img-3.jpg", "img/gallery/img-13.jpg", "img/gallery/img-14.jpg", "img/gallery/img-15.jpg", "img/gallery/img-16.jpg", "img/gallery/img-17.jpg", "img/gallery/img-18.jpg", "img/gallery/need.jpg"];
+var image = document.querySelector("#gallery-slider .imageWrapper .image");
+var i ;
+var clickedImage;
+var imageItems = document.querySelectorAll("#gallery-slide-image .galleryImage .overlay");
+
+//Function show clicked image
+for (var j = 0; j < imageItems.length;j++)
+{
+    imageItems[j].addEventListener('click',showImage)
+}
+
+function showImage(e) {
+    clickedImage = e.target.previousElementSibling.getAttribute("src");
+    image.setAttribute("src", clickedImage);
+    gallerySlider.style.display = "block";
+    i = images.indexOf(clickedImage);
+}
+
+
+//Creating dynamic next and prev functions 
+
+function next() {
+    if (i == images.length - 1) {
+        i = -1;
+    }
+    i++;
+    image.setAttribute("src", images[i]);
+    console.log(i, images.length);
+}
+function prev() {
+    if (i == 0) {
+        i = images.length;
+    }
+    i--;
+    image.setAttribute("src", images[i]);
+    console.log(i);
+}
 
 
 

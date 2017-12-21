@@ -148,7 +148,8 @@
       font-weight: 300;
       text-decoration: none;
       transition: all 0.2s linear;
-
+      cursor: pointer;
+      
       &:hover{
         color: #DAD8D8;
       }
