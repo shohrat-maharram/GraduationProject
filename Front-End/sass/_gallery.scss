@@ -118,7 +118,9 @@
   }
 }
 
-#gallery-slider {
+#gallery-slider {  
+  transition: all 0.8s linear;
+
   .main-wrapper {
     background: rgba(0, 0, 0, 0.65);
     padding: 30px;

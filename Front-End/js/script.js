@@ -164,7 +164,15 @@ for (i = 0; i < tab_link.length; i++) {
 
 
 
+/*  ~~~~~~~~~~~~~~~~~~~~~ Gallery page  ~~~~~~~~~~~~~~~~~~~~~ */
 
+//Hide gallery slider
+
+var gallerySlider=document.getElementById('gallery-slider');
+console.log(gallerySlider);
+function closeGallerySlider(){
+    gallerySlider.style.display="none";
+}
 
 
 
