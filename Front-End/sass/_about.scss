@@ -1,0 +1,195 @@
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+// Screen size > 992px
+/* Header section */
+
+#about-services{
+    padding-top: 85px;
+
+    .image{
+        img{
+            width:100%;
+        }
+    }
+
+    .content{
+        padding: 110px 10px 0 10px;
+        h1{
+            color: $main-black-color;
+            font-size: 24px;
+            font-weight: 900;
+            line-height: 31px;
+            text-transform: uppercase;
+        }
+        p{
+            margin-top: 20px;
+            font-size: 13px;
+            line-height: 24px;
+            font-family: $main-font-2;
+            font-weight: 400;
+            color: $main-font-color;
+        }
+        .donation {
+            margin-top: 20px;
+    
+            .main-color {
+              background-color: $main-color;
+              color: white;
+              font-family: $main-font;
+              font-size: 14px;
+              font-weight: 600;
+              padding: 9px 38px;
+              border-radius: 6px;
+              transition: all .2s linear;
+    
+              &:hover {
+                background-color: $main-black-color;
+              }
+            }
+        }
+    }    
+}
+
+#about-volunteers{
+    padding: 100px 0px;
+    background-color: $bg-col-volunteer;
+
+    .title{
+        padding-bottom: 85px;
+        text-align: center;
+        h1{
+            text-transform: uppercase;
+            color: $main-black-color;
+            font-family: $main-font;
+            font-weight: 900;
+            margin-bottom: 10px;
+            font-size: 24px;
+            line-height: 24px;
+        }
+        h5{
+            display: inline-block;
+            position: relative;
+            z-index: 8888;
+            padding: 0 15px;
+            font-family: $main-font-2;
+            font-weight: 400;
+            font-size: 15px;
+            color: $main-font-color;
+        }
+    }
+
+    .volunteers{
+        &:hover .text .social{
+            transform: scale(1.08);
+        }
+        .image{
+            margin-top: 20px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .text{
+            padding: 20px 0px;
+
+            .social{
+                float: right;
+                margin-top: -39px;
+                margin-right: 15px;
+                z-index: 6;
+                position: relative;
+                transition: all .25s linear;
+
+                i{
+                    font-size: 18px;
+                    color: white;
+                    background-color: red;
+                    width: 35px;
+                    padding: 8px;
+                    border-radius: 5px;
+                    text-align: center;
+                    cursor: pointer;
+                    transition: all .1s linear;
+                    &:hover{
+                        background-color: $main-black-color;
+                    }
+                    
+                }
+            }
+            
+
+            h5{
+                color: $main-color;
+                font-size: 15px;
+                font-weight: 500;
+                cursor: pointer;
+            }
+
+            h3{
+                padding: 15px 0px;
+                color: $main-black-color;
+                font-family: $main-font;
+                font-size: 16px;
+                font-weight: 600;
+                text-transform: uppercase;
+                transition: all 0.3s ease 0s;
+                cursor: pointer;
+                &:hover{
+                    color:  $main-color;
+                }
+            }
+
+            p{
+                color: $font-col-2;
+                font-size: 14px;
+                line-height: 24px;
+                font-family: $main-font-2;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+#about-partners{
+    padding: 65px 0px 85px;
+
+    .partner{
+        display: flex;
+        justify-content: center;
+        padding: 20px 0px;
+        
+        a{
+            img{
+                width: 100%;
+                transition: all 0.5s ease;
+                opacity: 0.4;
+            }
+    
+            &:hover img{
+                opacity: 1;
+            }
+        }
+    }  
+}
+
+  
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+  
+// Screen size between 992px and 768px
+@media only screen and (max-width: 992px) {
+    
+}
+  
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+  // Screen size between 768 and 576px
+@media only screen and (max-width: 768px) {
+    
+}
+  
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+  // Screen size < 576px
+@media only screen and (max-width: 576px) {
+    
+}
+  

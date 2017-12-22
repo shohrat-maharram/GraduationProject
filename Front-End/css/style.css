@@ -300,7 +300,8 @@ body {
             background-color: #de1219;
             color: white;
             font-size: 14px;
-            cursor: pointer; }
+            cursor: pointer;
+            transition: all .3s ease; }
             #header .navMenu .navMenuInside .navInside .searchIcon i:hover {
               background-color: #444444; }
   #header .navMenuSmall {
@@ -1189,5 +1190,125 @@ body {
 @media only screen and (max-width: 576px) {
   #gallery-slide-image .galleryWrapper .galleryImage .image .overlay:hover i {
     transform: translateY(80px); } }
+/* Header section */
+#about-services {
+  padding-top: 85px; }
+  #about-services .image img {
+    width: 100%; }
+  #about-services .content {
+    padding: 110px 10px 0 10px; }
+    #about-services .content h1 {
+      color: #444444;
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 31px;
+      text-transform: uppercase; }
+    #about-services .content p {
+      margin-top: 20px;
+      font-size: 13px;
+      line-height: 24px;
+      font-family: "Lato", sans-serif;
+      font-weight: 400;
+      color: #4a4a4a; }
+    #about-services .content .donation {
+      margin-top: 20px; }
+      #about-services .content .donation .main-color {
+        background-color: #de1219;
+        color: white;
+        font-family: "Raleway", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 9px 38px;
+        border-radius: 6px;
+        transition: all .2s linear; }
+        #about-services .content .donation .main-color:hover {
+          background-color: #444444; }
+
+#about-volunteers {
+  padding: 100px 0px;
+  background-color: #f8f8f8; }
+  #about-volunteers .title {
+    padding-bottom: 85px;
+    text-align: center; }
+    #about-volunteers .title h1 {
+      text-transform: uppercase;
+      color: #444444;
+      font-family: "Raleway", sans-serif;
+      font-weight: 900;
+      margin-bottom: 10px;
+      font-size: 24px;
+      line-height: 24px; }
+    #about-volunteers .title h5 {
+      display: inline-block;
+      position: relative;
+      z-index: 8888;
+      padding: 0 15px;
+      font-family: "Lato", sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      color: #4a4a4a; }
+  #about-volunteers .volunteers:hover .text .social {
+    transform: scale(1.08); }
+  #about-volunteers .volunteers .image {
+    margin-top: 20px; }
+    #about-volunteers .volunteers .image img {
+      width: 100%;
+      height: 100%; }
+  #about-volunteers .volunteers .text {
+    padding: 20px 0px; }
+    #about-volunteers .volunteers .text .social {
+      float: right;
+      margin-top: -39px;
+      margin-right: 15px;
+      z-index: 6;
+      position: relative;
+      transition: all .25s linear; }
+      #about-volunteers .volunteers .text .social i {
+        font-size: 18px;
+        color: white;
+        background-color: red;
+        width: 35px;
+        padding: 8px;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        transition: all .1s linear; }
+        #about-volunteers .volunteers .text .social i:hover {
+          background-color: #444444; }
+    #about-volunteers .volunteers .text h5 {
+      color: #de1219;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer; }
+    #about-volunteers .volunteers .text h3 {
+      padding: 15px 0px;
+      color: #444444;
+      font-family: "Raleway", sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: all 0.3s ease 0s;
+      cursor: pointer; }
+      #about-volunteers .volunteers .text h3:hover {
+        color: #de1219; }
+    #about-volunteers .volunteers .text p {
+      color: #666;
+      font-size: 14px;
+      line-height: 24px;
+      font-family: "Lato", sans-serif;
+      font-weight: 400; }
+
+#about-partners {
+  padding: 65px 0px 85px; }
+  #about-partners .partner {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px; }
+    #about-partners .partner a img {
+      width: 100%;
+      transition: all 0.5s ease;
+      opacity: 0.4; }
+    #about-partners .partner a:hover img {
+      opacity: 1; }
 
 /*# sourceMappingURL=style.css.map */

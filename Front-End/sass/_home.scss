@@ -163,6 +163,7 @@
             color: white;
             font-size: 14px;
             cursor: pointer;
+            transition: all .3s ease;
             &:hover{
               background-color: $main-black-color;
             }

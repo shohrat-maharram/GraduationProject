@@ -170,7 +170,7 @@ for (i = 0; i < tab_link.length; i++) {
 //Making slider
 
 //Defining of variables
-var images = ["img/gallery/img-1.jpg", "img/gallery/img-2.jpg", "img/gallery/img-3.jpg", "img/gallery/img-13.jpg", "img/gallery/img-14.jpg", "img/gallery/img-15.jpg", "img/gallery/img-16.jpg", "img/gallery/img-17.jpg", "img/gallery/img-18.jpg", "img/gallery/need.jpg"];
+var images = ["img/gallery/img-1.jpg", "img/gallery/img-2.jpg", "img/gallery/img-3.jpg", "img/gallery/img-19.jpg", "img/gallery/img-14.jpg", "img/gallery/img-15.jpg", "img/gallery/img-16.jpg", "img/gallery/img-17.jpg", "img/gallery/img-18.jpg", "img/gallery/need.jpg"];
 var image = document.querySelector("#gallery-slider .imageWrapper .image");
 var i ;
 var clickedImage;
