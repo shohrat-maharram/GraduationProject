@@ -1,0 +1,142 @@
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+// Screen size > 992px
+/* Header section */
+
+#blog-list {
+  background-color: $bg-col-cont;
+  padding: 85px 0;
+
+  .wrapper {
+    .leftSide {
+      background-color: gray;
+    }
+
+    .rightSide {
+      .wrapperRight {
+        margin-left: 30px;
+
+        .header {
+          border-bottom: 1px solid rgba(218, 215, 212, 0.5);
+          margin-bottom: 15px;
+
+          h2 {
+            font-size: 16px;
+            font-family: $main-font;
+            font-weight: 700;
+            color: $main-black-color;
+            margin-bottom: 15px;
+            position: relative;
+
+            &::after {
+              content: " ";
+              position: absolute;
+              bottom: -17px;
+              left: 0;
+              width: 81px;
+              height: 3px;
+              background-color: $main-color;
+
+            }
+          }
+        }
+
+        .search {
+          margin-bottom: 60px;
+
+          input {
+            height: 44px;
+            box-shadow: none;
+            border: 1px solid #ebebeb;
+            border-radius: 2px;
+            font-size: 13px;
+            outline: 0;
+            font-family: $main-font-3;
+
+            &:focus {
+              box-shadow: none;
+              outline: 0;
+            }
+          }
+
+          button {
+            position: absolute;
+            top: 0;
+            right: 21px;
+            padding: 13px;
+            background-color: transparent;
+            border: none;
+
+            i {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .categories {
+          margin-bottom: 60px;
+
+          .content {
+            a {
+              text-decoration: none;
+              display: block;
+              font-weight: 400;
+              font-family: "Lato", sans-serif;
+              color: #4a4a4a;
+              font-size: 14px;
+              padding: 12px 0;
+              border-bottom: 1px solid rgba(218, 215, 212, 0.5);
+              transition: all .3s linear;
+
+              span {
+                float: right;
+              }
+
+              &:hover {
+                color: $main-color;
+              }
+            }
+          }
+        }
+
+        .recentPosts {
+          margin-bottom: 60px;
+
+          .content {
+            ul {
+              li {
+                padding: 20px 0;
+
+                .image {
+                  float: left;
+                }
+
+                .info {
+                  float: left;
+                  padding: 0px 10px;
+                }
+              }
+            }
+          }
+        }
+
+        .tags {
+          margin-bottom: 60px;
+        }
+      }
+    }
+  }
+}
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+
+// Screen size between 992px and 768px
+@media only screen and (max-width: 992px) {}
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+// Screen size between 768 and 576px
+@media only screen and (max-width: 768px) {}
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+// Screen size < 576px
+@media only screen and (max-width: 576px) {}

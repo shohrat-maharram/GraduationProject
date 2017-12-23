@@ -1,0 +1,136 @@
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+// Screen size > 992px
+/* Header section */
+
+#contact-map {
+  .mapFrame {
+    line-height: 0;
+  }
+}
+
+#contact-info {
+  padding: 85px 0 105px;
+  background-color: $bg-col-cont;
+  text-align: center;
+
+  .contacts {
+    &:hover i {
+      color: $main-color;
+      transform: scale(1.2);
+    }
+
+    h5 {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 16px;
+      font-family: $main-font-3;
+    }
+
+    i {
+      font-size: 30px;
+      color: $col-map-maker;
+      margin: 30px 0;
+      transition: all .2s ease-in;
+    }
+
+    p {
+      font-size: 16px;
+      font-family: $main-font-2;
+      color: $main-font-color;
+      line-height: 24px;
+    }
+  }
+}
+
+#contact-message {
+  background-color: $bg-col-cont;
+
+  .heading {
+    text-align: center;
+
+    h1 {
+      font-size: 24px;
+      font-family: $main-font-3;
+      color: $main-black-color;
+      font-weight: 900;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 24px;
+      color: $main-font-color;
+      font-family: $main-font-2;
+      font-weight: 400;
+    }
+  }
+
+  .formSection {
+    padding: 20px 0;
+
+    .pd-l-r-p {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    label {
+      font-size: 16px;
+      color: $main-black-color;
+      font-weight: 400;
+      font-family: $main-font-3;
+      margin-bottom: 10px;
+      margin-top: 30px;
+    }
+
+    .inputText {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 2px;
+      background-color: transparent;
+      box-shadow: none;
+
+      &:focus {
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.13);
+      }
+    }
+
+    input {
+      height: 45px;
+    }
+
+    button {
+      text-align: center;
+      margin-top: 10px;
+      background-color: $main-color;
+      color: white;
+      font-family: $main-font;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 14px 23px;
+      border: none;
+      border-radius: 6px;
+      transition: all .2s linear;
+
+      &:hover {
+        background-color: $main-black-color;
+      }
+
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+
+// Screen size between 992px and 768px
+@media only screen and (max-width: 992px) {}
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+// Screen size between 768 and 576px
+@media only screen and (max-width: 768px) {}
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+// Screen size < 576px
+@media only screen and (max-width: 576px) {}

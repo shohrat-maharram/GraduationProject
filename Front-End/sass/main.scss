@@ -137,11 +137,13 @@ table {
 //My additions
 // Variables
 $main-bg-color: #f5f5f5;
-$bg-col-volunteer:#f8f8f8;
+$bg-col-cont: #f6f6f6;
+$bg-col-volunteer: #f8f8f8;
+$col-map-maker: #a5a5a5;
 $main-color: #de1219;
 $main-black-color: #444444;
 $main-font-color: #4a4a4a;
-$font-col-2:#666;
+$font-col-2: #666;
 $main-font: "Raleway",sans-serif;
 $main-font-2: "Lato", sans-serif;
 $main-font-3: "Helvetica Neue",sans-serif;
@@ -182,6 +184,16 @@ body {
   margin-bottom: 0 !important;
 }
 
+.mg-l-r {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.mg-t-b {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
 .pd {
   padding: 0 !important;
 }
@@ -202,6 +214,16 @@ body {
   padding-bottom: 0 !important;
 }
 
+.pd-l-r {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.pd-t-b {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 // Flex
 .flex {
   display: flex;
@@ -217,27 +239,26 @@ body {
 }
 
 //OverFlow
-.overFlow{
+.overFlow {
   overflow: hidden;
 }
 
 //Width options
-.width-25{
+.width-25 {
   width: 25%;
 }
-.width-50{
+
+.width-50 {
   width: 50%;
 }
-.width-75{
+
+.width-75 {
   width: 75%;
 }
-.width-100{
+
+.width-100 {
   width: 100%;
 }
-
-
-
-
 
 // Imports
 @import 'home';

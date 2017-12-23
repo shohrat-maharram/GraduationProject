@@ -150,6 +150,14 @@ body {
 .mg-bottom {
   margin-bottom: 0 !important; }
 
+.mg-l-r {
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
+
+.mg-t-b {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
 .pd {
   padding: 0 !important; }
 
@@ -163,6 +171,14 @@ body {
   padding-top: 0 !important; }
 
 .pd-bottom {
+  padding-bottom: 0 !important; }
+
+.pd-l-r {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
+.pd-t-b {
+  padding-top: 0 !important;
   padding-bottom: 0 !important; }
 
 .flex {
@@ -1310,5 +1326,162 @@ body {
       opacity: 0.4; }
     #about-partners .partner a:hover img {
       opacity: 1; }
+
+/* Header section */
+#blog-list {
+  background-color: #f6f6f6;
+  padding: 85px 0; }
+  #blog-list .wrapper .leftSide {
+    background-color: gray; }
+  #blog-list .wrapper .rightSide .wrapperRight {
+    margin-left: 30px; }
+    #blog-list .wrapper .rightSide .wrapperRight .header {
+      border-bottom: 1px solid rgba(218, 215, 212, 0.5);
+      margin-bottom: 15px; }
+      #blog-list .wrapper .rightSide .wrapperRight .header h2 {
+        font-size: 16px;
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
+        color: #444444;
+        margin-bottom: 15px;
+        position: relative; }
+        #blog-list .wrapper .rightSide .wrapperRight .header h2::after {
+          content: " ";
+          position: absolute;
+          bottom: -17px;
+          left: 0;
+          width: 81px;
+          height: 3px;
+          background-color: #de1219; }
+    #blog-list .wrapper .rightSide .wrapperRight .search {
+      margin-bottom: 60px; }
+      #blog-list .wrapper .rightSide .wrapperRight .search input {
+        height: 44px;
+        box-shadow: none;
+        border: 1px solid #ebebeb;
+        border-radius: 2px;
+        font-size: 13px;
+        outline: 0;
+        font-family: "Helvetica Neue", sans-serif; }
+        #blog-list .wrapper .rightSide .wrapperRight .search input:focus {
+          box-shadow: none;
+          outline: 0; }
+      #blog-list .wrapper .rightSide .wrapperRight .search button {
+        position: absolute;
+        top: 0;
+        right: 21px;
+        padding: 13px;
+        background-color: transparent;
+        border: none; }
+        #blog-list .wrapper .rightSide .wrapperRight .search button i {
+          font-size: 14px; }
+    #blog-list .wrapper .rightSide .wrapperRight .categories {
+      margin-bottom: 60px; }
+      #blog-list .wrapper .rightSide .wrapperRight .categories .content a {
+        text-decoration: none;
+        display: block;
+        font-weight: 400;
+        font-family: "Lato", sans-serif;
+        color: #4a4a4a;
+        font-size: 14px;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(218, 215, 212, 0.5);
+        transition: all .3s linear; }
+        #blog-list .wrapper .rightSide .wrapperRight .categories .content a span {
+          float: right; }
+        #blog-list .wrapper .rightSide .wrapperRight .categories .content a:hover {
+          color: #de1219; }
+    #blog-list .wrapper .rightSide .wrapperRight .recentPosts {
+      margin-bottom: 60px; }
+      #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li {
+        padding: 20px 0; }
+        #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .image {
+          float: left; }
+        #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info {
+          float: left;
+          padding: 0px 10px; }
+    #blog-list .wrapper .rightSide .wrapperRight .tags {
+      margin-bottom: 60px; }
+
+/* Header section */
+#contact-map .mapFrame {
+  line-height: 0; }
+
+#contact-info {
+  padding: 85px 0 105px;
+  background-color: #f6f6f6;
+  text-align: center; }
+  #contact-info .contacts:hover i {
+    color: #de1219;
+    transform: scale(1.2); }
+  #contact-info .contacts h5 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    font-family: "Helvetica Neue", sans-serif; }
+  #contact-info .contacts i {
+    font-size: 30px;
+    color: #a5a5a5;
+    margin: 30px 0;
+    transition: all .2s ease-in; }
+  #contact-info .contacts p {
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    color: #4a4a4a;
+    line-height: 24px; }
+
+#contact-message {
+  background-color: #f6f6f6; }
+  #contact-message .heading {
+    text-align: center; }
+    #contact-message .heading h1 {
+      font-size: 24px;
+      font-family: "Helvetica Neue", sans-serif;
+      color: #444444;
+      font-weight: 900;
+      margin-bottom: 15px; }
+    #contact-message .heading p {
+      font-size: 14px;
+      line-height: 24px;
+      color: #4a4a4a;
+      font-family: "Lato", sans-serif;
+      font-weight: 400; }
+  #contact-message .formSection {
+    padding: 20px 0; }
+    #contact-message .formSection .pd-l-r-p {
+      padding-left: 15px;
+      padding-right: 15px; }
+    #contact-message .formSection label {
+      font-size: 16px;
+      color: #444444;
+      font-weight: 400;
+      font-family: "Helvetica Neue", sans-serif;
+      margin-bottom: 10px;
+      margin-top: 30px; }
+    #contact-message .formSection .inputText {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 2px;
+      background-color: transparent;
+      box-shadow: none; }
+      #contact-message .formSection .inputText:focus {
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.13); }
+    #contact-message .formSection input {
+      height: 45px; }
+    #contact-message .formSection button {
+      text-align: center;
+      margin-top: 10px;
+      background-color: #de1219;
+      color: white;
+      font-family: "Raleway", sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 14px 23px;
+      border: none;
+      border-radius: 6px;
+      transition: all .2s linear; }
+      #contact-message .formSection button:hover {
+        background-color: #444444; }
+      #contact-message .formSection button i {
+        margin-right: 10px; }
 
 /*# sourceMappingURL=style.css.map */
