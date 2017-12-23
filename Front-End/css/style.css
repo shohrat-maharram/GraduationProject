@@ -1394,14 +1394,84 @@ body {
     #blog-list .wrapper .rightSide .wrapperRight .recentPosts {
       margin-bottom: 60px; }
       #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li {
-        padding: 20px 0; }
+        padding: 15px 0;
+        display: inline-block;
+        border-bottom: 1px solid rgba(218, 215, 212, 0.5); }
+        #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li:hover .image .owerlay {
+          opacity: 1; }
+        #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li:hover .image i {
+          opacity: 1;
+          top: 21px; }
+        #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li:hover .info a {
+          color: #de1219; }
         #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .image {
-          float: left; }
+          position: relative;
+          float: left;
+          line-height: 0;
+          overflow: hidden; }
+          #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .image .owerlay {
+            position: absolute;
+            top: 0;
+            line-height: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(36, 40, 47, 0.65);
+            opacity: 0;
+            transition: all .3s ease-out; }
+          #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .image i {
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            color: white;
+            background-color: #de1219;
+            padding: 9px 11px;
+            border-radius: 3px;
+            opacity: 0;
+            transition: all .3s ease-out; }
         #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info {
           float: left;
-          padding: 0px 10px; }
-    #blog-list .wrapper .rightSide .wrapperRight .tags {
-      margin-bottom: 60px; }
+          padding: 0 10px;
+          width: 245px; }
+          #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info a {
+            font-size: 16px;
+            line-height: 16px;
+            color: #444444;
+            font-family: "Raleway", sans-serif;
+            font-weight: 400;
+            text-decoration: none;
+            transition: all .3s ease-out; }
+          #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info .date {
+            padding: 12px 0; }
+            #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info .date p,
+            #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info .date span {
+              font-size: 14px;
+              color: rgba(56, 56, 56, 0.4);
+              font-family: "Lato", sans-serif;
+              display: inline;
+              margin-right: 6px; }
+              #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info .date p i,
+              #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info .date span i {
+                margin-right: 2px; }
+            #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info .date span {
+              font-size: 14px;
+              color: rgba(197, 192, 192, 0.4); }
+      #blog-list .wrapper .rightSide .wrapperRight .recentPosts .tags {
+        margin-bottom: 60px; }
+    #blog-list .wrapper .rightSide .wrapperRight .tags .content a {
+      display: inline-block;
+      text-decoration: none;
+      color: #4a4a4a;
+      font-size: 14px;
+      font-family: "Lato", sans-serif;
+      padding: 0 25px;
+      line-height: 35px;
+      background-color: #ebebeb;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+      margin: 2px 0px; }
+      #blog-list .wrapper .rightSide .wrapperRight .tags .content a:hover {
+        color: #f6f6f6;
+        background-color: #4a4a4a; }
 
 /* Header section */
 #contact-map .mapFrame {
