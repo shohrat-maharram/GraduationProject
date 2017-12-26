@@ -1328,12 +1328,12 @@ body {
       opacity: 1; }
 
 /* Header section */
-#blog-list {
+#blog-page {
   background-color: #f6f6f6;
   padding: 85px 0; }
-  #blog-list .wrapper .leftSide .blogItem {
+  #blog-page .wrapper .blog-list .blogItem {
     margin-bottom: 50px; }
-    #blog-list .wrapper .leftSide .blogItem .itemMeta .date {
+    #blog-page .wrapper .blog-list .blogItem .itemMeta .date {
       background-color: #de1219;
       width: 75px;
       height: 70px;
@@ -1345,36 +1345,36 @@ body {
       font-family: "Helvetica Neue", sans-serif;
       line-height: 23px;
       float: left; }
-    #blog-list .wrapper .leftSide .blogItem .itemMeta .about {
+    #blog-page .wrapper .blog-list .blogItem .itemMeta .about {
       float: left;
       padding-left: 20px; }
-      #blog-list .wrapper .leftSide .blogItem .itemMeta .about h3 {
+      #blog-page .wrapper .blog-list .blogItem .itemMeta .about h3 {
         font-size: 16px;
         font-family: "Raleway", sans-serif;
         font-weight: 600;
         color: #444444;
         margin-bottom: 20px; }
-      #blog-list .wrapper .leftSide .blogItem .itemMeta .about p {
+      #blog-page .wrapper .blog-list .blogItem .itemMeta .about p {
         display: inline-block;
         font-size: 12px;
         font-weight: 600;
         font-family: "Helvetica Neue", sans-serif;
         color: #444444;
         margin-right: 18px; }
-        #blog-list .wrapper .leftSide .blogItem .itemMeta .about p i {
+        #blog-page .wrapper .blog-list .blogItem .itemMeta .about p i {
           font-size: 14px; }
-    #blog-list .wrapper .leftSide .blogItem .itemImage {
+    #blog-page .wrapper .blog-list .blogItem .itemImage {
       overflow: hidden;
       clear: both;
       padding: 15px 0px; }
-    #blog-list .wrapper .leftSide .blogItem .itemText p {
+    #blog-page .wrapper .blog-list .blogItem .itemText p {
       font-size: 14px;
       line-height: 24px;
       font-family: "Lato", sans-serif;
       color: #4a4a4a; }
-    #blog-list .wrapper .leftSide .blogItem .readMore .donation {
+    #blog-page .wrapper .blog-list .blogItem .readMore .donation {
       margin-top: 10px; }
-      #blog-list .wrapper .leftSide .blogItem .readMore .donation .main-color {
+      #blog-page .wrapper .blog-list .blogItem .readMore .donation .main-color {
         background-color: #de1219;
         color: white;
         font-family: "Raleway", sans-serif;
@@ -1383,21 +1383,21 @@ body {
         padding: 9px 30px;
         border-radius: 6px;
         transition: all .2s linear; }
-        #blog-list .wrapper .leftSide .blogItem .readMore .donation .main-color:hover {
+        #blog-page .wrapper .blog-list .blogItem .readMore .donation .main-color:hover {
           background-color: #444444; }
-  #blog-list .wrapper .rightSide .wrapperRight {
+  #blog-page .wrapper .rightSide .wrapperRight {
     margin-left: 30px; }
-    #blog-list .wrapper .rightSide .wrapperRight .header {
+    #blog-page .wrapper .rightSide .wrapperRight .header {
       border-bottom: 1px solid rgba(218, 215, 212, 0.5);
       margin-bottom: 15px; }
-      #blog-list .wrapper .rightSide .wrapperRight .header h2 {
+      #blog-page .wrapper .rightSide .wrapperRight .header h2 {
         font-size: 16px;
         font-family: "Raleway", sans-serif;
         font-weight: 700;
         color: #444444;
         margin-bottom: 15px;
         position: relative; }
-        #blog-list .wrapper .rightSide .wrapperRight .header h2::after {
+        #blog-page .wrapper .rightSide .wrapperRight .header h2::after {
           content: " ";
           position: absolute;
           bottom: -17px;
@@ -1405,10 +1405,10 @@ body {
           width: 81px;
           height: 3px;
           background-color: #de1219; }
-    #blog-list .wrapper .rightSide .wrapperRight .search {
+    #blog-page .wrapper .rightSide .wrapperRight .search {
       margin-bottom: 60px;
       position: relative; }
-      #blog-list .wrapper .rightSide .wrapperRight .search input {
+      #blog-page .wrapper .rightSide .wrapperRight .search input {
         height: 44px;
         box-shadow: none;
         border: 1px solid #ebebeb;
@@ -1416,21 +1416,21 @@ body {
         font-size: 13px;
         outline: 0;
         font-family: "Helvetica Neue", sans-serif; }
-        #blog-list .wrapper .rightSide .wrapperRight .search input:focus {
+        #blog-page .wrapper .rightSide .wrapperRight .search input:focus {
           box-shadow: none;
           outline: 0; }
-      #blog-list .wrapper .rightSide .wrapperRight .search button {
+      #blog-page .wrapper .rightSide .wrapperRight .search button {
         position: absolute;
         top: 1px;
         right: 1px;
         padding: 13px;
         background-color: transparent;
         border: none; }
-        #blog-list .wrapper .rightSide .wrapperRight .search button i {
+        #blog-page .wrapper .rightSide .wrapperRight .search button i {
           font-size: 14px; }
-    #blog-list .wrapper .rightSide .wrapperRight .categories {
+    #blog-page .wrapper .rightSide .wrapperRight .categories {
       margin-bottom: 60px; }
-      #blog-list .wrapper .rightSide .wrapperRight .categories .content a {
+      #blog-page .wrapper .rightSide .wrapperRight .categories .content a {
         text-decoration: none;
         display: block;
         font-weight: 400;
@@ -1440,29 +1440,29 @@ body {
         padding: 12px 0;
         border-bottom: 1px solid rgba(218, 215, 212, 0.5);
         transition: all .3s linear; }
-        #blog-list .wrapper .rightSide .wrapperRight .categories .content a span {
+        #blog-page .wrapper .rightSide .wrapperRight .categories .content a span {
           float: right; }
-        #blog-list .wrapper .rightSide .wrapperRight .categories .content a:hover {
+        #blog-page .wrapper .rightSide .wrapperRight .categories .content a:hover {
           color: #de1219; }
-    #blog-list .wrapper .rightSide .wrapperRight .recentPosts {
+    #blog-page .wrapper .rightSide .wrapperRight .recentPosts {
       margin-bottom: 60px; }
-      #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li {
+      #blog-page .wrapper .rightSide .wrapperRight .recentPosts .content ul li {
         padding: 15px 0;
         display: inline-block;
         border-bottom: 1px solid rgba(218, 215, 212, 0.5); }
-        #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li:hover .image .owerlay {
+        #blog-page .wrapper .rightSide .wrapperRight .recentPosts .content ul li:hover .image .owerlay {
           opacity: 1; }
-        #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li:hover .image i {
+        #blog-page .wrapper .rightSide .wrapperRight .recentPosts .content ul li:hover .image i {
           opacity: 1;
           top: 21px; }
-        #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li:hover .info a {
+        #blog-page .wrapper .rightSide .wrapperRight .recentPosts .content ul li:hover .info a {
           color: #de1219; }
-        #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .image {
+        #blog-page .wrapper .rightSide .wrapperRight .recentPosts .content ul li .image {
           position: relative;
           float: left;
           line-height: 0;
           overflow: hidden; }
-          #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .image .owerlay {
+          #blog-page .wrapper .rightSide .wrapperRight .recentPosts .content ul li .image .owerlay {
             position: absolute;
             top: 0;
             line-height: 0;
@@ -1471,7 +1471,7 @@ body {
             background-color: rgba(36, 40, 47, 0.65);
             opacity: 0;
             transition: all .3s ease-out; }
-          #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .image i {
+          #blog-page .wrapper .rightSide .wrapperRight .recentPosts .content ul li .image i {
             position: absolute;
             top: -20px;
             left: 20px;
@@ -1481,11 +1481,11 @@ body {
             border-radius: 3px;
             opacity: 0;
             transition: all .3s ease-out; }
-        #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info {
+        #blog-page .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info {
           float: left;
           padding: 0 10px;
           width: 245px; }
-          #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info a {
+          #blog-page .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info a {
             font-size: 16px;
             line-height: 16px;
             color: #444444;
@@ -1493,24 +1493,24 @@ body {
             font-weight: 400;
             text-decoration: none;
             transition: all .3s ease-out; }
-          #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info .date {
+          #blog-page .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info .date {
             padding: 12px 0; }
-            #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info .date p,
-            #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info .date span {
+            #blog-page .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info .date p,
+            #blog-page .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info .date span {
               font-size: 14px;
               color: rgba(56, 56, 56, 0.4);
               font-family: "Lato", sans-serif;
               display: inline;
               margin-right: 6px; }
-              #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info .date p i,
-              #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info .date span i {
+              #blog-page .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info .date p i,
+              #blog-page .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info .date span i {
                 margin-right: 2px; }
-            #blog-list .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info .date span {
+            #blog-page .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info .date span {
               font-size: 14px;
               color: rgba(197, 192, 192, 0.4); }
-      #blog-list .wrapper .rightSide .wrapperRight .recentPosts .tags {
+      #blog-page .wrapper .rightSide .wrapperRight .recentPosts .tags {
         margin-bottom: 60px; }
-    #blog-list .wrapper .rightSide .wrapperRight .tags .content a {
+    #blog-page .wrapper .rightSide .wrapperRight .tags .content a {
       display: inline-block;
       text-decoration: none;
       color: #4a4a4a;
@@ -1522,9 +1522,16 @@ body {
       border-radius: 3px;
       transition: all 0.3s ease;
       margin: 2px 0px; }
-      #blog-list .wrapper .rightSide .wrapperRight .tags .content a:hover {
+      #blog-page .wrapper .rightSide .wrapperRight .tags .content a:hover {
         color: #f6f6f6;
         background-color: #4a4a4a; }
+
+/* Header section */
+#blog-page {
+  background-color: #f6f6f6;
+  padding: 85px 0; }
+  #blog-page .wrapper .blog-single {
+    background-color: red; }
 
 /* Header section */
 #contact-map .mapFrame {

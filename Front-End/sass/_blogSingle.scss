@@ -1,0 +1,32 @@
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+// Screen size > 992px
+/* Header section */
+
+#blog-page {
+    background-color: $bg-col-cont;
+    padding: 85px 0;
+  
+    .wrapper {
+      .blog-single {
+        background-color: red;
+      }
+  
+      .rightSide {
+        
+      }
+    }
+  }
+  
+  // <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+  
+  // Screen size between 992px and 768px
+  @media only screen and (max-width: 992px) {}
+  
+  // <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+  // Screen size between 768 and 576px
+  @media only screen and (max-width: 768px) {}
+  
+  // <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+  // Screen size < 576px
+  @media only screen and (max-width: 576px) {}

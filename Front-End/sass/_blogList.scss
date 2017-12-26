@@ -3,12 +3,12 @@
 // Screen size > 992px
 /* Header section */
 
-#blog-list {
+#blog-page {
   background-color: $bg-col-cont;
   padding: 85px 0;
 
   .wrapper {
-    .leftSide {
+    .blog-list {
       .blogItem{
         margin-bottom: 50px;
         .itemMeta{
