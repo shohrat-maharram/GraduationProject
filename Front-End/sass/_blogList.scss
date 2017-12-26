@@ -9,7 +9,84 @@
 
   .wrapper {
     .leftSide {
-      background-color: gray;
+      .blogItem{
+        margin-bottom: 50px;
+        .itemMeta{
+          .date{
+            background-color: $main-color;
+            width: 75px;
+            height: 70px;
+            padding: 10px 0 0 0;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 900;
+            color: white;
+            font-family: $main-font-3;
+            line-height: 23px;
+            float: left;
+
+          }
+          .about{
+            float: left;
+            padding-left: 20px;
+            h3{
+              font-size: 16px;
+              font-family: $main-font;
+              font-weight: 600;
+              color: $main-black-color;
+              margin-bottom: 20px;
+            }
+            p{
+              display: inline-block;
+              font-size: 12px;
+              font-weight: 600;
+              font-family: $main-font-3;
+              color: $main-black-color;
+              margin-right: 18px;
+              i{
+                font-size: 14px;
+              }
+            }
+
+          }
+        }
+
+        .itemImage{
+          overflow: hidden;
+          clear: both;
+          padding: 15px 0px;
+        }
+
+        .itemText{
+          p{
+            font-size: 14px;
+            line-height: 24px;
+            font-family: $main-font-2;
+            color: $main-font-color;
+          }
+        }
+
+        .readMore{
+          .donation {
+            margin-top: 10px;
+  
+            .main-color {
+              background-color: $main-color;
+              color: white;
+              font-family: $main-font;
+              font-size: 14px;
+              font-weight: 600;
+              padding: 9px 30px;
+              border-radius: 6px;
+              transition: all .2s linear;
+  
+              &:hover {
+                background-color: $main-black-color;
+              }
+            }
+          }
+        }
+      }
     }
 
     .rightSide {
@@ -43,7 +120,8 @@
 
         .search {
           margin-bottom: 60px;
-
+          // margin-top: 10px;
+          position: relative;
           input {
             height: 44px;
             box-shadow: none;
@@ -61,8 +139,8 @@
 
           button {
             position: absolute;
-            top: 0;
-            right: 21px;
+            top: 1px;
+            right: 1px;
             padding: 13px;
             background-color: transparent;
             border: none;

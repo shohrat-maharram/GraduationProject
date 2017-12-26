@@ -1331,8 +1331,60 @@ body {
 #blog-list {
   background-color: #f6f6f6;
   padding: 85px 0; }
-  #blog-list .wrapper .leftSide {
-    background-color: gray; }
+  #blog-list .wrapper .leftSide .blogItem {
+    margin-bottom: 50px; }
+    #blog-list .wrapper .leftSide .blogItem .itemMeta .date {
+      background-color: #de1219;
+      width: 75px;
+      height: 70px;
+      padding: 10px 0 0 0;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 900;
+      color: white;
+      font-family: "Helvetica Neue", sans-serif;
+      line-height: 23px;
+      float: left; }
+    #blog-list .wrapper .leftSide .blogItem .itemMeta .about {
+      float: left;
+      padding-left: 20px; }
+      #blog-list .wrapper .leftSide .blogItem .itemMeta .about h3 {
+        font-size: 16px;
+        font-family: "Raleway", sans-serif;
+        font-weight: 600;
+        color: #444444;
+        margin-bottom: 20px; }
+      #blog-list .wrapper .leftSide .blogItem .itemMeta .about p {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        font-family: "Helvetica Neue", sans-serif;
+        color: #444444;
+        margin-right: 18px; }
+        #blog-list .wrapper .leftSide .blogItem .itemMeta .about p i {
+          font-size: 14px; }
+    #blog-list .wrapper .leftSide .blogItem .itemImage {
+      overflow: hidden;
+      clear: both;
+      padding: 15px 0px; }
+    #blog-list .wrapper .leftSide .blogItem .itemText p {
+      font-size: 14px;
+      line-height: 24px;
+      font-family: "Lato", sans-serif;
+      color: #4a4a4a; }
+    #blog-list .wrapper .leftSide .blogItem .readMore .donation {
+      margin-top: 10px; }
+      #blog-list .wrapper .leftSide .blogItem .readMore .donation .main-color {
+        background-color: #de1219;
+        color: white;
+        font-family: "Raleway", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 9px 30px;
+        border-radius: 6px;
+        transition: all .2s linear; }
+        #blog-list .wrapper .leftSide .blogItem .readMore .donation .main-color:hover {
+          background-color: #444444; }
   #blog-list .wrapper .rightSide .wrapperRight {
     margin-left: 30px; }
     #blog-list .wrapper .rightSide .wrapperRight .header {
@@ -1354,7 +1406,8 @@ body {
           height: 3px;
           background-color: #de1219; }
     #blog-list .wrapper .rightSide .wrapperRight .search {
-      margin-bottom: 60px; }
+      margin-bottom: 60px;
+      position: relative; }
       #blog-list .wrapper .rightSide .wrapperRight .search input {
         height: 44px;
         box-shadow: none;
@@ -1368,8 +1421,8 @@ body {
           outline: 0; }
       #blog-list .wrapper .rightSide .wrapperRight .search button {
         position: absolute;
-        top: 0;
-        right: 21px;
+        top: 1px;
+        right: 1px;
         padding: 13px;
         background-color: transparent;
         border: none; }
