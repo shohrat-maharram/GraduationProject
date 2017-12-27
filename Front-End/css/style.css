@@ -1333,36 +1333,41 @@ body {
   padding: 85px 0; }
   #blog-page .wrapper .blog-list .blogItem {
     margin-bottom: 50px; }
-    #blog-page .wrapper .blog-list .blogItem .itemMeta .date {
-      background-color: #de1219;
-      width: 75px;
-      height: 70px;
-      padding: 10px 0 0 0;
-      text-align: center;
-      font-size: 14px;
-      font-weight: 900;
-      color: white;
-      font-family: "Helvetica Neue", sans-serif;
-      line-height: 23px;
-      float: left; }
-    #blog-page .wrapper .blog-list .blogItem .itemMeta .about {
-      float: left;
-      padding-left: 20px; }
-      #blog-page .wrapper .blog-list .blogItem .itemMeta .about h3 {
-        font-size: 16px;
-        font-family: "Raleway", sans-serif;
-        font-weight: 600;
-        color: #444444;
-        margin-bottom: 20px; }
-      #blog-page .wrapper .blog-list .blogItem .itemMeta .about p {
-        display: inline-block;
-        font-size: 12px;
-        font-weight: 600;
+    #blog-page .wrapper .blog-list .blogItem .itemMeta {
+      width: 100%; }
+      #blog-page .wrapper .blog-list .blogItem .itemMeta .date {
+        background-color: #de1219;
+        width: 75px;
+        height: 70px;
+        padding: 10px 0 0 0;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 900;
+        color: white;
         font-family: "Helvetica Neue", sans-serif;
-        color: #444444;
-        margin-right: 18px; }
-        #blog-page .wrapper .blog-list .blogItem .itemMeta .about p i {
-          font-size: 14px; }
+        line-height: 23px;
+        float: left; }
+      #blog-page .wrapper .blog-list .blogItem .itemMeta .about {
+        float: left;
+        padding-left: 20px;
+        width: -moz-calc(100%-75px);
+        width: -webkit-calc(100%-75px);
+        width: calc(100%-75px); }
+        #blog-page .wrapper .blog-list .blogItem .itemMeta .about h3 {
+          font-size: 16px;
+          font-family: "Raleway", sans-serif;
+          font-weight: 600;
+          color: #444444;
+          margin-bottom: 20px; }
+        #blog-page .wrapper .blog-list .blogItem .itemMeta .about p {
+          display: inline-block;
+          font-size: 12px;
+          font-weight: 600;
+          font-family: "Helvetica Neue", sans-serif;
+          color: #444444;
+          margin-right: 18px; }
+          #blog-page .wrapper .blog-list .blogItem .itemMeta .about p i {
+            font-size: 14px; }
     #blog-page .wrapper .blog-list .blogItem .itemImage {
       overflow: hidden;
       clear: both;
@@ -1449,7 +1454,8 @@ body {
       #blog-page .wrapper .rightSide .wrapperRight .recentPosts .content ul li {
         padding: 15px 0;
         display: inline-block;
-        border-bottom: 1px solid rgba(218, 215, 212, 0.5); }
+        border-bottom: 1px solid rgba(218, 215, 212, 0.5);
+        width: 100%; }
         #blog-page .wrapper .rightSide .wrapperRight .recentPosts .content ul li:hover .image .owerlay {
           opacity: 1; }
         #blog-page .wrapper .rightSide .wrapperRight .recentPosts .content ul li:hover .image i {
@@ -1461,7 +1467,8 @@ body {
           position: relative;
           float: left;
           line-height: 0;
-          overflow: hidden; }
+          overflow: hidden;
+          width: 75px; }
           #blog-page .wrapper .rightSide .wrapperRight .recentPosts .content ul li .image .owerlay {
             position: absolute;
             top: 0;
@@ -1484,7 +1491,9 @@ body {
         #blog-page .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info {
           float: left;
           padding: 0 10px;
-          width: 245px; }
+          width: -moz-calc(100% - 75px);
+          width: -webkit-calc(100% - 75px);
+          width: calc(100% - 75px); }
           #blog-page .wrapper .rightSide .wrapperRight .recentPosts .content ul li .info a {
             font-size: 16px;
             line-height: 16px;
@@ -1526,6 +1535,9 @@ body {
         color: #f6f6f6;
         background-color: #4a4a4a; }
 
+@media only screen and (max-width: 768px) {
+  #blog-page .wrapper .rightSide .wrapperRight {
+    margin-left: 0px; } }
 /* Header section */
 #blog-page {
   background-color: #f6f6f6;

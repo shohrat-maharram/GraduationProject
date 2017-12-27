@@ -12,6 +12,7 @@
       .blogItem{
         margin-bottom: 50px;
         .itemMeta{
+          width: 100%;
           .date{
             background-color: $main-color;
             width: 75px;
@@ -29,6 +30,7 @@
           .about{
             float: left;
             padding-left: 20px;
+            @include calc(width,'100%-75px');
             h3{
               font-size: 16px;
               font-family: $main-font;
@@ -186,6 +188,7 @@
                 padding: 15px 0;
                 display: inline-block;
                 border-bottom: 1px solid rgba(218, 215, 212, 0.5);
+                width: 100%;
 
                 &:hover .image .owerlay {
                   opacity: 1;
@@ -205,6 +208,7 @@
                   float: left;
                   line-height: 0;
                   overflow: hidden;
+                  width: 75px;
 
                   .owerlay {
                     position: absolute;
@@ -233,7 +237,7 @@
                 .info {
                   float: left;
                   padding: 0 10px;
-                  width: 245px;
+                  @include calc( width, '100% - 75px');
 
                   a {
                     font-size: 16px;
@@ -310,7 +314,59 @@
 
 // <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
 // Screen size between 768 and 576px
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px) {
+
+  #blog-page {  
+    .wrapper {
+      .blog-list {
+        .blogItem{
+          
+          .itemMeta{
+            
+          }
+  
+          .itemImage{
+            
+          }
+  
+          .itemText{
+            
+          }
+  
+          .readMore{
+            
+          }
+        }
+      }
+  
+      .rightSide {
+        .wrapperRight {
+          margin-left: 0px;
+  
+          .header {
+            
+          }
+  
+          .search {
+            
+          }
+  
+          .categories {
+           
+          }
+  
+          .recentPosts {
+            
+          }
+  
+          .tags {
+            
+          }
+        }
+      }
+    }
+  }
+}
 
 // <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
 // Screen size < 576px
