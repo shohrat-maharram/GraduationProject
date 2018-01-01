@@ -8,16 +8,43 @@
   padding: 85px 0;
 
   .wrapper {
+    .header {
+      border-bottom: 1px solid rgba(218, 215, 212, 0.5);
+      margin-bottom: 15px;
+
+      h2 {
+        font-size: 16px;
+        font-family: $main-font;
+        font-weight: 700;
+        color: $main-black-color;
+        margin-bottom: 15px;
+        position: relative;
+
+        &::after {
+          content: " ";
+          position: absolute;
+          bottom: -17px;
+          left: 0;
+          width: 81px;
+          height: 3px;
+          background-color: $main-color;
+
+        }
+      }
+    }
+
     .blog-list {
-      .blogItem{
+      .blogItem {
         margin-bottom: 50px;
-        .itemMeta{
+
+        .itemMeta {
           width: 100%;
-          .date{
+
+          .date {
             background-color: $main-color;
             width: 75px;
             height: 70px;
-            padding: 10px 0 0 0;
+            padding: 10px 0 0;
             text-align: center;
             font-size: 14px;
             font-weight: 900;
@@ -27,25 +54,29 @@
             float: left;
 
           }
-          .about{
+
+          .about {
             float: left;
             padding-left: 20px;
             @include calc(width,'100%-75px');
-            h3{
+
+            h3 {
               font-size: 16px;
               font-family: $main-font;
               font-weight: 600;
               color: $main-black-color;
               margin-bottom: 20px;
             }
-            p{
+
+            p {
               display: inline-block;
               font-size: 12px;
               font-weight: 600;
               font-family: $main-font-3;
               color: $main-black-color;
               margin-right: 18px;
-              i{
+
+              i {
                 font-size: 14px;
               }
             }
@@ -53,14 +84,14 @@
           }
         }
 
-        .itemImage{
+        .itemImage {
           overflow: hidden;
           clear: both;
-          padding: 15px 0px;
+          padding: 15px 0;
         }
 
-        .itemText{
-          p{
+        .itemText {
+          p {
             font-size: 14px;
             line-height: 24px;
             font-family: $main-font-2;
@@ -68,10 +99,10 @@
           }
         }
 
-        .readMore{
+        .readMore {
           .donation {
             margin-top: 10px;
-  
+
             .main-color {
               background-color: $main-color;
               color: white;
@@ -81,7 +112,7 @@
               padding: 9px 30px;
               border-radius: 6px;
               transition: all .2s linear;
-  
+
               &:hover {
                 background-color: $main-black-color;
               }
@@ -95,35 +126,11 @@
       .wrapperRight {
         margin-left: 30px;
 
-        .header {
-          border-bottom: 1px solid rgba(218, 215, 212, 0.5);
-          margin-bottom: 15px;
-
-          h2 {
-            font-size: 16px;
-            font-family: $main-font;
-            font-weight: 700;
-            color: $main-black-color;
-            margin-bottom: 15px;
-            position: relative;
-
-            &::after {
-              content: " ";
-              position: absolute;
-              bottom: -17px;
-              left: 0;
-              width: 81px;
-              height: 3px;
-              background-color: $main-color;
-
-            }
-          }
-        }
-
         .search {
           margin-bottom: 60px;
           // margin-top: 10px;
           position: relative;
+
           input {
             height: 44px;
             box-shadow: none;
@@ -292,8 +299,8 @@
               line-height: 35px;
               background-color: $bg-col-tag;
               border-radius: 3px;
-              transition: all 0.3s ease;
-              margin: 2px 0px;
+              transition: all .3s ease;
+              margin: 2px 0;
 
               &:hover {
                 color: $bg-col-cont;
@@ -315,53 +322,33 @@
 // <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
 // Screen size between 768 and 576px
 @media only screen and (max-width: 768px) {
-
-  #blog-page {  
+  #blog-page {
     .wrapper {
       .blog-list {
-        .blogItem{
-          
-          .itemMeta{
-            
-          }
-  
-          .itemImage{
-            
-          }
-  
-          .itemText{
-            
-          }
-  
-          .readMore{
-            
-          }
+        .blogItem {
+          .itemMeta {}
+
+          .itemImage {}
+
+          .itemText {}
+
+          .readMore {}
         }
       }
-  
+
       .rightSide {
         .wrapperRight {
-          margin-left: 0px;
-  
-          .header {
-            
-          }
-  
-          .search {
-            
-          }
-  
-          .categories {
-           
-          }
-  
-          .recentPosts {
-            
-          }
-  
-          .tags {
-            
-          }
+          margin-left: 0;
+
+          .header {}
+
+          .search {}
+
+          .categories {}
+
+          .recentPosts {}
+
+          .tags {}
         }
       }
     }

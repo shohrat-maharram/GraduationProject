@@ -135,12 +135,23 @@ table {
 
 // <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    My additions    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
 
+//Importing fonts
+@import url( 'https://fonts.googleapis.com/css?family=Lato:100,100i,300i,400,700,900,900i|Raleway:100,100i,200,300,300i,400,500,500i,600,700,800,800i,900,900i');
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/Roboto.ttf");
+}
+
 // <-- ~~~~~~~~~~~~~~~~~~    Variables    ~~~~~~~~~~~~~~~~~~ --> //
 
 $main-bg-color: #f5f5f5;
+$main-col-55: rgba(0, 0, 0, 0.55);
+$main-col-45: rgba(0, 0, 0, 0.45);
 $bg-col-cont: #f6f6f6;
 $bg-col-volunteer: #f8f8f8;
-$bg-col-tag:#ebebeb;
+$bg-col-fa: #fafafa;
+$bg-col-tag: #ebebeb;
+$bg-col-ea:#eaeaea;
 $col-map-maker: #a5a5a5;
 $main-color: #de1219;
 $main-black-color: #444444;
@@ -149,7 +160,7 @@ $font-col-2: #666;
 $main-font: "Raleway",sans-serif;
 $main-font-2: "Lato", sans-serif;
 $main-font-3: "Helvetica Neue",sans-serif;
-
+$main-font-4: Roboto;
 
 // <-- ~~~~~~~~~~~~~~~~~~    Clases    ~~~~~~~~~~~~~~~~~~ --> //
 
@@ -265,9 +276,7 @@ body {
   width: 100%;
 }
 
-
 // <-- ~~~~~~~~~~~~~~~~~~    Mixins    ~~~~~~~~~~~~~~~~~~ --> //
-
 @mixin calc($property, $expression) {
   #{$property}: -moz-calc(#{$expression});
   #{$property}: -webkit-calc(#{$expression});
@@ -275,7 +284,6 @@ body {
 }
 
 // <-- ~~~~~~~~~~~~~~~~~~    Imports    ~~~~~~~~~~~~~~~~~~ --> //
-
 @import 'home';
 @import 'causesGrid';
 @import 'causesList';
