@@ -717,6 +717,25 @@ body {
           transition: all .2s linear; }
           #grid-cause-list .cause .content .donation .main-color:hover {
             background-color: #444444; }
+  #grid-cause-list #paginationCauseGridNav {
+    display: flex;
+    justify-content: center; }
+    #grid-cause-list #paginationCauseGridNav li {
+      cursor: pointer;
+      font-size: 14px;
+      padding: 11px 18px;
+      background-color: white;
+      border: 1px solid lightgray;
+      border-right: none;
+      font-family: "Lato", sans-serif;
+      transition: all .3s ease; }
+      #grid-cause-list #paginationCauseGridNav li:hover {
+        color: #de1219; }
+      #grid-cause-list #paginationCauseGridNav li:last-Child {
+        border-right: 1px solid lightgray; }
+    #grid-cause-list #paginationCauseGridNav .active {
+      color: #de1219;
+      font-weight: 700; }
 
 /* Header section */
 #list-causes-grid {

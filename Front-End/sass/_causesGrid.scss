@@ -144,7 +144,7 @@
             line-height: 14px;
             text-align: right;
           }
-          
+
           .changeWidth {
             width: 50%;
           }
@@ -171,5 +171,34 @@
       }
     }
 
+  }
+
+  #paginationCauseGridNav {
+    display: flex;
+    justify-content: center;
+
+    li {
+      cursor: pointer;
+      font-size: 14px;
+      padding: 11px 18px;
+      background-color: white;
+      border: 1px solid lightgray;
+      border-right: none;
+      font-family: $main-font-2;
+      transition: all .3s ease;
+
+      &:hover {
+        color: $main-color;
+      }
+
+      &:last-Child {
+        border-right: 1px solid lightgray;
+      }
+    }
+
+    .active {
+      color: $main-color;
+      font-weight: 700;
+    }
   }
 }

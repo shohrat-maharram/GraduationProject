@@ -10,7 +10,8 @@ $(document).ready(function () {
         }
     });
 
-    /*  ~~~~~~~~~~~~~~~~~~~~~ Home page ~~~~~~~~~~~~~~~~~~~~~ */
+
+    /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ Home page ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
     //Show and hide search bar
     $(".searchIcon").click(function () {
         $(".search").slideDown("slow");
@@ -59,7 +60,7 @@ $(document).ready(function () {
         }
     });
 
-    /*  ~~~~~~~~~~~~~~~~~~~~~ Causes page  ~~~~~~~~~~~~~~~~~~~~~ */
+    /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ Causes page  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
     //making Progressbar dynamically
     var progressBar = $(".progressOwn").offset().top;
@@ -91,16 +92,12 @@ $(document).ready(function () {
             checked = true;
         }
     })
-
-
-
-
 });
 
 
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Switching to native javascript  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-/*  ~~~~~~~~~~~~~~~~~~~~~ Home page  ~~~~~~~~~~~~~~~~~~~~~ */
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ Home page  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 //Add active class to the active page
 var pageTabs = document.getElementsByClassName("pageTabs");
@@ -119,7 +116,118 @@ function activeTab(elem) {
     }
 }
 
-/*  ~~~~~~~~~~~~~~~~~~~~~ Causes page  ~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ Pagination ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+//Pagination of cause grid menu
+//Variables
+var causeGridPaginationItems = document.getElementsByClassName("causeGridPagination");
+var paginationCauseGridNav = document.getElementById("paginationCauseGridNav");
+var itemNum = 6;
+var pageCount = Math.ceil(causeGridPaginationItems.length / itemNum);
+
+//Creating Prev button
+var listLeft = document.createElement("li");
+var iLeft = document.createElement("i");
+iLeft.setAttribute("class", "fa fa-angle-double-left");
+listLeft.appendChild(iLeft);
+listLeft.addEventListener('click', paginationPrevCauseGrid);
+paginationCauseGridNav.appendChild(listLeft);
+
+//Creating Pages
+for (var i = 0; i < pageCount; i++) {
+    var list = document.createElement("li");
+    list.innerHTML = (i + 1);
+    list.setAttribute("data-index", (i + 1));
+    if (i == 0) { list.classList.add("active"); }
+    list.addEventListener('click', goToPage);
+    paginationCauseGridNav.appendChild(list);
+}
+
+//Creating Next button
+var listRight = document.createElement("li");
+var iRight = document.createElement("i");
+iRight.setAttribute("class", "fa fa-angle-double-right");
+listRight.appendChild(iRight);
+listRight.addEventListener('click', paginationNextCauseGrid);
+paginationCauseGridNav.appendChild(listRight);
+
+// Making page numbers dynamic
+for (var j = 0; j < causeGridPaginationItems.length; j++) {
+    causeGridPaginationItems[j].style.display = "none";
+    if (0 <= j && j < 6) {
+        causeGridPaginationItems[j].style.display = "block";
+    }
+}
+
+function goToPage(e) {
+    var pageNum = e.target.dataset.index;
+
+    for (var j = 0; j < causeGridPaginationItems.length; j++) {
+        causeGridPaginationItems[j].style.display = "none";
+
+        if (((pageNum - 1) * itemNum) <= j && j < (pageNum * itemNum)) {
+            causeGridPaginationItems[j].style.display = "block";
+        }
+    }
+
+    var li = document.querySelectorAll("#paginationCauseGridNav li");
+    for (var t = 0; t < (pageCount + 2); t++) {
+        li[t].classList.remove("active");
+    }
+    li[pageNum].classList.add("active");
+}
+
+// Making Next button dynamic
+function paginationNextCauseGrid() {
+    var activePage = document.querySelector("#paginationCauseGridNav .active").dataset.index;
+    var currentActivePage = parseInt(activePage) + 1;
+    if (activePage == pageCount) { currentActivePage = pageCount; activePage -= 1; }
+    var itemStart = activePage * 6;
+    var itemEnd = itemStart + 6;
+
+    for (var j = 0; j < causeGridPaginationItems.length; j++) {
+        causeGridPaginationItems[j].style.display = "none";
+        if (itemStart <= j && j < itemEnd) {
+            causeGridPaginationItems[j].style.display = "block";
+        }
+    }
+
+    var li = document.querySelectorAll("#paginationCauseGridNav li");
+    for (var t = 0; t < (pageCount + 2); t++) {
+        li[t].classList.remove("active");
+    }
+    li[currentActivePage].classList.add("active");
+}
+
+// Making Prev button dynamic
+function paginationPrevCauseGrid() {
+    var activePage = document.querySelector("#paginationCauseGridNav .active").dataset.index;
+    var currentActivePage = parseInt(activePage) - 1;
+    if (activePage == 1) { currentActivePage = 1; activePage = 1; }
+    
+    var itemEnd = currentActivePage * 6;
+    var itemStart = itemEnd - 6;
+
+    for (var j = 0; j < causeGridPaginationItems.length; j++) {
+        causeGridPaginationItems[j].style.display = "none";
+        if (itemStart <= j && j < itemEnd) {
+            causeGridPaginationItems[j].style.display = "block";
+        }
+    }
+
+    var li = document.querySelectorAll("#paginationCauseGridNav li");
+    for (var t = 0; t < (pageCount + 2); t++) {
+        li[t].classList.remove("active");
+    }
+    li[currentActivePage].classList.add("active");
+}
+
+
+
+
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ Causes page  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 //Causes single menu Paypal/Visa Master Card section
 
@@ -164,7 +272,7 @@ for (i = 0; i < tab_link.length; i++) {
 
 
 
-/*  ~~~~~~~~~~~~~~~~~~~~~ Gallery page  ~~~~~~~~~~~~~~~~~~~~~ */
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ Gallery page  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
 //Making slider
@@ -217,7 +325,8 @@ function closeGallerySlider() {
 }
 
 
-/*  ~~~~~~~~~~~~~~~~~~~~~ Blog page  ~~~~~~~~~~~~~~~~~~~~~ */
+
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ Blog page  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 //Making slider for blog item
 
@@ -226,9 +335,6 @@ var blogItemSlider = document.getElementById("#blogItemSlider");
 var currentImage = document.querySelector("#blogItemSlider .itemImage img");
 var currentImageIndex;
 var imageNavs = document.querySelector("#blogItemSlider .itemImage .navs");
-
-//Adding first image
-currentImage.setAttribute("src", blogItemImagesArray[0]);
 
 //Create nav for all images
 for (var i = 0; i < blogItemImagesArray.length; i++) {
@@ -248,15 +354,12 @@ var blogItemSliderWidth = currentImage.width;
 var imageNavsWidth = 18 * blogItemImagesArray.length;
 imageNavs.style.left = ((blogItemSliderWidth - imageNavsWidth) / 2) + "px";
 
-function positioning() {
+function blogListSliderPositioning() {
     var blogItemSliderWidth = currentImage.width;
     var imageNavsWidth = 18 * blogItemImagesArray.length;
     imageNavs.style.left = ((blogItemSliderWidth - imageNavsWidth) / 2) + "px";
     console.log("jsdb");
 }
-
-// currentImage.addEventListener('resize', positioning);
-
 
 //Controling images via navControls
 function navControl(e) {
@@ -300,9 +403,6 @@ function blogSinglePrev() {
     }
     navItems[indx].classList.add("active");
 }
-
-
-
 
 
 
