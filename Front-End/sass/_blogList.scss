@@ -85,9 +85,66 @@
         }
 
         .itemImage {
+          position: relative;
           overflow: hidden;
           clear: both;
           padding: 15px 0;
+
+          img {
+            width: 100%;
+          }
+
+          .controls {
+            .controlsItem {
+              position: absolute;
+              z-index: 4;
+              padding: 20px;
+              font-size: 45px;
+              color: rgba(255, 255, 255, 0.6);
+              top: 115px;
+              cursor: pointer;
+              transition: all .3s ease;
+              font-weight: 500;
+
+              &:hover {
+                color: white;
+              }
+            }
+
+            .right {
+              right: 20px;
+            }
+
+            .left {
+              left: 20px;
+            }
+          }
+
+          .navs {
+            position: absolute;
+            bottom: 60px;
+            height: 15px;
+            line-height: 15px;
+
+            .navItem {
+              width: 10px;
+              height: 10px;
+              background-color: $main-font-color;
+              border-radius: 100%;
+              display: inline-block;
+              margin-right: 8px;
+              transition: all .3s ease;
+              cursor: pointer;
+
+              &:hover {
+                background-color: $main-color;
+              }
+            }
+
+            .active {
+              background-color: $main-color;
+            }
+          }
         }
 
         .itemText {
@@ -328,7 +385,25 @@
         .blogItem {
           .itemMeta {}
 
-          .itemImage {}
+          .itemImage {
+            .controls {
+              .controlsItem {
+                top: 70px;
+              }
+
+              .right {
+                right: 0;
+              }
+
+              .left {
+                left: 0;
+              }
+            }
+
+            .navs {
+              bottom: 30px;
+            }
+          }
 
           .itemText {}
 
@@ -358,3 +433,57 @@
 // <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
 // Screen size < 576px
 @media only screen and (max-width: 576px) {}
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+// Screen size between 768 and 576px
+@media only screen and (max-width: 400px) {
+  #blog-page {
+    .wrapper {
+      .blog-list {
+        .blogItem {
+          .itemMeta {}
+
+          .itemImage {
+            .controls {
+              .controlsItem {
+                top: 35px;
+              }
+
+              .right {
+                right: 0;
+              }
+
+              .left {
+                left: 0;
+              }
+            }
+
+            .navs {
+              bottom: 30px;
+            }
+          }
+
+          .itemText {}
+
+          .readMore {}
+        }
+      }
+
+      .rightSide {
+        .wrapperRight {
+          margin-left: 0;
+
+          .header {}
+
+          .search {}
+
+          .categories {}
+
+          .recentPosts {}
+
+          .tags {}
+        }
+      }
+    }
+  }
+}

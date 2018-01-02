@@ -1391,9 +1391,46 @@ body {
           #blog-page .wrapper .blog-list .blogItem .itemMeta .about p i {
             font-size: 14px; }
     #blog-page .wrapper .blog-list .blogItem .itemImage {
+      position: relative;
       overflow: hidden;
       clear: both;
       padding: 15px 0; }
+      #blog-page .wrapper .blog-list .blogItem .itemImage img {
+        width: 100%; }
+      #blog-page .wrapper .blog-list .blogItem .itemImage .controls .controlsItem {
+        position: absolute;
+        z-index: 4;
+        padding: 20px;
+        font-size: 45px;
+        color: rgba(255, 255, 255, 0.6);
+        top: 115px;
+        cursor: pointer;
+        transition: all .3s ease;
+        font-weight: 500; }
+        #blog-page .wrapper .blog-list .blogItem .itemImage .controls .controlsItem:hover {
+          color: white; }
+      #blog-page .wrapper .blog-list .blogItem .itemImage .controls .right {
+        right: 20px; }
+      #blog-page .wrapper .blog-list .blogItem .itemImage .controls .left {
+        left: 20px; }
+      #blog-page .wrapper .blog-list .blogItem .itemImage .navs {
+        position: absolute;
+        bottom: 60px;
+        height: 15px;
+        line-height: 15px; }
+        #blog-page .wrapper .blog-list .blogItem .itemImage .navs .navItem {
+          width: 10px;
+          height: 10px;
+          background-color: #4a4a4a;
+          border-radius: 100%;
+          display: inline-block;
+          margin-right: 8px;
+          transition: all .3s ease;
+          cursor: pointer; }
+          #blog-page .wrapper .blog-list .blogItem .itemImage .navs .navItem:hover {
+            background-color: #de1219; }
+        #blog-page .wrapper .blog-list .blogItem .itemImage .navs .active {
+          background-color: #de1219; }
     #blog-page .wrapper .blog-list .blogItem .itemText p {
       font-size: 14px;
       line-height: 24px;
@@ -1540,6 +1577,25 @@ body {
         background-color: #4a4a4a; }
 
 @media only screen and (max-width: 768px) {
+  #blog-page .wrapper .blog-list .blogItem .itemImage .controls .controlsItem {
+    top: 70px; }
+  #blog-page .wrapper .blog-list .blogItem .itemImage .controls .right {
+    right: 0; }
+  #blog-page .wrapper .blog-list .blogItem .itemImage .controls .left {
+    left: 0; }
+  #blog-page .wrapper .blog-list .blogItem .itemImage .navs {
+    bottom: 30px; }
+  #blog-page .wrapper .rightSide .wrapperRight {
+    margin-left: 0; } }
+@media only screen and (max-width: 400px) {
+  #blog-page .wrapper .blog-list .blogItem .itemImage .controls .controlsItem {
+    top: 35px; }
+  #blog-page .wrapper .blog-list .blogItem .itemImage .controls .right {
+    right: 0; }
+  #blog-page .wrapper .blog-list .blogItem .itemImage .controls .left {
+    left: 0; }
+  #blog-page .wrapper .blog-list .blogItem .itemImage .navs {
+    bottom: 30px; }
   #blog-page .wrapper .rightSide .wrapperRight {
     margin-left: 0; } }
 /* Header section */

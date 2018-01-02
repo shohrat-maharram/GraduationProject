@@ -172,14 +172,13 @@ for (i = 0; i < tab_link.length; i++) {
 //Defining of variables
 var images = ["img/gallery/img-1.jpg", "img/gallery/img-2.jpg", "img/gallery/img-3.jpg", "img/gallery/img-19.jpg", "img/gallery/img-14.jpg", "img/gallery/img-15.jpg", "img/gallery/img-16.jpg", "img/gallery/img-17.jpg", "img/gallery/img-18.jpg", "img/gallery/need.jpg"];
 var image = document.querySelector("#gallery-slider .imageWrapper .image");
-var i ;
+var i;
 var clickedImage;
 var imageItems = document.querySelectorAll("#gallery-slide-image .galleryImage .overlay");
 
 //Function show clicked image
-for (var j = 0; j < imageItems.length;j++)
-{
-    imageItems[j].addEventListener('click',showImage)
+for (var j = 0; j < imageItems.length; j++) {
+    imageItems[j].addEventListener('click', showImage)
 }
 
 function showImage(e) {
@@ -218,10 +217,89 @@ function closeGallerySlider() {
 }
 
 
+/*  ~~~~~~~~~~~~~~~~~~~~~ Blog page  ~~~~~~~~~~~~~~~~~~~~~ */
+
+//Making slider for blog item
+
+var blogItemImagesArray = ["img/blog/img-5.jpg", "img/blog/img-4.jpg", "img/blog/img-6.jpg"];
+var blogItemSlider = document.getElementById("#blogItemSlider");
+var currentImage = document.querySelector("#blogItemSlider .itemImage img");
+var currentImageIndex;
+var imageNavs = document.querySelector("#blogItemSlider .itemImage .navs");
+
+//Adding first image
+currentImage.setAttribute("src", blogItemImagesArray[0]);
+
+//Create nav for all images
+for (var i = 0; i < blogItemImagesArray.length; i++) {
+    var navItem = document.createElement("div");
+    navItem.setAttribute("class", "navItem");
+    navItem.setAttribute("data-index", i);
+    navItem.addEventListener('click', navControl);
+    imageNavs.appendChild(navItem);
+}
+
+//Add active class to first image
+var navItems = document.querySelectorAll("#blogItemSlider .itemImage .navs .navItem");
+navItems[0].classList.add("active");
+
+//Positioning of navControls
+var blogItemSliderWidth = currentImage.width;
+var imageNavsWidth = 18 * blogItemImagesArray.length;
+imageNavs.style.left = ((blogItemSliderWidth - imageNavsWidth) / 2) + "px";
+
+function positioning() {
+    var blogItemSliderWidth = currentImage.width;
+    var imageNavsWidth = 18 * blogItemImagesArray.length;
+    imageNavs.style.left = ((blogItemSliderWidth - imageNavsWidth) / 2) + "px";
+    console.log("jsdb");
+}
+
+// currentImage.addEventListener('resize', positioning);
 
 
+//Controling images via navControls
+function navControl(e) {
+    indexOfImage = e.target.dataset.index;
+    currentImage.setAttribute("src", blogItemImagesArray[indexOfImage]);
+    for (var i = 0; i < blogItemImagesArray.length; i++) {
+        navItems[i].classList.remove("active");
+    }
+    navItems[indexOfImage].classList.add("active");
+}
 
+//Go to next image
+function blogSingleNext() {
+    currentImageIndex = parseInt(document.querySelector("#blogItemSlider .itemImage .navs .active").dataset.index);
+    if (currentImageIndex == (blogItemImagesArray.length - 1)) {
+        indx = 0;
+    }
+    else {
+        var indx = (currentImageIndex + 1);
+    }
+    currentImage.setAttribute("src", blogItemImagesArray[indx]);
+    for (var i = 0; i < blogItemImagesArray.length; i++) {
+        navItems[i].classList.remove("active");
+    }
+    navItems[indx].classList.add("active");
+}
 
+//Go to previous image
+function blogSinglePrev() {
+    currentImageIndex = parseInt(document.querySelector("#blogItemSlider .itemImage .navs .active").dataset.index);
+    if (currentImageIndex == 0) {
+        indx = parseInt(blogItemImagesArray.length - 1);
+    }
+    else {
+        var indx = (currentImageIndex - 1);
+    }
+
+    currentImage.setAttribute("src", blogItemImagesArray[indx]);
+    for (var i = 0; i < blogItemImagesArray.length; i++) {
+        navItems[i].classList.remove("active");
+    }
+    navItems[indx].classList.add("active");
+}
 
 
 

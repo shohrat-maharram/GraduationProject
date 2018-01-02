@@ -17,7 +17,7 @@
 
 </head>
 
-<body>
+<body onresize="positioning()">
     <section style="margin:30px 0px; text-align:center;">Here is header</section>
 
     <section id="gallery-grid">
@@ -39,6 +39,7 @@
         <div class="container">
             <div class="row wrapper">
                 <div class="col-lg-8 blog-list">
+
                     <div class="blogItem">
                         <div class="itemMeta">
                             <div class="date">20 jule 2017</div>
@@ -64,7 +65,7 @@
                         </div>
                     </div>
 
-                    <div class="blogItem">
+                    <div id="blogItemSlider" class="blogItem">
                         <div class="itemMeta">
                             <div class="date">20 jule 2017</div>
                             <div class="about">
@@ -77,6 +78,13 @@
                         </div>
                         <div class="itemImage">
                             <img src="img/blog/img-5.jpg" alt="">
+                            <div class="controls">
+                                <i class="fa fa-angle-right right controlsItem" onclick="blogSingleNext()"></i>
+                                <i class="fa fa-angle-left left controlsItem" onclick="blogSinglePrev()"></i>
+                            </div>
+                            <div class="navs">
+
+                            </div>
                         </div>
                         <div class="itemText">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque nam, necessitatibus odio dignissimos nostrum unde iure veniam.</p>
