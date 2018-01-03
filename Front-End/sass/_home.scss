@@ -1,509 +1,569 @@
 
 // <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
 // Screen size > 992px
-/* Header section */
-#header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
+//Container of the Home page
+#mainContainer {
 
-  //Search bar
-  .search {
-    background-color: $main-bg-color;
-    padding: 5px 0;
-    display: none;
+  /* Header section */
+  #header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
 
-    .flex {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    //Search bar
+    .search {
+      background-color: $main-bg-color;
+      padding: 5px 0;
+      display: none;
+
+      .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .searchBar {
+        background-color: transparent;
+        border: none;
+        width: 95%;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: $main-font-2;
+        line-height: 0;
+        outline-style: none;
+        box-shadow: none;
+        border-color: transparent;
+      }
+
+      i {
+        font-size: 13px;
+        color: $main-color;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
 
-    .searchBar {
-      background-color: transparent;
-      border: none;
-      width: 95%;
-      font-size: 14px;
-      font-weight: 400;
-      font-family: $main-font-2;
-      line-height: 0;
-      outline-style: none;
-      box-shadow: none;
-      border-color: transparent;
+    //Navbar
+    .navMenu {
+      background-color: white;
+      box-shadow: 0 5px 10px -7px #dfdede;
+      // position: relative;
+      // display: none;
+
+      .navMenuInside {
+        padding: 5px 0;
+
+        a {
+          align-items: center;
+          padding: 0;
+        }
+
+        .navInside {
+          position: relative;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+          padding-top: 25px;
+
+          .logoDiv {
+            position: relative;
+            top: -12px;
+
+            .logo {
+              font-size: 32px;
+              color: $main-color;
+              font-weight: 600;
+              font-family: $main-font;
+
+              span {
+                color: $main-black-color;
+                font-weight: 900;
+              }
+            }
+          }
+
+          .menuDiv {
+            position: relative;
+            top: 3px;
+
+            .navInsidePages {
+              justify-content: flex-end;
+
+              ul {
+                align-items: center;
+                line-height: 30px;
+
+                .active {
+                  color: $main-color;
+                }
+
+                li {
+                  position: relative;
+                  padding-bottom: 25px;
+
+                  a,
+                  span {
+                    transition: all .2s ease-out 0s;
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: $main-black-color;
+                    margin: 0 20px;
+                    opacity: .9;
+                    cursor: pointer;
+
+                    &:hover {
+                      color: $main-color;
+                    }
+                  }
+
+                  .subMenu {
+                    display: none;
+                    position: absolute;
+                    top: 45px;
+                    left: 20px;
+                    width: 250px;
+                    border-bottom: 2px solid $main-color;
+
+                    li {
+                      background-color: $main-black-color;
+                      padding: 10px 0;
+                      border-bottom: 1px solid rgb(95, 95, 97);
+                      transition: all .3s ease-out 0s;
+
+                      &:hover {
+                        background-color: $main-color;
+                        border-bottom: 1px solid $main-color;
+                      }
+
+                      &:hover a {
+                        margin-left: 15px;
+                      }
+
+                      a {
+                        text-decoration: none;
+                        color: white;
+                        margin-left: 10px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .searchIcon {
+            justify-content: flex-end;
+            position: relative;
+            top: -12px;
+
+            i {
+              padding: 8px 15px;
+              border-radius: 3px;
+              background-color: $main-color;
+              color: white;
+              font-size: 14px;
+              cursor: pointer;
+              transition: all .3s ease;
+
+              &:hover {
+                background-color: $main-black-color;
+              }
+            }
+          }
+        }
+      }
     }
 
-    i {
-      font-size: 13px;
-      color: $main-color;
+    //Navbar small screen
+    .navMenuSmall {
+      display: none;
+    }
 
-      &:hover {
-        cursor: pointer;
+    //Title of navbar
+    .navMenuSmallTitle {
+      display: none;
+    }
+
+    //Responsive menu
+    .menuResponse {
+      display: none;
+      background-color: white;
+
+      ul {
+        width: 100%;
+
+        li {
+          border-top: 1px solid lighten($main-black-color,60%);
+          position: relative;
+
+          a {
+            display: block;
+            text-decoration: none;
+            color: $main-black-color;
+            font-family: $main-font;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 15px;
+            cursor: pointer;
+            width: 95%;
+            transition: all .3s ease-out 0s;
+
+            &:hover {
+              color: $main-color;
+            }
+          }
+
+          i {
+            position: absolute;
+            right: 7px;
+            top: 12px;
+            float: right;
+            color: $main-black-color;
+            font-size: 8px;
+            padding: 3px;
+            cursor: pointer;
+            transition: all .3s ease-out 0s;
+
+            &:hover {
+              color: $main-color;
+            }
+          }
+
+          ul {
+            display: none;
+
+            li {
+              background-color: rgb(252, 252, 252);
+
+              a {
+                padding-left: 55px;
+                font-size: 12px;
+                color: lighten($main-black-color, 30);
+                font-weight: normal;
+
+              }
+            }
+          }
+        }
       }
     }
   }
 
-  //Navbar
-  .navMenu {
-    background-color: white;
-    box-shadow: 0 5px 10px -7px #dfdede;
-    // position: relative;
-    // display: none;
+  /* Slider section */
+  #slider {
+    #sliderWrapper {
+      margin: 0 -15px;
+      position: relative;
 
-    .navMenuInside {
-      padding: 5px 0;
-
-      a {
-        align-items: center;
-        padding: 0;
+      .slideItems {
+        height: 100vh;
+        width: 100%;
+        float: left;
+        background-size: cover;
       }
 
-      .navInside {
-        position: relative;
+      .slideItem-1 {
+        display: block;
+        background: url("../img/slides/s1.jpg") no-repeat center center;
+      }
+
+      .slideItem-2 {
+        display: none;
+        background: url("../img/slides/s2.jpg") no-repeat center center;
+      }
+
+      .slideItem-3 {
+        display: none;
+        background: url("../img/slides/s3.jpg") no-repeat center center;
+      }
+
+      .overlay {
+        padding: 250px 0;
+        text-align: center;
         width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 25px;
+        height: 100vh;
+        position: absolute;
+        background-color: rgba(0,0,0,0.4);
 
-        .logoDiv {
+        h1 {
           position: relative;
-          top: -12px;
+          top: -30px;
+          opacity: .1;
+          transition: all 1.8s ease;
+          font-size: 55px;
+          font-weight: bold;
+          margin-bottom: 45px;
+          letter-spacing: 5px;
+          font-family: $main-font-3;
+          color: white;
+        }
 
-          .logo {
-            font-size: 32px;
+        p {
+          position: relative;
+          top: -60px;
+          opacity: .1;
+          transition: all 1.4s ease;
+          padding: 0 80px;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px;
+          font-family: $main-font-2;
+          color: white;
+          margin-bottom: 50px;
+        }
+
+        a {
+          position: relative;
+          top: -60px;
+          opacity: .1;
+          text-decoration: none;
+          background-color: $main-color;
+          color: white;
+          font-family: $main-font-3;
+          font-size: 14px;
+          font-weight: 600;
+          padding: 16px 46px;
+          border-radius: 6px;
+          letter-spacing: 1px;
+          transition: background-color .3s ease-out, opacity 1s ease, top 1s ease;
+
+          &:hover {
+            background-color: $main-black-color;
+          }
+        }
+
+        .controls {
+          position: absolute;
+          top: 330px;
+          right: 35px;
+          width: 15px;
+          height: 70px;
+
+          .controlItem {
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            background-color: $bg-col-tag;
+            margin-bottom: 10px;
+            transition: all .3s ease;
+            cursor: pointer;
+
+            &:hover {
+              background-color: $main-color;
+            }
+          }
+
+          .active {
+            background-color: $main-color;
+          }
+        }
+      }
+    }
+  }
+
+  /* Footer section */
+  #footer {
+    .footerBar {
+      padding: 50px 15px;
+      background-color: #1e2024;
+
+      .gives {
+        margin: 35px 0;
+
+        .logo {
+          margin-bottom: 25px;
+
+          a {
+            display: block;
             color: $main-color;
-            font-weight: 600;
+            text-decoration: none;
+            font-size: 32px;
+            font-weight: 700;
             font-family: $main-font;
 
             span {
-              color: $main-black-color;
-              font-weight: 900;
+              color: white;
             }
           }
         }
 
-        .menuDiv {
-          position: relative;
-          top: 3px;
+        .text {
+          margin-bottom: 20px;
 
-          .navInsidePages {
-            justify-content: flex-end;
-
-            ul {
-              align-items: center;
-              line-height: 30px;
-
-              .active {
-                color: $main-color;
-              }
-
-              li {
-                position: relative;
-                padding-bottom: 25px;
-
-                a,
-                span {
-                  transition: all .2s ease-out 0s;
-                  font-size: 15px;
-                  font-weight: 500;
-                  color: $main-black-color;
-                  margin: 0 20px;
-                  opacity: .9;
-                  cursor: pointer;
-
-                  &:hover {
-                    color: $main-color;
-                  }
-                }
-
-                .subMenu {
-                  display: none;
-                  position: absolute;
-                  top: 45px;
-                  left: 20px;
-                  width: 250px;
-                  border-bottom: 2px solid $main-color;
-
-                  li {
-                    background-color: $main-black-color;
-                    padding: 10px 0;
-                    border-bottom: 1px solid rgb(95, 95, 97);
-                    transition: all .3s ease-out 0s;
-
-                    &:hover {
-                      background-color: $main-color;
-                      border-bottom: 1px solid $main-color;
-                    }
-
-                    &:hover a {
-                      margin-left: 15px;
-                    }
-
-                    a {
-                      text-decoration: none;
-                      color: white;
-                      margin-left: 10px;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-
-        .searchIcon {
-          justify-content: flex-end;
-          position: relative;
-          top: -12px;
-
-          i {
-            padding: 8px 15px;
-            border-radius: 3px;
-            background-color: $main-color;
-            color: white;
+          p {
+            color: darken(white,20);
+            line-height: 24px;
             font-size: 14px;
+          }
+        }
+
+        .social {
+          color: darken(white,20);
+
+          a {
+            display: inline-block;
+            position: relative;
+            text-decoration: none;
+            color: darken(white,20);
+            font-size: 12px;
+            font-weight: bold;
+            width: 28px;
+            padding: 8px;
+            background-color: lighten(#1e2024,5);
+            border-radius: 3px;
             cursor: pointer;
-            transition: all .3s ease;
-            &:hover{
-              background-color: $main-black-color;
+            transition: all .3s ease-in 0s;
+            box-sizing: border-box;
+            overflow: hidden;
+
+            &:hover {
+              background-color: white;
+              width: 88px;
+              color: $main-color;
+            }
+
+            &:hover span {
+              visibility: visible;
+            }
+
+            i {}
+
+            span {
+              position: absolute;
+              top: 8px;
+              left: 28px;
+              visibility: hidden;
             }
           }
+
         }
       }
-    }
-  }
 
-  //Navbar small screen
-  .navMenuSmall {
-    display: none;
-  }
+      .links {
+        margin: 35px 0;
 
-  //Title of navbar
-  .navMenuSmallTitle {
-    display: none;
-  }
-
-  //Responsive menu
-  .menuResponse {
-    display: none;
-    background-color: white;
-
-    ul {
-      width: 100%;
-
-      li {
-        border-top: 1px solid lighten($main-black-color,60%);
-        position: relative;
-
-        a {
-          display: block;
-          text-decoration: none;
-          color: $main-black-color;
-          font-family: $main-font;
-          font-size: 12px;
-          font-weight: 600;
-          padding: 15px;
-          cursor: pointer;
-          width: 95%;
-          transition: all .3s ease-out 0s;
-
-          &:hover {
-            color: $main-color;
-          }
-        }
-
-        i {
-          position: absolute;
-          right: 7px;
-          top: 12px;
-          float: right;
-          color: $main-black-color;
-          font-size: 8px;
-          padding: 3px;
-          cursor: pointer;
-          transition: all .3s ease-out 0s;
-
-          &:hover {
-            color: $main-color;
-          }
+        h5 {
+          font-size: 16px;
+          color: darken(white,20);
+          margin-bottom: 25px;
         }
 
         ul {
-          display: none;
-
           li {
-            background-color: rgb(252, 252, 252);
+            line-height: 30px;
+            color: darken(white,20);
+            font-size: 14px;
+            cursor: pointer;
+            transition: all .3s ease-out 0s;
+
+            &:hover {
+              margin-left: 6px;
+              color: $main-color;
+            }
+
+            &:hover a {
+              color: $main-color;
+            }
 
             a {
-              padding-left: 55px;
-              font-size: 12px;
-              color: lighten($main-black-color, 30);
-              font-weight: normal;
-
+              color: darken(white,20);
+              text-decoration: none;
             }
           }
         }
       }
-    }
-  }
-}
 
-/* Slider section */
-#slider {
-  .sliderFrame {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-color: lightgray;
-    margin: 0 auto;
-    padding: 0;
-    overflow: hidden;
+      .tags {
+        margin: 35px 0;
 
-    //Creating rounded nav 
-    .nextDiv {
-      position: absolute;
-      right: 40px;
-      bottom: 5px;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      .nextRound {
-        width: 15px;
-        height: 15px;
-        box-sizing: border-box;
-        border-radius: 100%;
-        float: left;
-        background-color: darken(white,10);
-        transition: background-color .2s linear;
-
-        &:hover {
-          background-color: #de1219;
-          cursor: pointer;
+        h5 {
+          color: darken(white,20);
+          margin-bottom: 25px;
         }
-      }
-    }
-
-    .slidesDiv {
-      height: 100vh;
-      position: absolute;
-      left: 0;
-      transition: all .5s linear;
-
-      .slideDiv {
-        height: 100vh;
-        float: left;
-        background-repeat: no-repeat;
-        // background-attachment: fixed;
-        // background-position: center;
-        background-size: cover;
-      }
-    }
-
-  }
-
-}
-
-/* Footer section */
-#footer {
-  .footerBar {
-    padding: 50px 15px;
-    background-color: #1e2024;
-
-    .gives {
-      margin: 35px 0;
-
-      .logo {
-        margin-bottom: 25px;
 
         a {
-          display: block;
-          color: $main-color;
+          transition: all .3s ease-out 0s;
+          font-size: 14px;
+          display: inline-block;
           text-decoration: none;
-          font-size: 32px;
-          font-weight: 700;
-          font-family: $main-font;
+          color: darken(white,20);
+          padding: 10px 12px;
+          margin: 3px 0;
+          background-color: lighten(#1e2024,5);
+          border-radius: 3px;
 
-          span {
-            color: white;
+          &:hover {
+            background-color: white;
+            color: $main-color;
           }
         }
       }
 
-      .text {
-        margin-bottom: 20px;
+      .subscribe {
+        margin: 35px 0;
+
+        h5 {
+          color: darken(white,20);
+          margin-bottom: 25px;
+        }
 
         p {
           color: darken(white,20);
           line-height: 24px;
           font-size: 14px;
-        }
-      }
-
-      .social {
-        color: darken(white,20);
-
-        a {
-          display: inline-block;
-          position: relative;
-          text-decoration: none;
-          color: darken(white,20);
-          font-size: 12px;
-          font-weight: bold;
-          width: 28px;
-          padding: 8px;
-          background-color: lighten(#1e2024,5);
-          border-radius: 3px;
-          cursor: pointer;
-          transition: all .3s ease-in 0s;
-          box-sizing: border-box;
-          overflow: hidden;
-
-          &:hover {
-            background-color: white;
-            width: 88px;
-            color: $main-color;
-          }
-
-          &:hover span {
-            visibility: visible;
-          }
-
-          i {}
-
-          span {
-            position: absolute;
-            top: 8px;
-            left: 28px;
-            visibility: hidden;
-          }
+          margin-bottom: 30px;
         }
 
-      }
-    }
-
-    .links {
-      margin: 35px 0;
-
-      h5 {
-        font-size: 16px;
-        color: darken(white,20);
-        margin-bottom: 25px;
-      }
-
-      ul {
-        li {
-          line-height: 30px;
-          color: darken(white,20);
+        .form {
           font-size: 14px;
-          cursor: pointer;
-          transition: all .3s ease-out 0s;
 
-          &:hover {
-            margin-left: 6px;
-            color: $main-color;
+          input {
+            height: 45px;
+            border-radius: 3px;
+            outline-style: none;
+            box-shadow: none;
+            border-color: transparent;
+            font-size: 14px;
+            width: 100%;
           }
 
-          &:hover a {
-            color: $main-color;
-          }
+          button {
+            height: 45px;
+            background-color: $main-color;
+            border: none;
+            font-size: 14px;
+            color: white;
+            font-weight: 600;
+            padding: 0 20px;
+            border-radius: 3px;
+            outline-style: none;
+            box-shadow: none;
+            border-color: transparent;
+            transition: all .3s linear 0s;
 
-          a {
-            color: darken(white,20);
-            text-decoration: none;
+            &:hover {
+              background-color: white;
+              color: $main-color;
+            }
           }
         }
       }
     }
 
-    .tags {
-      margin: 35px 0;
-
-      h5 {
-        color: darken(white,20);
-        margin-bottom: 25px;
-      }
-
-      a {
-        transition: all .3s ease-out 0s;
-        font-size: 14px;
-        display: inline-block;
-        text-decoration: none;
-        color: darken(white,20);
-        padding: 10px 12px;
-        margin: 3px 0;
-        background-color: lighten(#1e2024,5);
-        border-radius: 3px;
-
-        &:hover {
-          background-color: white;
-          color: $main-color;
-        }
-      }
-    }
-
-    .subscribe {
-      margin: 35px 0;
-
-      h5 {
-        color: darken(white,20);
-        margin-bottom: 25px;
-      }
+    .copyright {
+      padding: 25px 0;
+      background-color: #161719;
+      text-align: center;
 
       p {
         color: darken(white,20);
-        line-height: 24px;
         font-size: 14px;
-        margin-bottom: 30px;
+        font-family: $main-font-2;
+        font-weight: 400;
       }
-
-      .form {
-        font-size: 14px;
-
-        input {
-          height: 45px;
-          border-radius: 3px;
-          outline-style: none;
-          box-shadow: none;
-          border-color: transparent;
-          font-size: 14px;
-          width: 100%;
-        }
-
-        button {
-          height: 45px;
-          background-color: $main-color;
-          border: none;
-          font-size: 14px;
-          color: white;
-          font-weight: 600;
-          padding: 0 20px;
-          border-radius: 3px;
-          outline-style: none;
-          box-shadow: none;
-          border-color: transparent;
-          transition: all .3s linear 0s;
-
-          &:hover {
-            background-color: white;
-            color: $main-color;
-          }
-        }
-      }
-    }
-  }
-
-  .copyright {
-    padding: 25px 0;
-    background-color: #161719;
-    text-align: center;
-
-    p {
-      color: darken(white,20);
-      font-size: 14px;
-      font-family: $main-font-2;
-      font-weight: 400;
     }
   }
 }
@@ -512,150 +572,194 @@
 
 // Screen size bigger than 992px
 @media only screen and (min-width: 992px) {
-  .menuResponse {
-    display: none;
+  #mainContainer {
+    //Header
+    #header {
+      //Responsive menu
+      .menuResponse {
+        display: none;
+      }
+    }
   }
 }
 
 // Screen size between 992px and 768px
 @media only screen and (max-width: 992px) {
+  #mainContainer {
+    //Header
+    #header {
+      //Navbar big screen
+      .navMenuBig {
+        display: none;
+      }
 
-  //Header
-  #header {
-    //Navbar big screen
-    .navMenuBig {
-      display: none;
-    }
+      //Navbar small screen
+      .navMenuSmall {
+        display: block;
+        box-shadow: none;
 
-    //Navbar small screen
-    .navMenuSmall {
-      display: block;
-      box-shadow: none;
+        .navInside {
+          border-bottom: 1px solid lighten($main-black-color, 60%);
+        }
+      }
 
-      .navInside {
-        border-bottom: 1px solid lighten($main-black-color, 60%);
+      //Title of navbar
+      .navMenuSmallTitle {
+        display: block;
+        box-shadow: none;
+
+        .navInside {
+          .logoDiv {
+            a {
+              font-size: 22px !important;
+              font-weight: 300 !important;
+            }
+          }
+
+          .searchIconSmall {
+
+            justify-content: flex-end;
+            position: relative;
+            top: -12px;
+
+            i {
+              color: $main-color;
+              font-size: 30px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      //Responsive menu
+      .menuResponse {
+        display: none;
+
       }
     }
 
-    //Title of navbar
-    .navMenuSmallTitle {
-      display: block;
-      box-shadow: none;
-
-      .navInside {
-        .logoDiv {
-          a {
-            font-size: 22px !important;
-            font-weight: 300 !important;
-          }
-        }
-
-        .searchIconSmall {
-
-          justify-content: flex-end;
-          position: relative;
-          top: -12px;
-
-          i {
-            color: $main-color;
-            font-size: 30px;
-            cursor: pointer;
+    /* Slider section */
+    #slider {
+      #sliderWrapper {
+        .overlay {
+          h1 {
+            font-size: 35px;
           }
         }
       }
     }
 
-    //Responsive menu
-    .menuResponse {
-      display: none;
-
-    }
+    //Footer
+    #footer {}
   }
-
-  //Footer
-  #footer {}
 }
 
 // <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
 // Screen size between 768 and 576px
 @media only screen and (max-width: 768px) {
-
-  //Header
-  #header {
-    //Navbar small screen
-    .navMenuSmall {
-      .navInside {
-        border-bottom: 1px solid lighten($main-black-color, 60%);
+  #mainContainer {
+    //Header
+    #header {
+      //Navbar small screen
+      .navMenuSmall {
+        .navInside {
+          border-bottom: 1px solid lighten($main-black-color, 60%);
+        }
       }
     }
-  }
 
-  //Footer
-  #footer {}
+    //Footer
+    #footer {}
+  }
 }
 
 // <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
 // Screen size < 576px
 @media only screen and (max-width: 576px) {
-
-  //Header
-  #header {
-    //Search bar
-    .search {
-      padding: 0 50px;
-    }
-
-    //Navbar big screen
-    .navMenuBig {
-      display: none;
-    }
-
-    //Navbar small screen
-    .navMenuSmall {
-      display: block;
-      padding-right: 15px;
-      padding-left: 15px;
-
-      .navInside {
+  #mainContainer {
+    //Header
+    #header {
+      //Search bar
+      .search {
         padding: 0 50px;
+      }
 
-        .logoDiv {
-          width: 50%;
+      //Navbar big screen
+      .navMenuBig {
+        display: none;
+      }
+
+      //Navbar small screen
+      .navMenuSmall {
+        display: block;
+        padding-right: 15px;
+        padding-left: 15px;
+
+        .navInside {
+          padding: 0 50px;
+
+          .logoDiv {
+            width: 50%;
+          }
+
+          .searchIcon {
+            width: 50%;
+            // margin: 0px 10px;
+          }
         }
+      }
 
-        .searchIcon {
-          width: 50%;
-          // margin: 0px 10px;
+      //Title of navbar
+      .navMenuSmallTitle {
+        padding-right: 15px;
+        padding-left: 15px;
+
+        .navInside {
+          padding: 0 50px;
+
+          .logoDiv {
+            width: 50%;
+          }
+
+          .searchIconSmall {
+            width: 50%;
+            // margin: 0px 10px;
+          }
+        }
+      }
+
+      //Responsive menu
+      .menuResponse {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+    }
+
+    /* Slider section */
+    #slider {
+      #sliderWrapper {
+        .overlay {
+          h1 {
+            font-size: 20px;
+            margin-bottom: 25px;
+          }
+
+          p {
+            padding: 0 40px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            margin-bottom: 40px;
+          }
+
+          .controls {
+            right: 15px;
+          }
         }
       }
     }
 
-    //Title of navbar
-    .navMenuSmallTitle {
-      padding-right: 15px;
-      padding-left: 15px;
-
-      .navInside {
-        padding: 0 50px;
-
-        .logoDiv {
-          width: 50%;
-        }
-
-        .searchIconSmall {
-          width: 50%;
-          // margin: 0px 10px;
-        }
-      }
-    }
-
-    //Responsive menu
-    .menuResponse {
-      padding-right: 15px;
-      padding-left: 15px;
-    }
+    //Footer
+    #footer {}
   }
-
-  //Footer
-  #footer {}
 }

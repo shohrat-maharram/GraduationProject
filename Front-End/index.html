@@ -18,335 +18,357 @@
 </head>
 
 <body>
+    <div class="homeExist"></div>
 
-    <header id="header">
-        <div class="row search">
-            <div class="container pd-left pd-right">
-                <div class="col-md-12 flex pd-left pd-right">
-                    <input type="text" class="input-lg searchBar pd-left" placeholder="Type and Hit Enter" />
-                    <i class="glyphicon glyphicon-remove searchClose"></i>
+    <div id="mainContainer">
+        <header id="header">
+            <div class="row search">
+                <div class="container pd-left pd-right">
+                    <div class="col-md-12 flex pd-left pd-right">
+                        <input type="text" class="input-lg searchBar pd-left" placeholder="Type and Hit Enter" />
+                        <i class="glyphicon glyphicon-remove searchClose"></i>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row navMenu navMenuBig pd">
-            <div class="container flex navMenuInside pd">
-                <nav class="navbar navbar-expand-lg navbar-light pd-bottom pd-left pd-right mg-bottom navInside flex">
-                    <div class="col-md-3 pd-left logoDiv">
-                        <a class="navbar-brand pd-left flex logo" href="index.html">
-                            <span>G</span>ives
-                        </a>
-                    </div>
-
-                    <div class="col-md-8 pd-right menuDiv">
-                        <div class="collapse navbar-collapse navInsidePages pd-right" id="navbarSupportedContent">
-                            <ul class="navbar-nav mg-right flex">
-                                <li class="nav-item">
-                                    <a class="nav-link pd-right  pageTabs active" onclick='activeTab(this)' href="#">HOME</a>
-                                </li>
-                                <li class="nav-item subMenuLi">
-                                    <a class="nav-link pd-right pageTabs" onclick='activeTab(this)' href="#">CAUSES</a>
-                                    <ul class="subMenu">
-                                        <li>
-                                            <a class="nav-link pd-right pageTabs child" onclick='activeTab(this)' href="#">Causes grid</a>
-                                        </li>
-                                        <li>
-                                            <a class="nav-link pd-right pageTabs child" onclick='activeTab(this)' href="#">Causes list</a>
-                                        </li>
-                                        <li style="border-bottom:none;">
-                                            <a class="nav-link pd-right pageTabs child" onclick='activeTab(this)' href="#">Causes single</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link pd-right pageTabs" onclick='activeTab(this)' href="#">GALLERY</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link pd-right pageTabs" onclick='activeTab(this)' href="#">ABOUT</a>
-                                </li>
-                                <li class="nav-item subMenuLi">
-                                    <a class="nav-link pd-right pageTabs" onclick='activeTab(this)' href="#">BLOG</a>
-                                    <ul class="subMenu">
-                                        <li>
-                                            <a class="nav-link pd-right pageTabs child" onclick='activeTab(this)' href="#">Blog list</a>
-                                        </li>
-                                        <li style="border-bottom:none;">
-                                            <a class="nav-link pd-right pageTabs child" onclick='activeTab(this)' href="#">Blog single</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link pd-right pageTabs" onclick='activeTab(this)' href="#">CONTACT</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-md-1 flex searchIcon pd-right">
-                        <i class="glyphicon glyphicon-search"></i>
-                    </div>
-                </nav>
-            </div>
-        </div>
-
-        <div class="row navMenu navMenuSmall">
-            <div class="container flex navMenuInside pd">
-                <nav class="navbar navbar-expand-lg navbar-light pd-bottom pd-left pd-right mg-bottom navInside flex">
-                    <div class="col-md-6 col-sm-6 col-xs-4 pd-left logoDiv clear">
-                        <a class="navbar-brand pd-left flex logo" href="index.html">
-                            <span>G</span>ives
-                        </a>
-                    </div>
-
-                    <div class="col-md-6 col-sm-6 col-xs-4 flex searchIcon pd-right clear">
-                        <i class="glyphicon glyphicon-search"></i>
-                    </div>
-                </nav>
-            </div>
-        </div>
-
-        <div class="row navMenu navMenuSmallTitle">
-            <div class="container flex navMenuInside pd">
-                <nav class="navbar navbar-expand-lg navbar-light pd-bottom pd-left pd-right mg-bottom navInside flex">
-                    <div class="col-md-6 col-sm-6 col-xs-4 pd-left logoDiv clear">
-                        <a class="navbar-brand pd-left flex logo" href="index.html">
-                            Menu
-                        </a>
-                    </div>
-
-                    <div class="col-md-6 col-sm-6 col-xs-4 flex searchIconSmall pd-right clear">
-                        <i class="fa fa-bars" value="1" aria-hidden="true"></i>
-                    </div>
-                </nav>
-            </div>
-        </div>
-
-        <div class="row menuResponse">
-            <div class="container pd-left pd-right">
-                <div class="row mg-left mg-right">
-                    <ul>
-                        <li class="clear">
-                            <a href="">HOME</a>
-                        </li>
-                        <li>
-                            <a href="">CAUSES</a>
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                            <ul class="hiden">
-                                <li>
-                                    <a href="">Causes Grid</a>
-                                </li>
-                                <li>
-                                    <a href="">Causes List</a>
-                                </li>
-                                <li>
-                                    <a href="">Causes Single</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="">GALLERY</a>
-                        </li>
-                        <li>
-                            <a href="">ABOUT</a>
-                        </li>
-                        <li>
-                            <a href="">BLOG</a>
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                            <ul class="hiden">
-                                <li>
-                                    <a href="">Blog List</a>
-                                </li>
-                                <li>
-                                    <a href="">Blog Single</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="">CONTACT</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
-
-
-
-
-<!--     
-    <section id="slider">
-        <div class="container-fluid pd-left pd-right">
-            <div class="row">
-                <div id="sliderDiv" class="col-12 pd-left pd-right">
-
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-
-
-
-
-
-    <section id="doings">
-        <div class="container">
-            <h1 style="margin:200px 0px;">Main content</h1>
-        </div>
-    </section>
-
-    <section id="specialCauses">
-        <div class="container">
-
-        </div>
-    </section>
-
-    <section id="recentCauses">
-        <div class="container">
-
-        </div>
-    </section>
-
-    <section id="workTogather">
-        <div class="container">
-
-        </div>
-    </section>
-
-    <section id="volunteers">
-        <div class="container">
-
-        </div>
-    </section>
-
-    <section id="becomeVolunteer">
-        <div class="container">
-
-        </div>
-    </section>
-
-    <section id="gallery">
-        <div class="container">
-
-        </div>
-    </section>
-
-    <section id="recentNews">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <footer id="footer">
-        <div class="footerBar">
-            <div class="container pd-right pd-left">
-                <div class="row">
-                    <div class="col-lg-3 col-md-12 gives pd-left">
-                        <div class="logo">
-                            <a href="index.html">
+            <div class="row navMenu navMenuBig pd">
+                <div class="container flex navMenuInside pd">
+                    <nav class="navbar navbar-expand-lg navbar-light pd-bottom pd-left pd-right mg-bottom navInside flex">
+                        <div class="col-md-3 pd-left logoDiv">
+                            <a class="navbar-brand pd-left flex logo" href="index.html">
                                 <span>G</span>ives
                             </a>
                         </div>
-                        <div class="text">
-                            <p>At vero eos et accusamus et iusto odio dignis simos ducimus qui blanditiis praesentiumlo volupt</p>
+
+                        <div class="col-md-8 pd-right menuDiv">
+                            <div class="collapse navbar-collapse navInsidePages pd-right" id="navbarSupportedContent">
+                                <ul class="navbar-nav mg-right flex">
+                                    <li class="nav-item">
+                                        <a class="nav-link pd-right  pageTabs active" onclick='activeTab(this)' href="#">HOME</a>
+                                    </li>
+                                    <li class="nav-item subMenuLi">
+                                        <a class="nav-link pd-right pageTabs" onclick='activeTab(this)' href="#">CAUSES</a>
+                                        <ul class="subMenu">
+                                            <li>
+                                                <a class="nav-link pd-right pageTabs child" onclick='activeTab(this)' href="#">Causes grid</a>
+                                            </li>
+                                            <li>
+                                                <a class="nav-link pd-right pageTabs child" onclick='activeTab(this)' href="#">Causes list</a>
+                                            </li>
+                                            <li style="border-bottom:none;">
+                                                <a class="nav-link pd-right pageTabs child" onclick='activeTab(this)' href="#">Causes single</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link pd-right pageTabs" onclick='activeTab(this)' href="#">GALLERY</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link pd-right pageTabs" onclick='activeTab(this)' href="#">ABOUT</a>
+                                    </li>
+                                    <li class="nav-item subMenuLi">
+                                        <a class="nav-link pd-right pageTabs" onclick='activeTab(this)' href="#">BLOG</a>
+                                        <ul class="subMenu">
+                                            <li>
+                                                <a class="nav-link pd-right pageTabs child" onclick='activeTab(this)' href="#">Blog list</a>
+                                            </li>
+                                            <li style="border-bottom:none;">
+                                                <a class="nav-link pd-right pageTabs child" onclick='activeTab(this)' href="#">Blog single</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link pd-right pageTabs" onclick='activeTab(this)' href="#">CONTACT</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="social">
-                            <a href="">
-                                <i id="twitter" class="fa fa-twitter socialLinks" aria-hidden="true"></i>
-                                <span>Twitter</span>
-                            </a>
-                            <a href="">
-                                <i id="google" class="fa fa-google-plus socialLinks" aria-hidden="true"></i>
-                                <span>Google+</span>
-                            </a>
-                            <a href="">
-                                <i id="facebook" class="fa fa-facebook socialLinks" aria-hidden="true"></i>
-                                <span>Facebook</span>
-                            </a>
-                            <a href="">
-                                <i id="linkedin" class="fa fa-linkedin socialLinks" aria-hidden="true"></i>
-                                <span>Linkedin</span>
-                            </a>
-                            <a href="">
-                                <i id="skype" class="fa fa-skype socialLinks" aria-hidden="true"></i>
-                                <span>Skype</span>
+
+                        <div class="col-md-1 flex searchIcon pd-right">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="row navMenu navMenuSmall">
+                <div class="container flex navMenuInside pd">
+                    <nav class="navbar navbar-expand-lg navbar-light pd-bottom pd-left pd-right mg-bottom navInside flex">
+                        <div class="col-md-6 col-sm-6 col-xs-4 pd-left logoDiv clear">
+                            <a class="navbar-brand pd-left flex logo" href="index.html">
+                                <span>G</span>ives
                             </a>
                         </div>
-                    </div>
-                    <div class="col-lg-2 col-md-12 links pd-left">
-                        <h5>Quick Links</h5>
+
+                        <div class="col-md-6 col-sm-6 col-xs-4 flex searchIcon pd-right clear">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="row navMenu navMenuSmallTitle">
+                <div class="container flex navMenuInside pd">
+                    <nav class="navbar navbar-expand-lg navbar-light pd-bottom pd-left pd-right mg-bottom navInside flex">
+                        <div class="col-md-6 col-sm-6 col-xs-4 pd-left logoDiv clear">
+                            <a class="navbar-brand pd-left flex logo" href="index.html">
+                                Menu
+                            </a>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-xs-4 flex searchIconSmall pd-right clear">
+                            <i class="fa fa-bars" value="1" aria-hidden="true"></i>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="row menuResponse">
+                <div class="container pd-left pd-right">
+                    <div class="row mg-left mg-right">
                         <ul>
-                            <li>
-                                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                <a href="">About Us</a>
+                            <li class="clear">
+                                <a href="">HOME</a>
                             </li>
                             <li>
-                                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                <a href="">Forum</a>
+                                <a href="">CAUSES</a>
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                <ul class="hiden">
+                                    <li>
+                                        <a href="">Causes Grid</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Causes List</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Causes Single</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
-                                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                <a href="">Terms and Conditions</a>
+                                <a href="">GALLERY</a>
                             </li>
                             <li>
-                                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                <a href="">Privacy Policy</a>
+                                <a href="">ABOUT</a>
                             </li>
                             <li>
-                                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                <a href="">Blog</a>
+                                <a href="">BLOG</a>
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                <ul class="hiden">
+                                    <li>
+                                        <a href="">Blog List</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Blog Single</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
-                                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                <a href="">Compains</a>
+                                <a href="">CONTACT</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="col-lg-3 col-md-12 tags pd-left">
-                        <h5>Tags</h5>
-                        <a href="">Cause</a>
-                        <a href="">Lipsum</a>
-                        <a href="">Donation</a>
-                        <a href="">Chairtable</a>
-                        <a href="">Homeless</a>
-                        <a href="">Blog</a>
-                        <a href="">Minimal</a>
-                        <a href="">Health</a>
-                        <a href="">Education</a>
-                        <a href="">LifeStyle</a>
-                    </div>
-                    <div class="col-lg-4 col-md-12 subscribe pd-left pd-right">
-                        <h5>Subscribe</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate provident amet reprehenderit!</p>
-                        <div class="form">
-                            <form class="form-inline">
-                                <div class="form-group mx-sm-3 mg-left">
-                                    <input type="email" class="form-control " id="inputEmail" placeholder="Your E-mail">
+                </div>
+            </div>
+        </header>
+
+
+
+
+
+        <section id="slider">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div id="sliderWrapper">
+                            <div class="slideItems slideItem-1" data-index="1"></div>
+                            <div class="slideItems slideItem-2" data-index="2"></div>
+                            <div class="slideItems slideItem-3" data-index="3"></div>
+                            <div class="overlay">
+                                <h1>Gives & HUMANITY</h1>
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                    <br>the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                                </p>
+                                <a href="#">Donate Now</a>
+
+                                <div class="controls">
+                                    <div class="controlItem active" data-index="1" onclick="changeSlide(this)"></div>
+                                    <div class="controlItem" data-index="2" onclick="changeSlide(this)"></div>
+                                    <div class="controlItem" data-index="3" onclick="changeSlide(this)"></div>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Subscribe</button>
-                            </form>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="copyright">
+
+
+
+
+
+        <section id="doings">
+            <div class="container">
+                <h1 style="margin:200px 0px;">Main content</h1>
+            </div>
+        </section>
+
+        <section id="specialCauses">
+            <div class="container">
+
+            </div>
+        </section>
+
+        <section id="recentCauses">
+            <div class="container">
+
+            </div>
+        </section>
+
+        <section id="workTogather">
+            <div class="container">
+
+            </div>
+        </section>
+
+        <section id="volunteers">
+            <div class="container">
+
+            </div>
+        </section>
+
+        <section id="becomeVolunteer">
+            <div class="container">
+
+            </div>
+        </section>
+
+        <section id="gallery">
+            <div class="container">
+
+            </div>
+        </section>
+
+        <section id="recentNews">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <p>Copyright ©2017 Gives. All Rights Reserved</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </section>
 
+        <footer id="footer">
+            <div class="footerBar">
+                <div class="container pd-right pd-left">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-12 gives pd-left">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <span>G</span>ives
+                                </a>
+                            </div>
+                            <div class="text">
+                                <p>At vero eos et accusamus et iusto odio dignis simos ducimus qui blanditiis praesentiumlo
+                                    volupt
+                                </p>
+                            </div>
+                            <div class="social">
+                                <a href="">
+                                    <i id="twitter" class="fa fa-twitter socialLinks" aria-hidden="true"></i>
+                                    <span>Twitter</span>
+                                </a>
+                                <a href="">
+                                    <i id="google" class="fa fa-google-plus socialLinks" aria-hidden="true"></i>
+                                    <span>Google+</span>
+                                </a>
+                                <a href="">
+                                    <i id="facebook" class="fa fa-facebook socialLinks" aria-hidden="true"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="">
+                                    <i id="linkedin" class="fa fa-linkedin socialLinks" aria-hidden="true"></i>
+                                    <span>Linkedin</span>
+                                </a>
+                                <a href="">
+                                    <i id="skype" class="fa fa-skype socialLinks" aria-hidden="true"></i>
+                                    <span>Skype</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-12 links pd-left">
+                            <h5>Quick Links</h5>
+                            <ul>
+                                <li>
+                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                    <a href="">About Us</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                    <a href="">Forum</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                    <a href="">Terms and Conditions</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                    <a href="">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                    <a href="">Blog</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                    <a href="">Compains</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-12 tags pd-left">
+                            <h5>Tags</h5>
+                            <a href="">Cause</a>
+                            <a href="">Lipsum</a>
+                            <a href="">Donation</a>
+                            <a href="">Chairtable</a>
+                            <a href="">Homeless</a>
+                            <a href="">Blog</a>
+                            <a href="">Minimal</a>
+                            <a href="">Health</a>
+                            <a href="">Education</a>
+                            <a href="">LifeStyle</a>
+                        </div>
+                        <div class="col-lg-4 col-md-12 subscribe pd-left pd-right">
+                            <h5>Subscribe</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate provident amet reprehenderit!</p>
+                            <div class="form">
+                                <form class="form-inline">
+                                    <div class="form-group mx-sm-3 mg-left">
+                                        <input type="email" class="form-control " id="inputEmail" placeholder="Your E-mail">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>Copyright ©2017 Gives. All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
 
 
 
