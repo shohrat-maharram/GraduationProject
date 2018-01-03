@@ -120,29 +120,135 @@ function activeTab(elem) {
 
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ Pagination ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-//Pagination of cause grid menu
+// // Pagination of cause Grid menu
+// //Variables
+// var causeGridPaginationItems = document.getElementsByClassName("causeGridPagination");
+// var paginationCauseGridNav = document.getElementById("paginationCauseGridNav");
+// var itemNum = 6;
+// var pageCount = Math.ceil(causeGridPaginationItems.length / itemNum);
+
+// //Creating Prev button
+// var listLeft = document.createElement("li");
+// var iLeft = document.createElement("i");
+// iLeft.setAttribute("class", "fa fa-angle-double-left");
+// listLeft.appendChild(iLeft);
+// listLeft.addEventListener('click', paginationPrevCauseGrid);
+// paginationCauseGridNav.appendChild(listLeft);
+
+// //Creating Pages
+// for (var i = 0; i < pageCount; i++) {
+//     var list = document.createElement("li");
+//     list.innerHTML = (i + 1);
+//     list.setAttribute("data-index", (i + 1));
+//     if (i == 0) { list.classList.add("active"); }
+//     list.addEventListener('click', goToPage);
+//     paginationCauseGridNav.appendChild(list);
+// }
+
+// //Creating Next button
+// var listRight = document.createElement("li");
+// var iRight = document.createElement("i");
+// iRight.setAttribute("class", "fa fa-angle-double-right");
+// listRight.appendChild(iRight);
+// listRight.addEventListener('click', paginationNextCauseGrid);
+// paginationCauseGridNav.appendChild(listRight);
+
+// // Making page numbers dynamic
+// for (var j = 0; j < causeGridPaginationItems.length; j++) {
+//     causeGridPaginationItems[j].style.display = "none";
+//     if (0 <= j && j < itemNum) {
+//         causeGridPaginationItems[j].style.display = "block";
+//     }
+// }
+
+// function goToPage(e) {
+//     var pageNum = e.target.dataset.index;
+
+//     for (var j = 0; j < causeGridPaginationItems.length; j++) {
+//         causeGridPaginationItems[j].style.display = "none";
+
+//         if (((pageNum - 1) * itemNum) <= j && j < (pageNum * itemNum)) {
+//             causeGridPaginationItems[j].style.display = "block";
+//         }
+//     }
+
+//     var li = document.querySelectorAll("#paginationCauseGridNav li");
+//     for (var t = 0; t < (pageCount + 2); t++) {
+//         li[t].classList.remove("active");
+//     }
+//     li[pageNum].classList.add("active");
+// }
+
+// // Making Next button dynamic
+// function paginationNextCauseGrid() {
+//     var activePage = document.querySelector("#paginationCauseGridNav .active").dataset.index;
+//     var currentActivePage = parseInt(activePage) + 1;
+//     if (activePage == pageCount) { currentActivePage = pageCount; activePage -= 1; }
+//     var itemStart = activePage * 6;
+//     var itemEnd = itemStart + 6;
+
+//     for (var j = 0; j < causeGridPaginationItems.length; j++) {
+//         causeGridPaginationItems[j].style.display = "none";
+//         if (itemStart <= j && j < itemEnd) {
+//             causeGridPaginationItems[j].style.display = "block";
+//         }
+//     }
+
+//     var li = document.querySelectorAll("#paginationCauseGridNav li");
+//     for (var t = 0; t < (pageCount + 2); t++) {
+//         li[t].classList.remove("active");
+//     }
+//     li[currentActivePage].classList.add("active");
+// }
+
+// // Making Prev button dynamic
+// function paginationPrevCauseGrid() {
+//     var activePage = document.querySelector("#paginationCauseGridNav .active").dataset.index;
+//     var currentActivePage = parseInt(activePage) - 1;
+//     if (activePage == 1) { currentActivePage = 1; activePage = 1; }
+    
+//     var itemEnd = currentActivePage * 6;
+//     var itemStart = itemEnd - 6;
+
+//     for (var j = 0; j < causeGridPaginationItems.length; j++) {
+//         causeGridPaginationItems[j].style.display = "none";
+//         if (itemStart <= j && j < itemEnd) {
+//             causeGridPaginationItems[j].style.display = "block";
+//         }
+//     }
+
+//     var li = document.querySelectorAll("#paginationCauseGridNav li");
+//     for (var t = 0; t < (pageCount + 2); t++) {
+//         li[t].classList.remove("active");
+//     }
+//     li[currentActivePage].classList.add("active");
+// }
+
+
+
+//Pagination of Cause List and Blog List menu
 //Variables
-var causeGridPaginationItems = document.getElementsByClassName("causeGridPagination");
-var paginationCauseGridNav = document.getElementById("paginationCauseGridNav");
-var itemNum = 6;
-var pageCount = Math.ceil(causeGridPaginationItems.length / itemNum);
+var causeListPaginationItems = document.getElementsByClassName("causeListPagination");
+var paginationCauseListNav = document.getElementById("paginationCauseListNav");
+var itemNumCauseList = 3;
+var pageCountCauseList = Math.ceil(causeListPaginationItems.length / itemNumCauseList);
 
 //Creating Prev button
 var listLeft = document.createElement("li");
 var iLeft = document.createElement("i");
 iLeft.setAttribute("class", "fa fa-angle-double-left");
 listLeft.appendChild(iLeft);
-listLeft.addEventListener('click', paginationPrevCauseGrid);
-paginationCauseGridNav.appendChild(listLeft);
+listLeft.addEventListener('click', paginationPrevCauseList);
+paginationCauseListNav.appendChild(listLeft);
 
 //Creating Pages
-for (var i = 0; i < pageCount; i++) {
+for (var i = 0; i < pageCountCauseList; i++) {
     var list = document.createElement("li");
     list.innerHTML = (i + 1);
     list.setAttribute("data-index", (i + 1));
     if (i == 0) { list.classList.add("active"); }
     list.addEventListener('click', goToPage);
-    paginationCauseGridNav.appendChild(list);
+    paginationCauseListNav.appendChild(list);
 }
 
 //Creating Next button
@@ -150,80 +256,79 @@ var listRight = document.createElement("li");
 var iRight = document.createElement("i");
 iRight.setAttribute("class", "fa fa-angle-double-right");
 listRight.appendChild(iRight);
-listRight.addEventListener('click', paginationNextCauseGrid);
-paginationCauseGridNav.appendChild(listRight);
+listRight.addEventListener('click', paginationNextCauseList);
+paginationCauseListNav.appendChild(listRight);
 
 // Making page numbers dynamic
-for (var j = 0; j < causeGridPaginationItems.length; j++) {
-    causeGridPaginationItems[j].style.display = "none";
-    if (0 <= j && j < 6) {
-        causeGridPaginationItems[j].style.display = "block";
+for (var j = 0; j < causeListPaginationItems.length; j++) {
+    causeListPaginationItems[j].style.display = "none";
+    if (0 <= j && j < itemNumCauseList) {
+        causeListPaginationItems[j].style.display = "block";
     }
 }
 
 function goToPage(e) {
     var pageNum = e.target.dataset.index;
 
-    for (var j = 0; j < causeGridPaginationItems.length; j++) {
-        causeGridPaginationItems[j].style.display = "none";
+    for (var j = 0; j < causeListPaginationItems.length; j++) {
+        causeListPaginationItems[j].style.display = "none";
 
-        if (((pageNum - 1) * itemNum) <= j && j < (pageNum * itemNum)) {
-            causeGridPaginationItems[j].style.display = "block";
+        if (((pageNum - 1) * itemNumCauseList) <= j && j < (pageNum * itemNumCauseList)) {
+            causeListPaginationItems[j].style.display = "block";
         }
     }
 
-    var li = document.querySelectorAll("#paginationCauseGridNav li");
-    for (var t = 0; t < (pageCount + 2); t++) {
+    var li = document.querySelectorAll("#paginationCauseListNav li");
+    for (var t = 0; t < (pageCountCauseList + 2); t++) {
         li[t].classList.remove("active");
     }
     li[pageNum].classList.add("active");
 }
 
 // Making Next button dynamic
-function paginationNextCauseGrid() {
-    var activePage = document.querySelector("#paginationCauseGridNav .active").dataset.index;
+function paginationNextCauseList() {
+    var activePage = document.querySelector("#paginationCauseListNav .active").dataset.index;
     var currentActivePage = parseInt(activePage) + 1;
-    if (activePage == pageCount) { currentActivePage = pageCount; activePage -= 1; }
+    if (activePage == pageCountCauseList) { currentActivePage = pageCountCauseList; activePage -= 1; }
     var itemStart = activePage * 6;
     var itemEnd = itemStart + 6;
 
-    for (var j = 0; j < causeGridPaginationItems.length; j++) {
-        causeGridPaginationItems[j].style.display = "none";
+    for (var j = 0; j < causeListPaginationItems.length; j++) {
+        causeListPaginationItems[j].style.display = "none";
         if (itemStart <= j && j < itemEnd) {
-            causeGridPaginationItems[j].style.display = "block";
+            causeListPaginationItems[j].style.display = "block";
         }
     }
 
-    var li = document.querySelectorAll("#paginationCauseGridNav li");
-    for (var t = 0; t < (pageCount + 2); t++) {
+    var li = document.querySelectorAll("#paginationCauseListNav li");
+    for (var t = 0; t < (pageCountCauseList + 2); t++) {
         li[t].classList.remove("active");
     }
     li[currentActivePage].classList.add("active");
 }
 
 // Making Prev button dynamic
-function paginationPrevCauseGrid() {
-    var activePage = document.querySelector("#paginationCauseGridNav .active").dataset.index;
+function paginationPrevCauseList() {
+    var activePage = document.querySelector("#paginationCauseListNav .active").dataset.index;
     var currentActivePage = parseInt(activePage) - 1;
     if (activePage == 1) { currentActivePage = 1; activePage = 1; }
-    
+
     var itemEnd = currentActivePage * 6;
     var itemStart = itemEnd - 6;
 
-    for (var j = 0; j < causeGridPaginationItems.length; j++) {
-        causeGridPaginationItems[j].style.display = "none";
+    for (var j = 0; j < causeListPaginationItems.length; j++) {
+        causeListPaginationItems[j].style.display = "none";
         if (itemStart <= j && j < itemEnd) {
-            causeGridPaginationItems[j].style.display = "block";
+            causeListPaginationItems[j].style.display = "block";
         }
     }
 
-    var li = document.querySelectorAll("#paginationCauseGridNav li");
-    for (var t = 0; t < (pageCount + 2); t++) {
+    var li = document.querySelectorAll("#paginationCauseListNav li");
+    for (var t = 0; t < (pageCountCauseList + 2); t++) {
         li[t].classList.remove("active");
     }
     li[currentActivePage].classList.add("active");
 }
-
 
 
 
