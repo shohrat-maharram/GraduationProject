@@ -777,10 +777,10 @@ body {
           transition: all .2s linear; }
           #grid-cause-list .cause .content .donation .main-color:hover {
             background-color: #444444; }
-  #grid-cause-list #paginationCauseGridNav {
+  #grid-cause-list #paginationCauseListNav {
     display: flex;
     justify-content: center; }
-    #grid-cause-list #paginationCauseGridNav li {
+    #grid-cause-list #paginationCauseListNav li {
       cursor: pointer;
       font-size: 14px;
       padding: 11px 18px;
@@ -789,11 +789,11 @@ body {
       border-right: none;
       font-family: "Lato", sans-serif;
       transition: all .3s ease; }
-      #grid-cause-list #paginationCauseGridNav li:hover {
+      #grid-cause-list #paginationCauseListNav li:hover {
         color: #de1219; }
-      #grid-cause-list #paginationCauseGridNav li:last-Child {
+      #grid-cause-list #paginationCauseListNav li:last-Child {
         border-right: 1px solid lightgray; }
-    #grid-cause-list #paginationCauseGridNav .active {
+    #grid-cause-list #paginationCauseListNav .active {
       color: #de1219;
       font-weight: 700; }
 
