@@ -57,7 +57,9 @@ $(document).ready(function () {
     var causeGridExist = $(".causeGridExist");
     var causeListExist = $(".causeListExist");
     var causeSingleExist = $(".causeSingleExist");
-    if (causeGridExist.length > 0 || causeListExist.length > 0 || causeSingleExist.length > 0) {
+    var homeExist = $(".homeExist");
+
+    if (causeGridExist.length > 0 || causeListExist.length > 0 || causeSingleExist.length > 0 || homeExist.length > 0) {
         //making Progressbar dynamically
         var progressBar = $(".progressOwn").offset().top;
         var checked = false;
@@ -324,7 +326,9 @@ if (causeSingleExist.length > 0) {
 
 //Making slider
 var galleryExist = document.getElementsByClassName('galleryExist');
-if (galleryExist.length > 0) {
+var homeExist = document.getElementsByClassName("homeExist");
+
+if (galleryExist.length > 0 || homeExist.length > 0) {
     //Defining of variables
     var images = ["img/gallery/img-1.jpg", "img/gallery/img-2.jpg", "img/gallery/img-3.jpg", "img/gallery/img-19.jpg", "img/gallery/img-14.jpg", "img/gallery/img-15.jpg", "img/gallery/img-16.jpg", "img/gallery/img-17.jpg", "img/gallery/img-18.jpg", "img/gallery/need.jpg"];
     var image = document.querySelector("#gallery-slider .imageWrapper .image");
@@ -338,7 +342,13 @@ if (galleryExist.length > 0) {
     }
 
     function showImage(e) {
-        clickedImage = e.target.previousElementSibling.getAttribute("src");
+        if (galleryExist.length>0){
+            clickedImage = e.target.previousElementSibling.getAttribute("src");
+        }
+        else if (homeExist.length > 0){
+            clickedImage = e.target.parentElement.previousElementSibling.getAttribute("src");
+        }
+        
         image.setAttribute("src", clickedImage);
         gallerySlider.style.display = "block";
         i = images.indexOf(clickedImage);
