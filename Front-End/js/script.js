@@ -220,10 +220,11 @@ if (blogListExist.length > 0 || causeListExist.length > 0 || causeGridExist.leng
 
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ Home page  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-//Add active class to the active page / Header
 var homeExist = document.getElementsByClassName("homeExist");
 
 if (homeExist.length > 0) {
+
+    //Add active class to the active page / Header
     var pageTabs = document.getElementsByClassName("pageTabs");
     function activeTab(elem) {
         for (var i = 0; i < pageTabs.length; i++) {
@@ -269,6 +270,45 @@ if (homeExist.length > 0) {
         controlItems[(ControlsDataIndex - 1)].classList.add("active");
 
     }
+
+
+    //Create scrollTop button
+    function scrollToTop(e) {
+        var step;
+        var posOne = window.pageYOffset;
+
+        if (posOne < 1500) {
+            step = 10;
+        }
+        else {
+            step = 40;
+        }
+
+        var scrollToTopInt = setInterval(function () {
+            var pos = window.pageYOffset;
+            if (pos > 0) {
+                window.scrollTo(0, pos - step);
+            } else {
+                window.clearInterval(scrollToTopInt);
+            }
+        }, 0.2);
+    }
+
+    function showScrollToTop() {
+        var scrollToTop = document.getElementsByClassName("scrollToTop")[0];
+        var viewPortHeight = document.documentElement.clientHeight;
+        var windowTopPos = window.pageYOffset;
+        if (windowTopPos > (viewPortHeight - 500)) {
+            scrollToTop.style.opacity = "1";
+            scrollToTop.style.cursor = "pointer";
+
+        }
+        if (windowTopPos < (viewPortHeight - 300)) {
+            scrollToTop.style.opacity = "0";
+            scrollToTop.style.cursor = "default";
+        }
+    }
+    window.addEventListener("scroll", showScrollToTop);
 }
 
 
@@ -342,13 +382,13 @@ if (galleryExist.length > 0 || homeExist.length > 0) {
     }
 
     function showImage(e) {
-        if (galleryExist.length>0){
+        if (galleryExist.length > 0) {
             clickedImage = e.target.previousElementSibling.getAttribute("src");
         }
-        else if (homeExist.length > 0){
+        else if (homeExist.length > 0) {
             clickedImage = e.target.parentElement.previousElementSibling.getAttribute("src");
         }
-        
+
         image.setAttribute("src", clickedImage);
         gallerySlider.style.display = "block";
         i = images.indexOf(clickedImage);

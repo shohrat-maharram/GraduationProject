@@ -139,9 +139,6 @@ body {
 * {
   box-sizing: border-box; }
 
-.container {
-  padding: 0px; }
-
 .mg {
   margin: 0 !important; }
 
@@ -1245,6 +1242,25 @@ body {
       font-size: 14px;
       font-family: "Lato", sans-serif;
       font-weight: 400; }
+  #mainContainer #footer .scrollToTop {
+    opacity: 0;
+    cursor: default;
+    text-decoration: none;
+    position: fixed;
+    right: 32px;
+    bottom: 54px;
+    width: 40px;
+    height: 40px;
+    background-color: #de1219;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 23px;
+    color: white;
+    transition: background-color .3s ease, opacity 1s ease;
+    z-index: 4650345603465; }
+    #mainContainer #footer .scrollToTop:hover {
+      background-color: #444444; }
 
 @media only screen and (min-width: 992px) {
   #mainContainer #header .menuResponse {

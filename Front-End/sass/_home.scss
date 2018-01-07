@@ -3,9 +3,10 @@
 // Screen size > 992px
 //Container of the Home page
 #mainContainer {
-  
+
   /* Header section */
   #header {
+    
     position: fixed;
     top: 0;
     width: 100%;
@@ -1518,6 +1519,31 @@
         font-size: 14px;
         font-family: $main-font-2;
         font-weight: 400;
+      }
+    }
+
+    .scrollToTop {
+      opacity: 0;
+      // display: none;
+      cursor: default;
+      text-decoration: none;
+      position: fixed;
+      right: 32px;
+      bottom: 54px;
+      width: 40px;
+      height: 40px;
+      background-color: $main-color;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 5px;
+      font-size: 23px;
+      color: white;
+      // transition: all 2s ease;
+      transition: background-color .3s ease, opacity 1s ease;
+      z-index: 4650345603465;
+
+      &:hover {
+        background-color: $main-black-color;
       }
     }
   }
