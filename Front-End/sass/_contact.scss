@@ -35,6 +35,8 @@
     }
 
     p {
+      margin: 0 auto;
+      width: 65%;
       font-size: 16px;
       font-family: $main-font-2;
       color: $main-font-color;
@@ -129,8 +131,40 @@
 
 // <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
 // Screen size between 768 and 576px
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px) {
+  #contact-info {  
+    .contacts {
+      margin-bottom: 60px;
+      p {
+        width: 45%;
+        
+      }
+    }
+  }
+
+  #contact-message {
+    
+    .formSection {
+      padding: 20px 0;
+  
+      .pd-l-r-p {
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+  
+    }
+  }
+}
 
 // <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
 // Screen size < 576px
-@media only screen and (max-width: 576px) {}
+@media only screen and (max-width: 576px) {
+  #contact-info {  
+    .contacts {
+      margin-bottom: 60px;
+      p {
+        width: 65%;        
+      }
+    }
+  }
+}

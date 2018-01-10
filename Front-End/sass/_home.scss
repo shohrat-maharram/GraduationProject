@@ -3,6 +3,7 @@
 // Screen size > 992px
 //Container of the Home page
 #mainContainer {
+  position: relative;
 
   /* Header section */
   #header {
@@ -1639,6 +1640,8 @@
 // Screen size between 768 and 576px
 @media only screen and (max-width: 768px) {
   #mainContainer {
+    // width: 450px;
+    // margin: 0 auto;
     //Header
     #header {
       //Navbar small screen
@@ -1658,6 +1661,8 @@
 // Screen size < 576px
 @media only screen and (max-width: 576px) {
   #mainContainer {
+    // width: 300px;
+    // margin: 0 auto;
     //Header
     #header {
       //Search bar

@@ -213,6 +213,7 @@ body {
   width: 100%; }
 
 #mainContainer {
+  position: relative;
   /* Header section */
   /* Slider section */
   /* weDo section */
@@ -2708,6 +2709,8 @@ body {
     margin: 30px 0;
     transition: all .2s ease-in; }
   #contact-info .contacts p {
+    margin: 0 auto;
+    width: 65%;
     font-size: 16px;
     font-family: "Lato", sans-serif;
     color: #4a4a4a;
@@ -2766,5 +2769,22 @@ body {
         background-color: #444444; }
       #contact-message .formSection button i {
         margin-right: 10px; }
+
+@media only screen and (max-width: 768px) {
+  #contact-info .contacts {
+    margin-bottom: 60px; }
+    #contact-info .contacts p {
+      width: 45%; }
+
+  #contact-message .formSection {
+    padding: 20px 0; }
+    #contact-message .formSection .pd-l-r-p {
+      padding-left: 0px;
+      padding-right: 0px; } }
+@media only screen and (max-width: 576px) {
+  #contact-info .contacts {
+    margin-bottom: 60px; }
+    #contact-info .contacts p {
+      width: 65%; } }
 
 /*# sourceMappingURL=style.css.map */
