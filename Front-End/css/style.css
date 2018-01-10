@@ -2146,9 +2146,7 @@ body {
       #blog-page .wrapper .blog-list .blogItem .itemMeta .about {
         float: left;
         padding-left: 20px;
-        width: -moz-calc(100%-75px);
-        width: -webkit-calc(100%-75px);
-        width: calc(100%-75px); }
+        width: 65%; }
         #blog-page .wrapper .blog-list .blogItem .itemMeta .about h3 {
           font-size: 16px;
           font-family: "Raleway", sans-serif;
@@ -2164,6 +2162,8 @@ body {
           margin-right: 18px; }
           #blog-page .wrapper .blog-list .blogItem .itemMeta .about p i {
             font-size: 14px; }
+        #blog-page .wrapper .blog-list .blogItem .itemMeta .about p:last-child {
+          margin-right: 0px; }
     #blog-page .wrapper .blog-list .blogItem .itemImage {
       position: relative;
       overflow: hidden;

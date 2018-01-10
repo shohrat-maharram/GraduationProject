@@ -58,7 +58,7 @@
           .about {
             float: left;
             padding-left: 20px;
-            @include calc(width,'100%-75px');
+            width: 65%;
 
             h3 {
               font-size: 16px;
@@ -79,6 +79,10 @@
               i {
                 font-size: 14px;
               }
+            }
+
+            p:last-child{
+              margin-right: 0px;
             }
 
           }
