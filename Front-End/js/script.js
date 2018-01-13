@@ -123,7 +123,10 @@ if (blogListExist.length > 0 || causeListExist.length > 0 || causeGridExist.leng
     var iLeft = document.createElement("i");
     iLeft.setAttribute("class", "fa fa-angle-double-left");
     listLeft.appendChild(iLeft);
-    listLeft.addEventListener('click', paginationPrevCauseList);
+    listLeft.addEventListener('click', function () {
+        var direction = "backward";
+        paginationNextCauseList(direction);
+    });
     paginationCauseListNav.appendChild(listLeft);
 
     //Creating Pages
@@ -141,7 +144,10 @@ if (blogListExist.length > 0 || causeListExist.length > 0 || causeGridExist.leng
     var iRight = document.createElement("i");
     iRight.setAttribute("class", "fa fa-angle-double-right");
     listRight.appendChild(iRight);
-    listRight.addEventListener('click', paginationNextCauseList);
+    listRight.addEventListener('click', function () {
+        var direction = "forward";
+        paginationNextCauseList(direction);
+    });
     paginationCauseListNav.appendChild(listRight);
 
     // Making page numbers dynamic
@@ -171,12 +177,20 @@ if (blogListExist.length > 0 || causeListExist.length > 0 || causeGridExist.leng
     }
 
     // Making Next button dynamic
-    function paginationNextCauseList() {
+    function paginationNextCauseList(param) {
         var activePage = document.querySelector("#paginationCauseListNav .active").dataset.index;
-        var currentActivePage = parseInt(activePage) + 1;
-        if (activePage == pageCountCauseList) { currentActivePage = pageCountCauseList; activePage -= 1; }
-        var itemStart = activePage * itemNumCauseList;
-        var itemEnd = itemStart + itemNumCauseList;
+        //Make desition to choosing go forward or backward
+        if (param == "forward") {
+            var currentActivePage = parseInt(activePage) + 1;
+            if (activePage == pageCountCauseList) { currentActivePage = pageCountCauseList; activePage -= 1; }
+            var itemStart = activePage * itemNumCauseList;
+            var itemEnd = itemStart + itemNumCauseList;
+        } else if (param == "backward") {
+            var currentActivePage = parseInt(activePage) - 1;
+            if (activePage == 1) { currentActivePage = 1; activePage = 1; }
+            var itemEnd = currentActivePage * itemNumCauseList;
+            var itemStart = itemEnd - itemNumCauseList;
+        }
 
         for (var j = 0; j < causeListPaginationItems.length; j++) {
             causeListPaginationItems[j].style.display = "none";
@@ -191,30 +205,8 @@ if (blogListExist.length > 0 || causeListExist.length > 0 || causeGridExist.leng
         }
         li[currentActivePage].classList.add("active");
     }
+} 
 
-    // Making Prev button dynamic
-    function paginationPrevCauseList() {
-        var activePage = document.querySelector("#paginationCauseListNav .active").dataset.index;
-        var currentActivePage = parseInt(activePage) - 1;
-        if (activePage == 1) { currentActivePage = 1; activePage = 1; }
-
-        var itemEnd = currentActivePage * itemNumCauseList;
-        var itemStart = itemEnd - itemNumCauseList;
-
-        for (var j = 0; j < causeListPaginationItems.length; j++) {
-            causeListPaginationItems[j].style.display = "none";
-            if (itemStart <= j && j < itemEnd) {
-                causeListPaginationItems[j].style.display = "block";
-            }
-        }
-
-        var li = document.querySelectorAll("#paginationCauseListNav li");
-        for (var t = 0; t < (pageCountCauseList + 2); t++) {
-            li[t].classList.remove("active");
-        }
-        li[currentActivePage].classList.add("active");
-    }
-}
 
 
 
