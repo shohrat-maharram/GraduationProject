@@ -165,6 +165,7 @@
   padding: 50px 0 108px;
 
   .tabs {
+    margin: 0 auto;
     .tab-links {
       border-bottom: 1px solid #e2e2e2;
       width: 100%;
@@ -206,7 +207,7 @@
   }
 
   .contents {
-    margin-top: 25px;
+    margin: 25px auto;
 
     .paypal {
       p {
@@ -292,21 +293,25 @@
           color: #444;
           display: block;
           line-height: 20px;
-          margin: 10px 0px;;
+          margin: 10px 0;
         }
-        .rowPd{
-          padding: 15px 0px;
+
+        .rowPd {
+          padding: 15px 0;
         }
+
         .Input {
           height: 45px;
           font-size: 14px;
           line-height: 20px;
         }
+
         .Input:focus {
           outline: none;
           box-shadow: none;
           text-decoration: none;
         }
+
         .radios {
           input {
             font-size: 14px;
@@ -318,6 +323,7 @@
             font-size: 14px;
           }
         }
+
         .main-color {
           background-color: $main-color;
           color: white;
@@ -332,6 +338,97 @@
 
           &:hover {
             background-color: $main-black-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+// Screen size between 992px and 768px
+@media only screen and (max-width: 992px) {
+  #single-cause-list {
+    .mainCol {
+      margin: 0 auto;
+
+      .title {
+        div {
+          display: inline-block;
+          float: left;
+          margin-top: 30px;
+        }
+      }
+
+      .donationBar {
+        .progress_section {
+          display: inline-block;
+          width: 70%;
+          float: left;
+
+          p {
+            margin-top: 18px;
+
+            .Raised {
+              font-size: 16px;
+            }
+
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .donation {
+          float: left;
+        }
+      }
+    }
+  }
+}
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+// Screen size between 768 and 576px
+@media only screen and (max-width: 768px) {
+  #single-cause-pay {
+    
+    .contents {
+      .paypal {
+        .Form {
+          .numbers {
+            margin-top: 20px;            
+          }
+        }
+      }
+
+      .visa {
+        .Form {
+          .radios {
+            margin-top: 20px;           
+          }
+        }
+      }
+    }
+  }
+}
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+// Screen size < 576px
+@media only screen and (max-width: 576px) {
+  #single-cause-list {
+    .mainCol {
+      .donationBar {
+        .progress_section {
+          width: 100%;
+
+          p {
+            .Raised {
+              font-size: 14px;
+            }
+
+            span {
+              font-size: 13px;
+            }
           }
         }
       }

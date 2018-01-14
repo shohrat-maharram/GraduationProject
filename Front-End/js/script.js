@@ -125,7 +125,7 @@ if (blogListExist.length > 0 || causeListExist.length > 0 || causeGridExist.leng
     listLeft.appendChild(iLeft);
     listLeft.addEventListener('click', function () {
         var direction = "backward";
-        paginationNextCauseList(direction);
+        paginationNextPrev(direction);
     });
     paginationCauseListNav.appendChild(listLeft);
 
@@ -146,7 +146,7 @@ if (blogListExist.length > 0 || causeListExist.length > 0 || causeGridExist.leng
     listRight.appendChild(iRight);
     listRight.addEventListener('click', function () {
         var direction = "forward";
-        paginationNextCauseList(direction);
+        paginationNextPrev(direction);
     });
     paginationCauseListNav.appendChild(listRight);
 
@@ -177,7 +177,7 @@ if (blogListExist.length > 0 || causeListExist.length > 0 || causeGridExist.leng
     }
 
     // Making Next button dynamic
-    function paginationNextCauseList(param) {
+    function paginationNextPrev(param) {
         var activePage = document.querySelector("#paginationCauseListNav .active").dataset.index;
         //Make desition to choosing go forward or backward
         if (param == "forward") {

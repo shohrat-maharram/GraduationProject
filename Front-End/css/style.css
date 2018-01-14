@@ -1473,6 +1473,16 @@ body {
       color: #de1219;
       font-weight: 700; }
 
+@media only screen and (max-width: 992px) {
+  #grid-cause-list {
+    background-color: #f5f5f5;
+    padding-bottom: 112px;
+    padding-top: 108px; }
+    #grid-cause-list .cause {
+      max-width: 370px;
+      margin: 25px auto; }
+    #grid-cause-list #paginationCauseListNav li {
+      padding: 8px 14px; } }
 /* Header section */
 #list-causes-grid {
   background: url("../img/parallax/img-1.jpg") no-repeat;
@@ -1716,33 +1726,35 @@ body {
 #single-cause-pay {
   background-color: #f2f2f2;
   padding: 50px 0 108px; }
-  #single-cause-pay .tabs .tab-links {
-    border-bottom: 1px solid #e2e2e2;
-    width: 100%;
-    height: 100%; }
-    #single-cause-pay .tabs .tab-links ul {
-      clear: both; }
-      #single-cause-pay .tabs .tab-links ul .active {
-        color: #de1219;
-        border-bottom: 2px solid #de1219;
-        cursor: auto !important; }
-      #single-cause-pay .tabs .tab-links ul li {
-        padding: 10px 15px 20px;
-        margin-right: 35px;
-        list-style: none;
-        float: left;
-        color: #4a4a4a;
-        font-family: "Helvetica Neue", sans-serif;
-        font-size: 14px; }
-        #single-cause-pay .tabs .tab-links ul li:hover {
-          cursor: pointer; }
-        #single-cause-pay .tabs .tab-links ul li i {
+  #single-cause-pay .tabs {
+    margin: 0 auto; }
+    #single-cause-pay .tabs .tab-links {
+      border-bottom: 1px solid #e2e2e2;
+      width: 100%;
+      height: 100%; }
+      #single-cause-pay .tabs .tab-links ul {
+        clear: both; }
+        #single-cause-pay .tabs .tab-links ul .active {
+          color: #de1219;
+          border-bottom: 2px solid #de1219;
+          cursor: auto !important; }
+        #single-cause-pay .tabs .tab-links ul li {
+          padding: 10px 15px 20px;
+          margin-right: 35px;
+          list-style: none;
           float: left;
-          margin-right: 5px; }
-        #single-cause-pay .tabs .tab-links ul li p {
-          float: left; }
+          color: #4a4a4a;
+          font-family: "Helvetica Neue", sans-serif;
+          font-size: 14px; }
+          #single-cause-pay .tabs .tab-links ul li:hover {
+            cursor: pointer; }
+          #single-cause-pay .tabs .tab-links ul li i {
+            float: left;
+            margin-right: 5px; }
+          #single-cause-pay .tabs .tab-links ul li p {
+            float: left; }
   #single-cause-pay .contents {
-    margin-top: 25px; }
+    margin: 25px auto; }
     #single-cause-pay .contents .paypal p {
       font-size: 14px;
       line-height: 24px;
@@ -1799,9 +1811,9 @@ body {
         color: #444;
         display: block;
         line-height: 20px;
-        margin: 10px 0px; }
+        margin: 10px 0; }
       #single-cause-pay .contents .visa .Form .rowPd {
-        padding: 15px 0px; }
+        padding: 15px 0; }
       #single-cause-pay .contents .visa .Form .Input {
         height: 45px;
         font-size: 14px;
@@ -1830,6 +1842,37 @@ body {
         #single-cause-pay .contents .visa .Form .main-color:hover {
           background-color: #444444; }
 
+@media only screen and (max-width: 992px) {
+  #single-cause-list .mainCol {
+    margin: 0 auto; }
+    #single-cause-list .mainCol .title div {
+      display: inline-block;
+      float: left;
+      margin-top: 30px; }
+    #single-cause-list .mainCol .donationBar .progress_section {
+      display: inline-block;
+      width: 70%;
+      float: left; }
+      #single-cause-list .mainCol .donationBar .progress_section p {
+        margin-top: 18px; }
+        #single-cause-list .mainCol .donationBar .progress_section p .Raised {
+          font-size: 16px; }
+        #single-cause-list .mainCol .donationBar .progress_section p span {
+          font-size: 14px; }
+    #single-cause-list .mainCol .donationBar .donation {
+      float: left; } }
+@media only screen and (max-width: 768px) {
+  #single-cause-pay .contents .paypal .Form .numbers {
+    margin-top: 20px; }
+  #single-cause-pay .contents .visa .Form .radios {
+    margin-top: 20px; } }
+@media only screen and (max-width: 576px) {
+  #single-cause-list .mainCol .donationBar .progress_section {
+    width: 100%; }
+    #single-cause-list .mainCol .donationBar .progress_section p .Raised {
+      font-size: 14px; }
+    #single-cause-list .mainCol .donationBar .progress_section p span {
+      font-size: 13px; } }
 /* Header section */
 #gallery-grid {
   background: url("../img/parallax/img-1.jpg") no-repeat;
@@ -1983,7 +2026,7 @@ body {
     transform: translateY(120px); } }
 @media only screen and (max-width: 576px) {
   #gallery-slide-image .galleryWrapper .galleryImage .image .overlay:hover i {
-    transform: translateY(80px); } }
+    transform: translateY(60px); } }
 /* Header section */
 #about-services {
   padding-top: 85px; }

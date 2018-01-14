@@ -203,3 +203,32 @@
     }
   }
 }
+
+// <-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --> //
+
+// Screen size between 992px and 768px
+@media only screen and (max-width: 992px) {}
+
+// Screen size between 768px and 576px
+@media only screen and (max-width: 992px) {}
+
+// Screen size between 576px and 0px
+@media only screen and (max-width: 992px) {
+  #grid-cause-list {
+    background-color: $main-bg-color;
+    padding-bottom: 112px;
+    padding-top: 108px;
+
+    .cause {
+      max-width: 370px;
+      margin: 25px auto;
+    }
+
+    #paginationCauseListNav {
+      li {
+        padding: 8px 14px;
+      }
+    }
+  }
+
+}
