@@ -1477,14 +1477,16 @@
         .form {
           font-size: 14px;
 
-          input {
-            height: 45px;
-            border-radius: 3px;
-            outline-style: none;
-            box-shadow: none;
-            border-color: transparent;
-            font-size: 14px;
-            width: 100%;
+          .subsc {
+            input {
+              height: 45px;
+              border-radius: 3px;
+              outline-style: none;
+              box-shadow: none;
+              border-color: transparent;
+              font-size: 14px;
+              width: 100%;
+            }
           }
 
           button {
@@ -1652,6 +1654,37 @@
       }
     }
 
+    /* specialCauses section */
+    #specialCauses {
+      padding-left: 15px;
+      padding-right: 15px;
+
+      .list-cause-row {
+        .colOwn {
+          .cause {
+            margin-bottom: 0;
+          }
+        }
+
+        .colOwnRight {
+          margin-left: 0;
+
+          .cause {
+            .content {
+              padding-left: 0;
+              padding-right: 0;
+
+              .progress_section {
+                p {
+                  font-size: 13px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
     //Footer
     #footer {}
   }
@@ -1666,8 +1699,10 @@
     //Header
     #header {
       //Search bar
+      padding: 0 15px;
+
       .search {
-        padding: 0 50px;
+        padding: 0 15px;
       }
 
       //Navbar big screen
@@ -1745,7 +1780,146 @@
       }
     }
 
-    //Footer
-    #footer {}
+    /* Recent Causes section */
+    #recentCauses {
+      .cause {
+        .image {
+          img {
+            width: 100%;
+          }
+        }
+
+        .content {
+          .progress_section {
+            p {
+              font-size: 14px;
+            }
+          }
+        }
+
+      }
+    }
+
+    /* workTogather section */
+    #workTogather {
+      .workTogatherTitles {
+        h3 {
+          font-size: 24px;
+          font-weight: 400;
+          color: white;
+          font-family: $main-font;
+          margin-bottom: 30px;
+        }
+
+        h1 {
+          font-size: 30px;
+          font-weight: 800;
+          letter-spacing: 1px;
+          margin-bottom: 32px;
+          text-transform: uppercase;
+          color: white;
+        }
+
+      }
+
+      .overlay {
+        position: absolute;
+        background-color: $main-col-55;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    /* becomeVolunteer section */
+    #becomeVolunteer {
+      .becomeVolunteerTitles {
+        padding: 45px 20px;
+        width: 80%;
+
+        h1 {
+          font-size: 20px;
+        }
+
+        a {
+          padding: 15px 12px;
+          font-size: 12px;
+
+          i {
+            margin-right: 5px;
+          }
+        }
+
+      }
+    }
+
+    /* gallery section */
+    #gallery {
+      #gallery-slide-image {
+        .galleryWrapper {
+          .galleryImage {
+            width: 100%;
+          }
+        }
+      }
+
+      #gallery-slider {
+        .main-wrapper {
+          padding: 5px;
+
+          .controls {
+            font-size: 24px;
+          }
+
+          .close {
+            right: 48px;
+          }
+
+          .content {
+            .imageWrapper {
+              img {
+                border: 3px solid white;
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+    /* recentNews section */
+    #recentNews {
+      .blogItem {
+        .itemMeta {
+          .about {
+            width: 65%;
+          }
+        }
+      }
+    }
+
+    /* Footer section */
+    #footer {
+      .footerBar {
+        .subscribe {
+          .form {
+            .subsc {
+              width: 70%;
+            }
+
+            button {
+              width: 31%;
+              min-width: 120px;
+            }
+          }
+        }
+      }
+
+      .scrollToTop {
+        right: 15px;
+        bottom: 54px;
+      }
+    }
   }
 }

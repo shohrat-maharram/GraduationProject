@@ -1210,7 +1210,7 @@ body {
         margin-bottom: 30px; }
       #mainContainer #footer .footerBar .subscribe .form {
         font-size: 14px; }
-        #mainContainer #footer .footerBar .subscribe .form input {
+        #mainContainer #footer .footerBar .subscribe .form .subsc input {
           height: 45px;
           border-radius: 3px;
           outline-style: none;
@@ -1295,37 +1295,59 @@ body {
     #mainContainer #slider #sliderWrapper .overlay h1 {
       font-size: 35px; } }
 @media only screen and (max-width: 768px) {
-  #mainContainer #header .navMenuSmall .navInside {
-    border-bottom: 1px solid #dddddd; } }
+  #mainContainer {
+    /* specialCauses section */ }
+    #mainContainer #header .navMenuSmall .navInside {
+      border-bottom: 1px solid #dddddd; }
+    #mainContainer #specialCauses {
+      padding-left: 15px;
+      padding-right: 15px; }
+      #mainContainer #specialCauses .list-cause-row .colOwn .cause {
+        margin-bottom: 0; }
+      #mainContainer #specialCauses .list-cause-row .colOwnRight {
+        margin-left: 0; }
+        #mainContainer #specialCauses .list-cause-row .colOwnRight .cause .content {
+          padding-left: 0;
+          padding-right: 0; }
+          #mainContainer #specialCauses .list-cause-row .colOwnRight .cause .content .progress_section p {
+            font-size: 13px; } }
 @media only screen and (max-width: 576px) {
   #mainContainer {
-    /* Slider section */ }
-    #mainContainer #header .search {
-      padding: 0 50px; }
-    #mainContainer #header .navMenuBig {
-      display: none; }
-    #mainContainer #header .navMenuSmall {
-      display: block;
-      padding-right: 15px;
-      padding-left: 15px; }
-      #mainContainer #header .navMenuSmall .navInside {
-        padding: 0 50px; }
-        #mainContainer #header .navMenuSmall .navInside .logoDiv {
-          width: 50%; }
-        #mainContainer #header .navMenuSmall .navInside .searchIcon {
-          width: 50%; }
-    #mainContainer #header .navMenuSmallTitle {
-      padding-right: 15px;
-      padding-left: 15px; }
-      #mainContainer #header .navMenuSmallTitle .navInside {
-        padding: 0 50px; }
-        #mainContainer #header .navMenuSmallTitle .navInside .logoDiv {
-          width: 50%; }
-        #mainContainer #header .navMenuSmallTitle .navInside .searchIconSmall {
-          width: 50%; }
-    #mainContainer #header .menuResponse {
-      padding-right: 15px;
-      padding-left: 15px; }
+    /* Slider section */
+    /* Recent Causes section */
+    /* workTogather section */
+    /* becomeVolunteer section */
+    /* gallery section */
+    /* recentNews section */
+    /* Footer section */ }
+    #mainContainer #header {
+      padding: 0 15px; }
+      #mainContainer #header .search {
+        padding: 0 15px; }
+      #mainContainer #header .navMenuBig {
+        display: none; }
+      #mainContainer #header .navMenuSmall {
+        display: block;
+        padding-right: 15px;
+        padding-left: 15px; }
+        #mainContainer #header .navMenuSmall .navInside {
+          padding: 0 50px; }
+          #mainContainer #header .navMenuSmall .navInside .logoDiv {
+            width: 50%; }
+          #mainContainer #header .navMenuSmall .navInside .searchIcon {
+            width: 50%; }
+      #mainContainer #header .navMenuSmallTitle {
+        padding-right: 15px;
+        padding-left: 15px; }
+        #mainContainer #header .navMenuSmallTitle .navInside {
+          padding: 0 50px; }
+          #mainContainer #header .navMenuSmallTitle .navInside .logoDiv {
+            width: 50%; }
+          #mainContainer #header .navMenuSmallTitle .navInside .searchIconSmall {
+            width: 50%; }
+      #mainContainer #header .menuResponse {
+        padding-right: 15px;
+        padding-left: 15px; }
     #mainContainer #slider #sliderWrapper .overlay h1 {
       font-size: 20px;
       margin-bottom: 25px; }
@@ -1336,7 +1358,61 @@ body {
       line-height: 20px;
       margin-bottom: 40px; }
     #mainContainer #slider #sliderWrapper .overlay .controls {
-      right: 15px; } }
+      right: 15px; }
+    #mainContainer #recentCauses .cause .image img {
+      width: 100%; }
+    #mainContainer #recentCauses .cause .content .progress_section p {
+      font-size: 14px; }
+    #mainContainer #workTogather .workTogatherTitles h3 {
+      font-size: 24px;
+      font-weight: 400;
+      color: white;
+      font-family: "Raleway", sans-serif;
+      margin-bottom: 30px; }
+    #mainContainer #workTogather .workTogatherTitles h1 {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 32px;
+      text-transform: uppercase;
+      color: white; }
+    #mainContainer #workTogather .overlay {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.55);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+    #mainContainer #becomeVolunteer .becomeVolunteerTitles {
+      padding: 45px 20px;
+      width: 80%; }
+      #mainContainer #becomeVolunteer .becomeVolunteerTitles h1 {
+        font-size: 20px; }
+      #mainContainer #becomeVolunteer .becomeVolunteerTitles a {
+        padding: 15px 12px;
+        font-size: 12px; }
+        #mainContainer #becomeVolunteer .becomeVolunteerTitles a i {
+          margin-right: 5px; }
+    #mainContainer #gallery #gallery-slide-image .galleryWrapper .galleryImage {
+      width: 100%; }
+    #mainContainer #gallery #gallery-slider .main-wrapper {
+      padding: 5px; }
+      #mainContainer #gallery #gallery-slider .main-wrapper .controls {
+        font-size: 24px; }
+      #mainContainer #gallery #gallery-slider .main-wrapper .close {
+        right: 48px; }
+      #mainContainer #gallery #gallery-slider .main-wrapper .content .imageWrapper img {
+        border: 3px solid white; }
+    #mainContainer #recentNews .blogItem .itemMeta .about {
+      width: 65%; }
+    #mainContainer #footer .footerBar .subscribe .form .subsc {
+      width: 70%; }
+    #mainContainer #footer .footerBar .subscribe .form button {
+      width: 31%;
+      min-width: 120px; }
+    #mainContainer #footer .scrollToTop {
+      right: 15px;
+      bottom: 54px; } }
 /* Header section */
 #grid-causes-grid {
   background: url("../img/parallax/img-1.jpg") no-repeat;
